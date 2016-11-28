@@ -1,0 +1,249 @@
+.main-navigation {
+	display: block;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		background: #fafafa;
+		@include mqPC {
+			background: transparent;
+		}
+
+		ul {
+			display: none;
+			background: white;
+			padding-left: 1em;
+
+			@include mqPC {
+				float: left;
+				position: absolute;
+				background: rgba(250, 250, 250, 0.8);
+				padding-left: 0;
+				width: 200px;
+			}
+			ul {
+				@include mqPC {
+					top: 0;
+					left: 200px;
+				}
+			}
+
+			li {
+				&:hover > ul,
+				&.focus > ul {
+					display: block;
+				}
+			}
+
+			a {
+				@include mqPC {
+					padding: 1em;
+				}
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			display: block;
+		}
+	}
+	li {
+		border-bottom: solid 1px white;
+		@include mqPC {
+			position: relative;
+			float: left;
+			
+			li {
+				float: none;
+			}
+		}
+
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		padding: 1em;
+		@include mqPC {
+			padding: 0 0.5em;
+		}
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+	ul {
+		display: none;
+	}
+}
+
+.menu-toggle {
+	width: 100%;
+	background-color: #363636;
+	border: none;
+	color: white;
+	border-radius: 0;
+	@include font-size(24);
+}
+
+
+@include mqPC {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.footer-navigation {
+	@include font-size(14);
+	display: block;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			padding-left: 1em;
+
+			li {
+				&:hover > ul,
+				&.focus > ul {
+				}
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+		}
+	}
+	li {
+		border-bottom: solid 1px #666;
+		@include mqPC {
+			border-bottom: none;
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 1em;
+		}
+		li {
+			display: block;
+			border-bottom: none;
+		}
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+	a {
+		text-decoration: none;
+		display: block;
+		padding: 0.5em;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
+
+.pagination .nav-links,
+.page-links {
+	width: 100%;
+	text-align: center;
+	margin: 15px 0;
+	clear: both;
+
+	a {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		@include border-radius(20px);
+		color: #fff;
+		font-weight: bold;
+		background: #ff9c08;
+		display: inline-block;
+		margin: 0px 3px;
+		@include mqPC {
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			@include border-radius(25px);
+		}
+		&:hover {
+			text-decoration: none;
+			background: #231f20;
+		}
+	}
+	> span {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		@include border-radius(20px);
+		color: #fff;
+		font-weight: bold;
+		background: #231f20;
+		display: inline-block;
+		margin: 0px 3px;
+		@include mqPC {
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			@include border-radius(25px);
+		}
+		&.dots {
+			color: #231f20;
+			background: transparent;
+		}
+	}
+}

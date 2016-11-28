@@ -1,0 +1,154 @@
+.jawsdays-supporter {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	overflow: hidden;
+	width: 100%;
+	height: 140px;
+	@include mqPC {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		height: 180px;
+	}
+}
+// slide
+.jawsdays-supporter-slider {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	@include pie-clearfix;
+	height: 100px;
+	overflow: hidden;
+
+	li {
+		margin: 0;
+		padding: 0;
+		width: 220px;
+		@include mqPC {
+			float: left;
+		}
+	}
+	a {
+		display: block;
+		width: 220px;
+		height: 100px;
+		margin: 0 auto;
+		padding: 4px;
+		overflow: hidden;
+		border: solid 1px #dedede;
+		position: relative;
+		@include mqPC {
+			margin: 0 5px;
+		}
+	}
+	img {
+		max-width: 210px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+	}
+}
+.bx-viewport {
+	overflow: visible !important;
+	width: 220px !important;
+	margin: 0 auto;
+	@include mqPC {
+		width: 1000px !important;
+	}
+}
+.site {
+	overflow: hidden;
+}
+
+.footer-widgets-area {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	@include mqPC {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+.jawsdays-contact-box {
+	background: #ebebe9;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	@include pie-clearfix;
+
+	@include mqPC {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	p {
+		margin: 0;
+		@include font-size(20);
+		@include mqPC {
+			@include font-size(24);
+			display: inline-block;
+		}
+	}
+	a {
+		display: block;
+		background: #231f20;
+		color: #ffffff;
+		margin: 10px 0;
+		border-radius: 2px;
+		padding: 0.5em;
+		@include mqPC {
+			margin: 0 0 0 1em;
+			display: inline-block;
+			padding: 0.5em 5em;
+		}
+	}
+}
+.site-footer {
+	
+	background: #161616;
+	color: #e6e6e6;
+	a {
+		color: #e6e6e6;
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color__link-hover;
+			text-decoration: underline;
+		}
+	}
+	
+	padding-top: 20px;
+	padding-bottom: 20px;
+	@include mqPC {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+
+.site-info {
+	text-align: center;
+	margin-top: 20px;
+	@include mqPC {
+		margin-top: 40px;
+	}
+}
+.social-button {
+	@include font-size(36);
+	margin-bottom: 10px;
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		display: inline-block;
+		margin: 0 5px;
+	}
+}
+p.copyright {
+	@include font-size(11);
+	margin: 0;
+	@include mqPC {
+		@include font-size(14);
+	}
+}

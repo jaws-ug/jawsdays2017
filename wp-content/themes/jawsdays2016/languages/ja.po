@@ -1,0 +1,216 @@
+# Copyright (C) 2015 DigitalCube Co.,Ltd
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: JAWSDAYS 2016 1.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/jawsdays2016\n"
+"POT-Creation-Date: 2015-11-30 08:30:46+00:00\n"
+"Last-Translator: Kazue Igarashi <gatesapce.k@gmail.com>\n"
+"Language-Team: \n"
+"Language: JAPANESE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "お探しのページが見つかりません。"
+
+#: 404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"ここには何も見つかりませんでした。以下のリンクまたは検索をお試しください。"
+
+#: 404.php:29
+msgid "Most Used Categories"
+msgstr "よく使われているカテゴリー"
+
+#. translators: %1$s: smiley
+#: 404.php:46
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "月別アーカイブを見てみてください。%1$s"
+
+#: archive.php:42 index.php:47 search.php:39
+msgid "&lt;"
+msgstr ""
+
+#: archive.php:43 index.php:48 search.php:40
+msgid "&gt;"
+msgstr ""
+
+#: comments.php:32
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "「%2$s」への%1$s件のフィードバック"
+msgstr[1] "「%2$s」への%1$s件のフィードバック"
+
+#: comments.php:41 comments.php:62
+msgid "Comment navigation"
+msgstr "コメントナビゲーション"
+
+#: comments.php:44 comments.php:65
+msgid "Older Comments"
+msgstr "以前のコメント"
+
+#: comments.php:45 comments.php:66
+msgid "Newer Comments"
+msgstr "新しいコメント"
+
+#: comments.php:78
+msgid "Comments are closed."
+msgstr "コメントは受け付けていません。"
+
+#. translators: %s: Name of current year
+#: footer.php:32
+msgid "To participate in the JAWS DAYS %d"
+msgstr "JAWS DAYS %d に参加する"
+
+#: footer.php:36
+msgid "Tickets"
+msgstr ""
+
+#: functions.php:55
+msgid "Main Menu"
+msgstr "メインメニュー"
+
+#: functions.php:56
+msgid "Footer Menu"
+msgstr "フッターメニュー"
+
+#: functions.php:111
+msgid "Footer Widget Area"
+msgstr "フッターウィジェットエリア"
+
+#: header.php:26
+msgid "Skip to content"
+msgstr "コンテンツへスキップ"
+
+#: header.php:41
+msgid "Primary Menu"
+msgstr "メインメニュー"
+
+#: inc/template-tags.php:28
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "投稿日時: %s"
+
+#: inc/template-tags.php:33
+msgctxt "post author"
+msgid "by %s"
+msgstr "投稿者: %s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:50 inc/template-tags.php:56
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:52
+msgid "Posted in %1$s"
+msgstr "カテゴリー: %1$s"
+
+#: inc/template-tags.php:58
+msgid "Tagged %1$s"
+msgstr "タグ: %1$s"
+
+#: inc/template-tags.php:64
+msgid "Leave a comment"
+msgstr "コメントをどうぞ"
+
+#: inc/template-tags.php:64
+msgid "1 Comment"
+msgstr "1件のコメント"
+
+#: inc/template-tags.php:64
+msgid "% Comments"
+msgstr "%件のコメント"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:71 template-parts/content-page.php:41
+msgid "Edit %s"
+msgstr "%sを編集"
+
+#: search.php:19
+msgid "Search Results for: %s"
+msgstr "検索結果: %s"
+
+#: template-parts/content-none.php:15
+msgid "Nothing Found"
+msgstr "何も見つかりませんでした"
+
+#: template-parts/content-none.php:23
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"最初の投稿を公開する準備ができましたか ?<a href=\"%1$s\">こちらからスタートし"
+"ましょう</a>。"
+
+#: template-parts/content-none.php:27
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"検索キーワードに一致するコンテンツが見つかりませんでした。他のキーワードをお"
+"試しください。"
+
+#: template-parts/content-none.php:32
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "お探しのコンテンツが見つかりません。検索をお試しください。"
+
+#: template-parts/content-page.php:29 template-parts/content-single.php:41
+#: template-parts/content-speaker.php:116
+#: template-parts/content-supporter.php:38
+msgid "Pages:"
+msgstr "ページ:"
+
+#: template-parts/content-speaker.php:30
+msgid "Affiliation:"
+msgstr "所属: "
+
+#: template-parts/content-speaker.php:37
+msgid "Profile:"
+msgstr "自己紹介: "
+
+#: template-parts/content-speaker.php:85
+msgid "Track:"
+msgstr "トラック: "
+
+#: template-parts/content-speaker.php:95
+msgid "Target"
+msgstr "主な聴講者"
+
+#: template-parts/content-speaker.php:103
+msgid "Materials"
+msgstr "資料"
+
+#: template-parts/content-speaker.php:109
+msgid "Other"
+msgstr "その他"
+
+#: template-parts/content.php:36
+msgid "Read more &raquo;"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "JAWSDAYS 2016"
+msgstr ""
+
+#. #-#-#-#-#  jawsdays.pot (JAWSDAYS 2016 0.1.0)  #-#-#-#-#
+#. Theme URI of the plugin/theme
+#. #-#-#-#-#  jawsdays.pot (JAWSDAYS 2016 0.1.0)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "https://www.digitalcube.jp/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "JAWS DAYS 2016 theme."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "DigitalCube Co.,Ltd"
+msgstr ""

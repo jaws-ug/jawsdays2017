@@ -1,0 +1,184 @@
+.page-header {
+	text-align: center;
+	margin-bottom: 20px;
+	@include mqPC {
+		margin-bottom: 40px;
+	}
+}
+.page-title {
+	margin: 0;
+	@include font-size(36);
+	@include mqPC {
+		@include font-size(42);
+	}
+}
+.taxonomy-description {
+	margin-top: 10px;
+	@include mqPC {
+		margin-top: 20px;
+	}
+	p {
+		margin: 0;
+	}
+}
+
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin-bottom: 20px;
+	padding: 20px;
+	background: white;
+	border: 1px solid #dedede;
+	@include mqPC {
+		padding: 40px;
+	}
+}
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.post-thumbnail {
+	text-align: center;
+	margin-bottom: 15px;
+	a, span {
+		display: inline-block;
+		padding: 4px;
+		border: 1px solid #dedede;
+		width: 158px;
+		height: 158px;
+		position: relative;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+		}
+	}
+	@include mqPC {
+		float: left;
+		margin-right: 40px;
+		margin-bottom: 0;
+	}
+}
+.entry-header {
+	overflow: hidden;
+}
+
+.entry-title {
+	@include font-size(24);
+	margin: 0;
+	clear: none;
+	@include mqPC {
+		@include font-size(36);
+	}
+}
+.entry-meta {
+	@include font-size(12);
+	margin-top: 10px;
+	text-align: right;
+}
+.entry-profile {
+	margin-top: 10px;
+	@include font-size(14);
+	p {
+		margin-top: 0;
+		margin-bottom: 0.5em;
+	}
+	ul, ol, {
+		margin-top: 0;
+		margin-bottom: 0.5em;
+	}
+}
+.entry-sns {
+	margin-top: 10px;
+	@include font-size(24);
+	a {
+		display: inline-block;
+		margin-right: 10px;
+	}
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+}
+.entry-content {
+	clear: both;
+	padding-top: 15px;
+}
+
+.entry-summary {
+	overflow: hidden;
+	margin-top: 15px;
+	p {
+		margin: 0;
+	}
+	
+	.entry-more {
+		margin-top: 1em;
+		@include font-size(14);
+		text-align: right;
+		a {
+			display: inline-block;
+			border-radius: 2px;
+			background: #231f20;
+			color: white;
+			padding: 0.25em 2em;
+			
+			&:hover, &:active, &:focus {
+				color: white;
+				background: #ff9c08;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+// jetpack
+.entry-header {
+	.sharedaddy {
+		margin-top: 15px;
+		@include pie-clearfix;
+	}
+	div.sharedaddy h3.sd-title {
+		display: none;
+	}
+	.sd-content {
+		float: right;
+	}
+}
+
+// form
+.wpcf7 {
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="tel"],
+	input[type="password"],
+	input[type="search"],
+	textarea {
+		width: 100%;
+		margin-top: 0.25em;
+	}
+	.wpcf7-list-item {
+		label {
+			display: inline-block;
+		}
+	}
+	.wpcf7-submit {
+		display: block;
+		margin: 0 auto;
+		width: 250px;
+	}
+}

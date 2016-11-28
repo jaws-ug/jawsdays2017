@@ -1,0 +1,59 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 16) {
+	font-size: $sizeValue * 1px;
+	font-size: ($sizeValue / 16) * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+%inner {
+	max-width: $size__site-main;
+	padding: $size__site-inner-padding-sp;
+	margin: 0 auto;
+}
+@media screen and (min-width: ($size__media-min-width + 1) ) {
+	%inner {
+		max-width: $size__site-inner;
+		padding: $size__site-inner-padding;
+	}
+}
+
+// single content box
+%single-content-box {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top: solid 1px $color__background-hr;
+}
+@media screen and (min-width: ($size__media-min-width + 1) ) {
+	%single-content-box {
+		padding-top: 80px;
+		padding-bottom: 80px;
+		border-top: solid 1px $color__background-hr;
+	}
+}
+
+
+@mixin mqPC {
+	// $size__media-min-width 以上の場合
+	@media screen and (min-width: ($size__media-min-width + 1) ) {
+		@content;
+	}
+}
+

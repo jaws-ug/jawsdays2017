@@ -1,0 +1,37 @@
+.site-header {
+	@include pie-clearfix;
+	@extend %inner;
+	padding-top: 20px;
+	@include mqPC {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+
+.site-branding {
+	@include mqPC {
+		float: left;
+	}
+}
+.site-title {
+	margin: 0 auto;
+	width: 187px;
+	height: 49px;
+	overflow: hidden;
+	a {
+		display: block;
+		width: 187px;
+		padding-top: 49px;
+		background: transparent image-url( 'site-logo@2x.png' ) no-repeat center top;
+		background-size: 187px 49px;
+	}
+}
+.main-navigation {
+	margin-top: 20px;
+	margin-right: -15px;
+	margin-left: -15px;
+	@include mqPC {
+		margin: 20px 0 0 20px;
+		float: right;
+	}
+}

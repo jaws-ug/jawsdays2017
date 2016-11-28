@@ -1,0 +1,22 @@
+{
+  "name": "jawsdays-2016",
+  "title": "JAWSDAYS 2016",
+  "description": "JAWS DAYS 2016 theme.",
+  "version": "0.1.0",
+  "homepage": "https://www.digitalcube.jp/",
+  "author": {
+    "name": "DigitalCube Co.,Ltd",
+    "url": "https://www.digitalcube.jp/"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-jshint": "^1.12.0",
+    "gulp-load-plugins": "^0.7.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^0.6.6",
+    "gulp-replace": "^0.5.0",
+    "run-sequence": "^1.1.5"
+  },
+  "keywords": []
+}

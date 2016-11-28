@@ -1,0 +1,81 @@
+.page-content,
+.entry-content,
+.entry-summary,
+.mceContentBody {
+	word-wrap: break-word;
+
+	a {
+		color: #336699;
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color__link-hover;
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6, p {
+		margin-top: 0;
+	}
+
+	h1 {
+		background: #fafafa;
+		border-top: 4px solid #dedede;
+		border-bottom: 2px solid #dedede;
+		padding: 5px;
+	}
+	h2 {
+		background-image: image-url( 'title-back.gif' );
+		padding: 5px;
+	}
+	h3 {
+		border-top: 4px solid #dedede;
+		padding: 5px;
+	}
+	h4 {
+		border-top: 1px solid #dedede;
+		padding: 5px;
+	}
+
+	table {
+		th, td {
+			padding: 0.5em;
+			border: solid 1px $color__background-hr;
+		}
+		th {
+			background: #eeeeee;
+		}
+	}
+	
+	// time table
+	table.timetable {
+		background: white;
+		@include font-size(14);
+		@include mqPC {
+			@include font-size(12);
+		}
+
+		thead th {
+			background: #424346;
+			color: white;
+			a {
+				color: $color__link-hover;
+				text-decoration: underline;
+			}
+		}
+		.long-cell td {
+			text-align: center;
+		}
+		th > p,
+		td > p {
+			margin-bottom: 0.5em;
+			&::last-child {
+				margin-bottom: 0;
+			}
+		}
+		
+		.footable-row-detail-name {
+			width: 50%;
+		}
+	}
+
+}

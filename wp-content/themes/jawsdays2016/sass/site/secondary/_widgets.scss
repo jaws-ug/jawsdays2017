@@ -1,0 +1,67 @@
+.widget {
+	margin: 0 0 20px 0;
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+}
+.widget-title {
+	margin-top: 0;
+	margin-bottom: 10px;
+	@include font-size(20);
+	background: #231f20;
+	color: white;
+	border-radius: 2px;
+	padding: 5px;
+	text-align: center;
+	a {
+		color: white;
+	}
+	
+	.widget_twitter_timeline & {
+		background: #55acee;
+	}
+	.widget_facebook_likebox & {
+		background: #3b5999;
+	}
+}
+
+// widget_recent_entries
+.widget_recent_entries {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+	li {
+		margin-bottom: 0.5em;
+		padding-bottom: 0.5em;
+		border-bottom: dotted 1px $color__background-hr;
+	}
+	a {
+		display: block;
+		font-weight: bold;
+	}
+	.post-date {
+		@include font-size(14);
+		display: block;
+		color: #666;
+	}
+}
+
+.footer-widgets-area {
+	@extend %inner;
+	@include mqPC {
+		@include display-flex();
+		.widget {
+			width: 300px;
+			
+			&:nth-child(2) {
+				margin-right: 50px;
+				margin-left: 50px;
+			}
+		}
+	}
+}
+
