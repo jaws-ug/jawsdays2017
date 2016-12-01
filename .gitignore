@@ -24,6 +24,8 @@ wp-content/wptouch-data/temp/*
 /readme.html
 /readme-ja.html
 /license.txt
+/local-config.php
+/local-salt.php
 *.bak
 *.back
 .sass-cache
