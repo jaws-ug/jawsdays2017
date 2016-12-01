@@ -36,8 +36,9 @@ function flamingo_collect_contacts_from_users() {
 		$email = $user->user_email;
 		$name = $user->display_name;
 
-		if ( empty( $email ) )
+		if ( empty( $email ) ) {
 			continue;
+		}
 
 		$props = array(
 			'first_name' => empty( $user->first_name ) ? '' : $user->first_name,
@@ -50,5 +51,3 @@ function flamingo_collect_contacts_from_users() {
 			'channel' => 'user' ) );
 	}
 }
-
-?>

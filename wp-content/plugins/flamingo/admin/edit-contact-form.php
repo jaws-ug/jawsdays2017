@@ -12,7 +12,6 @@ if ( ! empty( $post->id ) ) {
 
 ?>
 <div class="wrap columns-2">
-<?php screen_icon(); ?>
 
 <h1><?php echo esc_html( __( 'Edit Contact', 'flamingo' ) ); ?></h1>
 

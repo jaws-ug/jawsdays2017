@@ -43,5 +43,3 @@ function flamingo_akismet_is_active() {
 
 	return false;
 }
-
-?>

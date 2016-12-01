@@ -5,10 +5,10 @@ Description: Flamingo manages your contact list on WordPress.
 Author: Takayuki Miyoshi
 Text Domain: flamingo
 Domain Path: /languages/
-Version: 1.4
+Version: 1.5
 */
 
-define( 'FLAMINGO_VERSION', '1.4' );
+define( 'FLAMINGO_VERSION', '1.5' );
 
 define( 'FLAMINGO_PLUGIN', __FILE__ );
 
@@ -35,8 +35,9 @@ require_once FLAMINGO_PLUGIN_DIR . '/includes/user.php';
 require_once FLAMINGO_PLUGIN_DIR . '/includes/comment.php';
 require_once FLAMINGO_PLUGIN_DIR . '/includes/akismet.php';
 
-if ( is_admin() )
+if ( is_admin() ) {
 	require_once FLAMINGO_PLUGIN_DIR . '/admin/admin.php';
+}
 
 /* Init */
 

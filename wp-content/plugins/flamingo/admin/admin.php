@@ -40,8 +40,9 @@ function flamingo_set_screen_options( $result, $option, $value ) {
 		'toplevel_page_flamingo_per_page',
 		'flamingo_page_flamingo_inbound_per_page' );
 
-	if ( in_array( $option, $flamingo_screens ) )
+	if ( in_array( $option, $flamingo_screens ) ) {
 		$result = $value;
+	}
 
 	return $result;
 }
@@ -94,8 +95,9 @@ function flamingo_admin_updated_message() {
 		return;
 	}
 
-	if ( empty( $updated_message ) )
+	if ( empty( $updated_message ) ) {
 		return;
+	}
 
 ?>
 <div id="message" class="updated"><p><?php echo $updated_message; ?></p></div>
@@ -113,8 +115,9 @@ function flamingo_load_contact_admin() {
 		$post = new Flamingo_Contact( $_REQUEST['post'] );
 
 		if ( ! empty( $post ) ) {
-			if ( ! current_user_can( 'flamingo_edit_contact', $post->id ) )
+			if ( ! current_user_can( 'flamingo_edit_contact', $post->id ) ) {
 				wp_die( __( 'You are not allowed to edit this item.', 'flamingo' ) );
+			}
 
 			check_admin_referer( 'flamingo-update-contact_' . $post->id );
 
@@ -139,30 +142,36 @@ function flamingo_load_contact_admin() {
 	}
 
 	if ( 'delete' == $action && ! empty( $_REQUEST['post'] ) ) {
-		if ( ! is_array( $_REQUEST['post'] ) )
+		if ( ! is_array( $_REQUEST['post'] ) ) {
 			check_admin_referer( 'flamingo-delete-contact_' . $_REQUEST['post'] );
-		else
+		} else {
 			check_admin_referer( 'bulk-posts' );
+		}
 
 		$deleted = 0;
 
 		foreach ( (array) $_REQUEST['post'] as $post ) {
 			$post = new Flamingo_Contact( $post );
 
-			if ( empty( $post ) )
+			if ( empty( $post ) ) {
 				continue;
+			}
 
-			if ( ! current_user_can( 'flamingo_delete_contact', $post->id ) )
+			if ( ! current_user_can( 'flamingo_delete_contact', $post->id ) ) {
 				wp_die( __( 'You are not allowed to delete this item.', 'flamingo' ) );
+			}
 
-			if ( ! $post->delete() )
+			if ( ! $post->delete() ) {
 				wp_die( __( 'Error in deleting.', 'flamingo' ) );
+			}
 
 			$deleted += 1;
 		}
 
-		if ( ! empty( $deleted ) )
-			$redirect_to = add_query_arg( array( 'message' => 'contactdeleted' ), $redirect_to );
+		if ( ! empty( $deleted ) ) {
+			$redirect_to = add_query_arg(
+				array( 'message' => 'contactdeleted' ), $redirect_to );
+		}
 
 		wp_safe_redirect( $redirect_to );
 		exit();
@@ -192,21 +201,25 @@ function flamingo_load_contact_admin() {
 			'order' => 'ASC',
 			'meta_key' => '_email' );
 
-		if ( ! empty( $_GET['s'] ) )
+		if ( ! empty( $_GET['s'] ) ) {
 			$args['s'] = $_GET['s'];
-
-		if ( ! empty( $_GET['orderby'] ) ) {
-			if ( 'email' == $_GET['orderby'] )
-				$args['meta_key'] = '_email';
-			elseif ( 'name' == $_GET['orderby'] )
-				$args['meta_key'] = '_name';
 		}
 
-		if ( ! empty( $_GET['order'] ) && 'asc' == strtolower( $_GET['order'] ) )
-			$args['order'] = 'ASC';
+		if ( ! empty( $_GET['orderby'] ) ) {
+			if ( 'email' == $_GET['orderby'] ) {
+				$args['meta_key'] = '_email';
+			} elseif ( 'name' == $_GET['orderby'] ) {
+				$args['meta_key'] = '_name';
+			}
+		}
 
-		if ( ! empty( $_GET['contact_tag_id'] ) )
+		if ( ! empty( $_GET['order'] ) && 'asc' == strtolower( $_GET['order'] ) ) {
+			$args['order'] = 'ASC';
+		}
+
+		if ( ! empty( $_GET['contact_tag_id'] ) ) {
 			$args['contact_tag_id'] = explode( ',', $_GET['contact_tag_id'] );
+		}
 
 		$items = Flamingo_Contact::find( $args );
 
@@ -223,7 +236,8 @@ function flamingo_load_contact_admin() {
 		exit();
 	}
 
-	if ( ! empty( $_GET['sendmail'] ) && ! empty( $_REQUEST['contact_tag_id'] ) ) {
+	if ( ! empty( $_GET['sendmail'] )
+	&& ! empty( $_REQUEST['contact_tag_id'] ) ) {
 		$redirect_to = admin_url( 'admin.php?page=flamingo_outbound' );
 
 		$redirect_to = add_query_arg( array(
@@ -248,8 +262,10 @@ function flamingo_load_contact_admin() {
 			'flamingo_contact_name_meta_box', null, 'normal', 'core' );
 
 	} else {
-		if ( ! class_exists( 'Flamingo_Contacts_List_Table' ) )
-			require_once FLAMINGO_PLUGIN_DIR . '/admin/includes/class-contacts-list-table.php';
+		if ( ! class_exists( 'Flamingo_Contacts_List_Table' ) ) {
+			require_once FLAMINGO_PLUGIN_DIR
+				. '/admin/includes/class-contacts-list-table.php';
+		}
 
 		$current_screen = get_current_screen();
 
@@ -266,7 +282,8 @@ function flamingo_contact_admin_page() {
 	$action = flamingo_current_action();
 	$post_id = ! empty( $_REQUEST['post'] ) ? $_REQUEST['post'] : '';
 
-	if ( 'edit' == $action && Flamingo_Contact::post_type == get_post_type( $post_id ) ) {
+	if ( 'edit' == $action
+	&& Flamingo_Contact::post_type == get_post_type( $post_id ) ) {
 		flamingo_contact_edit_page();
 		return;
 	}
@@ -276,7 +293,6 @@ function flamingo_contact_admin_page() {
 
 ?>
 <div class="wrap">
-<?php screen_icon(); ?>
 
 <h1><?php
 	echo esc_html( __( 'Flamingo Address Book', 'flamingo' ) );
@@ -303,8 +319,9 @@ function flamingo_contact_admin_page() {
 function flamingo_contact_edit_page() {
 	$post = new Flamingo_Contact( $_REQUEST['post'] );
 
-	if ( empty( $post ) )
+	if ( empty( $post ) ) {
 		return;
+	}
 
 	require_once FLAMINGO_PLUGIN_DIR . '/admin/includes/meta-boxes.php';
 
@@ -319,60 +336,76 @@ function flamingo_load_inbound_admin() {
 	$redirect_to = admin_url( 'admin.php?page=flamingo_inbound' );
 
 	if ( 'trash' == $action && ! empty( $_REQUEST['post'] ) ) {
-		if ( ! is_array( $_REQUEST['post'] ) )
-			check_admin_referer( 'flamingo-trash-inbound-message_' . $_REQUEST['post'] );
-		else
+		if ( ! is_array( $_REQUEST['post'] ) ) {
+			check_admin_referer(
+				'flamingo-trash-inbound-message_' . $_REQUEST['post'] );
+		} else {
 			check_admin_referer( 'bulk-posts' );
+		}
 
 		$trashed = 0;
 
 		foreach ( (array) $_REQUEST['post'] as $post ) {
 			$post = new Flamingo_Inbound_Message( $post );
 
-			if ( empty( $post ) )
+			if ( empty( $post ) ) {
 				continue;
+			}
 
-			if ( ! current_user_can( 'flamingo_delete_inbound_message', $post->id ) )
+			if ( ! current_user_can(
+			'flamingo_delete_inbound_message', $post->id ) ) {
 				wp_die( __( 'You are not allowed to move this item to the Trash.', 'flamingo' ) );
+			}
 
-			if ( ! $post->trash() )
+			if ( ! $post->trash() ) {
 				wp_die( __( 'Error in moving to Trash.', 'flamingo' ) );
+			}
 
 			$trashed += 1;
 		}
 
-		if ( ! empty( $trashed ) )
-			$redirect_to = add_query_arg( array( 'message' => 'inboundtrashed' ), $redirect_to );
+		if ( ! empty( $trashed ) ) {
+			$redirect_to = add_query_arg(
+				array( 'message' => 'inboundtrashed' ), $redirect_to );
+		}
 
 		wp_safe_redirect( $redirect_to );
 		exit();
 	}
 
 	if ( 'untrash' == $action && ! empty( $_REQUEST['post'] ) ) {
-		if ( ! is_array( $_REQUEST['post'] ) )
-			check_admin_referer( 'flamingo-untrash-inbound-message_' . $_REQUEST['post'] );
-		else
+		if ( ! is_array( $_REQUEST['post'] ) ) {
+			check_admin_referer(
+				'flamingo-untrash-inbound-message_' . $_REQUEST['post'] );
+		} else {
 			check_admin_referer( 'bulk-posts' );
+		}
 
 		$untrashed = 0;
 
 		foreach ( (array) $_REQUEST['post'] as $post ) {
 			$post = new Flamingo_Inbound_Message( $post );
 
-			if ( empty( $post ) )
+			if ( empty( $post ) ) {
 				continue;
+			}
 
-			if ( ! current_user_can( 'flamingo_delete_inbound_message', $post->id ) )
+			if ( ! current_user_can(
+			'flamingo_delete_inbound_message', $post->id ) ) {
 				wp_die( __( 'You are not allowed to restore this item from the Trash.', 'flamingo' ) );
+			}
 
-			if ( ! $post->untrash() )
+			if ( ! $post->untrash() ) {
 				wp_die( __( 'Error in restoring from Trash.', 'flamingo' ) );
+			}
 
 			$untrashed += 1;
 		}
 
-		if ( ! empty( $untrashed ) )
-			$redirect_to = add_query_arg( array( 'message' => 'inbounduntrashed' ), $redirect_to );
+		if ( ! empty( $untrashed ) ) {
+			$redirect_to = add_query_arg(
+				array( 'message' => 'inbounduntrashed' ), $redirect_to );
+		}
 
 		wp_safe_redirect( $redirect_to );
 		exit();
@@ -388,86 +421,109 @@ function flamingo_load_inbound_admin() {
 	}
 
 	if ( 'delete' == $action && ! empty( $_REQUEST['post'] ) ) {
-		if ( ! is_array( $_REQUEST['post'] ) )
-			check_admin_referer( 'flamingo-delete-inbound-message_' . $_REQUEST['post'] );
-		else
+		if ( ! is_array( $_REQUEST['post'] ) ) {
+			check_admin_referer(
+				'flamingo-delete-inbound-message_' . $_REQUEST['post'] );
+		} else {
 			check_admin_referer( 'bulk-posts' );
+		}
 
 		$deleted = 0;
 
 		foreach ( (array) $_REQUEST['post'] as $post ) {
 			$post = new Flamingo_Inbound_Message( $post );
 
-			if ( empty( $post ) )
+			if ( empty( $post ) ) {
 				continue;
+			}
 
-			if ( ! current_user_can( 'flamingo_delete_inbound_message', $post->id ) )
+			if ( ! current_user_can(
+			'flamingo_delete_inbound_message', $post->id ) ) {
 				wp_die( __( 'You are not allowed to delete this item.', 'flamingo' ) );
+			}
 
-			if ( ! $post->delete() )
+			if ( ! $post->delete() ) {
 				wp_die( __( 'Error in deleting.', 'flamingo' ) );
+			}
 
 			$deleted += 1;
 		}
 
-		if ( ! empty( $deleted ) )
-			$redirect_to = add_query_arg( array( 'message' => 'inbounddeleted' ), $redirect_to );
+		if ( ! empty( $deleted ) ) {
+			$redirect_to = add_query_arg(
+				array( 'message' => 'inbounddeleted' ), $redirect_to );
+		}
 
 		wp_safe_redirect( $redirect_to );
 		exit();
 	}
 
 	if ( 'spam' == $action && ! empty( $_REQUEST['post'] ) ) {
-		if ( ! is_array( $_REQUEST['post'] ) )
-			check_admin_referer( 'flamingo-spam-inbound-message_' . $_REQUEST['post'] );
-		else
+		if ( ! is_array( $_REQUEST['post'] ) ) {
+			check_admin_referer(
+				'flamingo-spam-inbound-message_' . $_REQUEST['post'] );
+		} else {
 			check_admin_referer( 'bulk-posts' );
+		}
 
 		$submitted = 0;
 
 		foreach ( (array) $_REQUEST['post'] as $post ) {
 			$post = new Flamingo_Inbound_Message( $post );
 
-			if ( empty( $post ) )
+			if ( empty( $post ) ) {
 				continue;
+			}
 
-			if ( ! current_user_can( 'flamingo_spam_inbound_message', $post->id ) )
+			if ( ! current_user_can( 'flamingo_spam_inbound_message', $post->id ) ) {
 				wp_die( __( 'You are not allowed to spam this item.', 'flamingo' ) );
+			}
 
-			if ( $post->spam() )
+			if ( $post->spam() ) {
 				$submitted += 1;
+			}
 		}
 
-		if ( ! empty( $submitted ) )
-			$redirect_to = add_query_arg( array( 'message' => 'inboundspammed' ), $redirect_to );
+		if ( ! empty( $submitted ) ) {
+			$redirect_to = add_query_arg(
+				array( 'message' => 'inboundspammed' ), $redirect_to );
+		}
 
 		wp_safe_redirect( $redirect_to );
 		exit();
 	}
 
 	if ( 'unspam' == $action && ! empty( $_REQUEST['post'] ) ) {
-		if ( ! is_array( $_REQUEST['post'] ) )
-			check_admin_referer( 'flamingo-unspam-inbound-message_' . $_REQUEST['post'] );
-		else
+		if ( ! is_array( $_REQUEST['post'] ) ) {
+			check_admin_referer(
+				'flamingo-unspam-inbound-message_' . $_REQUEST['post'] );
+		} else {
 			check_admin_referer( 'bulk-posts' );
+		}
 
 		$submitted = 0;
 
 		foreach ( (array) $_REQUEST['post'] as $post ) {
 			$post = new Flamingo_Inbound_Message( $post );
 
-			if ( empty( $post ) )
+			if ( empty( $post ) ) {
 				continue;
+			}
 
-			if ( ! current_user_can( 'flamingo_unspam_inbound_message', $post->id ) )
+			if ( ! current_user_can(
+			'flamingo_unspam_inbound_message', $post->id ) ) {
 				wp_die( __( 'You are not allowed to unspam this item.', 'flamingo' ) );
+			}
 
-			if ( $post->unspam() )
+			if ( $post->unspam() ) {
 				$submitted += 1;
+			}
 		}
 
-		if ( ! empty( $submitted ) )
-			$redirect_to = add_query_arg( array( 'message' => 'inboundunspammed' ), $redirect_to );
+		if ( ! empty( $submitted ) ) {
+			$redirect_to = add_query_arg(
+				array( 'message' => 'inboundunspammed' ), $redirect_to );
+		}
 
 		wp_safe_redirect( $redirect_to );
 		exit();
@@ -595,7 +651,6 @@ function flamingo_inbound_admin_page() {
 
 ?>
 <div class="wrap">
-<?php screen_icon(); ?>
 
 <h1><?php
 	echo esc_html( __( 'Inbound Messages', 'flamingo' ) );
@@ -707,7 +762,6 @@ function flamingo_outbound_admin_page() {
 
 ?>
 <div class="wrap">
-<?php screen_icon(); ?>
 
 <h1><?php
 	echo esc_html( __( 'Outbound Messages', 'flamingo' ) );

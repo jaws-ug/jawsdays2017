@@ -56,7 +56,7 @@ class Flamingo_Inbound_Message {
 			'post_status' => 'any',
 			'tax_query' => array(),
 			'channel' => '',
-			'channel_id' => '' );
+			'channel_id' => 0 );
 
 		$args = wp_parse_args( $args, $defaults );
 
@@ -65,7 +65,7 @@ class Flamingo_Inbound_Message {
 		if ( ! empty( $args['channel_id'] ) ) {
 			$args['tax_query'][] = array(
 				'taxonomy' => self::channel_taxonomy,
-				'terms' => $args['channel_id'],
+				'terms' => absint( $args['channel_id'] ),
 				'field' => 'term_id' );
 		}
 
@@ -83,10 +83,23 @@ class Flamingo_Inbound_Message {
 
 		$objs = array();
 
-		foreach ( (array) $posts as $post )
+		foreach ( (array) $posts as $post ) {
 			$objs[] = new self( $post );
+		}
 
 		return $objs;
+	}
+
+	public static function count( $args = '' ) {
+		$args = wp_parse_args( $args, array(
+			'offset' => 0,
+			'channel' => '',
+			'channel_id' => 0,
+		 	'post_status' => 'publish' ) );
+
+		self::find( $args );
+
+		return absint( self::$found_items );
 	}
 
 	public static function add( $args = '' ) {
