@@ -1,0 +1,54 @@
+{
+    "key": "group_583f9bfec2324",
+    "title": "\u30bb\u30c3\u30b7\u30e7\u30f3\u30c8\u30e9\u30c3\u30af\u540d",
+    "fields": [
+        {
+            "layout": "horizontal",
+            "choices": {
+                "\u30bb\u30f3\u30bf\u30fc\u30c8\u30e9\u30c3\u30af": "\u30bb\u30f3\u30bf\u30fc\u30c8\u30e9\u30c3\u30af",
+                "AWS Technical Deep Dive": "AWS Technical Deep Dive",
+                "\u30e6\u30fc\u30b6\u30fc\u30c8\u30e9\u30c3\u30af": "\u30e6\u30fc\u30b6\u30fc\u30c8\u30e9\u30c3\u30af",
+                "The Next Cloud": "The Next Cloud",
+                "Workshop": "Workshop",
+                "HackDay": "HackDay",
+                "JAWS-UG \u51fa\u5f35\u52c9\u5f37\u4f1a": "JAWS-UG \u51fa\u5f35\u52c9\u5f37\u4f1a",
+                "LT": "LT"
+            },
+            "default_value": "\u30bb\u30f3\u30bf\u30fc\u30c8\u30e9\u30c3\u30af",
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "allow_null": 0,
+            "return_format": "label",
+            "key": "field_583f9c0b3c6e5",
+            "label": "\u30c8\u30e9\u30c3\u30af\u540d",
+            "name": "track",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "session"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1480564256
+}

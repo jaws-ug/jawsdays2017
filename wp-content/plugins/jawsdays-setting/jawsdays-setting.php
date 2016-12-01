@@ -63,21 +63,23 @@ public function plugins_loaded() {
 	);
 
 	// Register Custom Post Type
-	add_action( 'init', array( $this, 'custom_post_type_speaker' ), 0 );
+	add_action( 'init', array( $this, 'custom_post_type_session' ), 0 );
 	add_action( 'init', array( $this, 'custom_post_type_supporter' ), 0 );
 	// Query pre_get_posts
 	add_action( 'pre_get_posts', array( $this, 'jaws_modify_main_query' ) );
-	// jaws_acf
-	add_action( 'init', array( $this, 'jaws_acf' ) );
+	// ACF
+	add_filter( 'acf/settings/save_json', array( $this, 'jaws_acf_json_save_point' ) );
+	add_filter( 'acf/settings/load_json', array( $this, 'jaws_acf_json_load_point' ) );
+// 	add_action( 'init', array( $this, 'jaws_acf' ) );
 
 }
 
 // Register Custom Post Type
-public function custom_post_type_speaker() {
+public function custom_post_type_session() {
 	$labels = array(
-		'name'                => _x( 'Speakers', 'Post Type General Name', 'jawsdays' ),
-		'singular_name'       => _x( 'Speaker', 'Post Type Singular Name', 'jawsdays' ),
-		'menu_name'           => _x( 'Speakers', 'Post Type Menu Name', 'jawsdays' ),
+		'name'                => _x( 'Sessions', 'Post Type General Name', 'jawsdays' ),
+		'singular_name'       => _x( 'Session', 'Post Type Singular Name', 'jawsdays' ),
+		'menu_name'           => _x( 'Sessions', 'Post Type Menu Name', 'jawsdays' ),
 		'parent_item_colon'   => __( 'Parent Item:', 'jawsdays' ),
 		'all_items'           => __( 'All Items', 'jawsdays' ),
 		'view_item'           => __( 'View Item', 'jawsdays' ),
@@ -90,8 +92,8 @@ public function custom_post_type_speaker() {
 		'not_found_in_trash'  => __( 'Not found in Trash', 'jawsdays' ),
 	);
 	$args = array(
-		'label'               => _x( 'Speakers', 'Post Type label', 'jawsdays' ),
-		'description'         => _x( 'Speaker', 'Post Type description', 'jawsdays' ),
+		'label'               => _x( 'Sessions', 'Post Type label', 'jawsdays' ),
+		'description'         => _x( 'Session', 'Post Type description', 'jawsdays' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'publicize', 'wpcom-markdown' ),
 		'hierarchical'        => false,
@@ -107,10 +109,10 @@ public function custom_post_type_speaker() {
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'capability_type'     => 'post',
-		'rewrite'             => array( 'slug' => 'speaker', 'with_front' => false ),
-		'sptp_permalink_structure' => 'speaker/%post_id%',
+		'rewrite'             => array( 'slug' => 'session', 'with_front' => false ),
+		'sptp_permalink_structure' => 'session/%post_id%',
 	);
-	register_post_type( 'speaker', $args );
+	register_post_type( 'session', $args );
 }
 
 // Register Custom Post Type
@@ -174,6 +176,27 @@ public function jaws_modify_main_query( $query ) {
 }
 
 // ACF
+public function jaws_acf_json_save_point( $path ) {
+
+	// update path
+	$path = JAWSDAYS_PATH . '/acf-json';
+
+	// return
+	return $path;
+
+}
+public function jaws_acf_json_load_point( $paths ) {
+
+	// remove original path (optional)
+	unset($paths[0]);
+
+	// append path
+	$paths[] = JAWSDAYS_PATH . '/acf-json';
+
+	// return
+	return $paths;
+
+}
 public function jaws_acf() {
 	if( function_exists( "register_field_group" ) ) {
 		// sub title

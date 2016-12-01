@@ -1,0 +1,40 @@
+{
+    "key": "group_583f9b2c15312",
+    "title": "\u30b5\u30dd\u30fc\u30bf\u30fc",
+    "fields": [
+        {
+            "default_value": "",
+            "placeholder": "",
+            "key": "field_583f9b353d6c9",
+            "label": "URL",
+            "name": "_supporter_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "supporter"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1480563544
+}

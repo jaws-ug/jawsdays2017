@@ -44,7 +44,7 @@ class just_do_it {
 //       $this->must_plugins['Nginx Mobile Theme'] = 'nginx-mobile-theme/nginx-mobile-theme.php';
     }
 
-    $this->must_plugins['Advanced Custom Fields'] = 'advanced-custom-fields/acf.php';
+    $this->must_plugins['Advanced Custom Fields PRO'] = 'advanced-custom-fields-pro/acf.php';
     $this->must_plugins['JAWSDAYS Setting'] = 'jawsdays-setting/jawsdays-setting.php';
 
     add_action('shutdown', array($this, 'plugins_loaded'));
