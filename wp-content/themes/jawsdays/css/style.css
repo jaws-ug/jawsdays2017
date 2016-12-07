@@ -1042,14 +1042,22 @@ body.home .site-content {
 /* line 20, ../sass/layout/_sidebar-content.scss */
 body.home .main-image {
   text-align: center;
+  line-height: 1;
+  padding: 15px 0;
+}
+@media screen and (min-width: 601px) {
+  /* line 20, ../sass/layout/_sidebar-content.scss */
+  body.home .main-image {
+    padding: 30px 0;
+  }
 }
 
-/* line 29, ../sass/layout/_sidebar-content.scss */
+/* line 34, ../sass/layout/_sidebar-content.scss */
 .site-content .widget-area {
   width: 200px;
 }
 
-/* line 33, ../sass/layout/_sidebar-content.scss */
+/* line 38, ../sass/layout/_sidebar-content.scss */
 .site-footer {
   width: 100%;
 }
