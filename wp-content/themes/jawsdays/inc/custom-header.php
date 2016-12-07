@@ -26,8 +26,8 @@ function jawsdays_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'jawsdays_custom_header_args', array(
 		'default-image'          => get_template_directory_uri() . '/images/default-image.png',
 		'default-text-color'     => 'ffffff',
-		'width'                  => 878,
-		'height'                 => 400,
+		'width'                  => 870,
+		'height'                 => 335,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'jawsdays_header_style',
 		'admin-head-callback'    => 'jawsdays_admin_header_style',
