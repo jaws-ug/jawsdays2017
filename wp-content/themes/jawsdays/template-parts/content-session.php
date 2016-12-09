@@ -21,14 +21,8 @@
 	<header class="entry-header">
 		<?php do_action( 'jawsdays_before_entry_header' ); ?>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php
-			// トラック
-			if ( get_field( 'track' ) ) {
-				echo '<h2>' . __( 'Track:', 'jawsdays' );
-				the_field( 'track' );
-				echo '</h2>' . "\n";
-			}
-		?>
+		<?php // 会場：時間 ?>
+		<p><?php the_field( 'track' ); ?>：<?php the_field( 'start_time' ); ?>〜<?php the_field( 'end_time' ); ?></p>
 		<?php
 			if ( function_exists( 'sharing_display' ) ) {
 				sharing_display( '', true );
