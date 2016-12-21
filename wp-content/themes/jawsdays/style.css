@@ -421,7 +421,7 @@ input[type="submit"] {
   border-color: #231f20;
   border-radius: 3px;
   background: #231f20;
-  color: white;
+  color: #ffffff;
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1;
@@ -431,7 +431,9 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #231f20;
+  border-color: #ff9c08;
+  background: #ff9c08;
+  color: #ffffff;
 }
 button:active, button:focus,
 input[type="button"]:active,
@@ -440,7 +442,9 @@ input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-  border-color: #231f20;
+  border-color: #ff9c08;
+  background: #ff9c08;
+  color: #ffffff;
 }
 
 input[type="text"],
@@ -522,7 +526,7 @@ a:hover, a:active {
 }
 .main-navigation ul ul {
   display: none;
-  background: white;
+  background: #ffffff;
   padding-left: 1em;
 }
 @media screen and (min-width: 601px) {
@@ -589,7 +593,7 @@ a:hover, a:active {
   width: 100%;
   background-color: #363636;
   border: none;
-  color: white;
+  color: #ffffff;
   border-radius: 0;
   font-size: 24px;
   font-size: 1.5rem;
@@ -673,7 +677,7 @@ a:hover, a:active {
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
   border-radius: 20px;
-  color: #fff;
+  color: #ffffff;
   font-weight: bold;
   background: #ff9c08;
   display: inline-block;
@@ -693,6 +697,7 @@ a:hover, a:active {
 .pagination .nav-links a:hover,
 .page-links a:hover {
   text-decoration: none;
+  color: #ffffff;
   background: #231f20;
 }
 .pagination .nav-links > span,
@@ -703,7 +708,7 @@ a:hover, a:active {
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
   border-radius: 20px;
-  color: #fff;
+  color: #ffffff;
   font-weight: bold;
   background: #231f20;
   display: inline-block;
@@ -831,13 +836,13 @@ a:hover, a:active {
   font-size: 20px;
   font-size: 1.25rem;
   background: #231f20;
-  color: white;
-  border-radius: 2px;
+  color: #ffffff;
+  border-radius: 3px;
   padding: 5px;
   text-align: center;
 }
 .widget-title a {
-  color: white;
+  color: #ffffff;
 }
 .widget_twitter_timeline .widget-title {
   background: #55acee;
@@ -1097,8 +1102,13 @@ body.home .main-image {
   background: #231f20;
   color: #ffffff;
   margin: 10px 0;
-  border-radius: 2px;
+  border-radius: 3px;
   padding: 0.5em;
+}
+.jawsdays-contact-box a:hover, .jawsdays-contact-box a:focus, .jawsdays-contact-box a:active {
+  color: #ff9c08;
+  text-decoration: none;
+  background-color: #ff9c08;
 }
 @media screen and (min-width: 601px) {
   .jawsdays-contact-box a {
@@ -1209,7 +1219,7 @@ p.copyright {
 .hentry {
   margin-bottom: 20px;
   padding: 20px;
-  background: white;
+  background: #ffffff;
   border: 1px solid #dedede;
 }
 @media screen and (min-width: 601px) {
@@ -1295,13 +1305,13 @@ p.copyright {
 }
 .entry-summary .entry-more a {
   display: inline-block;
-  border-radius: 2px;
+  border-radius: 3px;
   background: #231f20;
-  color: white;
+  color: #ffffff;
   padding: 0.25em 2em;
 }
 .entry-summary .entry-more a:hover, .entry-summary .entry-more a:active, .entry-summary .entry-more a:focus {
-  color: white;
+  color: #ffffff;
   background: #ff9c08;
   text-decoration: none;
 }
@@ -1416,6 +1426,30 @@ p.copyright {
 .mceContentBody a:focus,
 .mceContentBody a:active {
   color: #ff9c08;
+}
+.page-content .btn,
+.entry-content .btn,
+.entry-summary .btn,
+.mceContentBody .btn {
+  display: inline-block;
+  color: white;
+  background-color: #336699;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+}
+.page-content .btn:hover, .page-content .btn:focus, .page-content .btn:active,
+.entry-content .btn:hover,
+.entry-content .btn:focus,
+.entry-content .btn:active,
+.entry-summary .btn:hover,
+.entry-summary .btn:focus,
+.entry-summary .btn:active,
+.mceContentBody .btn:hover,
+.mceContentBody .btn:focus,
+.mceContentBody .btn:active {
+  color: white;
+  text-decoration: none;
+  background-color: #ff9c08;
 }
 .page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6, .page-content p,
 .entry-content h1,

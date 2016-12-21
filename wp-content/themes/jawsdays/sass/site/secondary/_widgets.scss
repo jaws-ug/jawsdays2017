@@ -10,13 +10,13 @@
 	margin-top: 0;
 	margin-bottom: 10px;
 	@include font-size(20);
-	background: #231f20;
-	color: white;
-	border-radius: 2px;
+	background: $color__background-widget-title;
+	color: $color__text-widget-title;
+	border-radius: 3px;
 	padding: 5px;
 	text-align: center;
 	a {
-		color: white;
+		color: $color__text-widget-title;
 	}
 	
 	.widget_twitter_timeline & {

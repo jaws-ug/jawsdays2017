@@ -6,14 +6,14 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-		background: #fafafa;
+		background: $color__background-main-navigation;
 		@include mqPC {
 			background: transparent;
 		}
 
 		ul {
 			display: none;
-			background: white;
+			background: $color__background-main-navigation-depth;
 			padding-left: 1em;
 
 			@include mqPC {
@@ -99,9 +99,9 @@
 
 .menu-toggle {
 	width: 100%;
-	background-color: #363636;
+	background-color: $color__background-menu-toggle;
 	border: none;
-	color: white;
+	color: $color__text-menu-toggle;
 	border-radius: 0;
 	@include font-size(24);
 }
@@ -148,7 +148,7 @@
 		}
 	}
 	li {
-		border-bottom: solid 1px #666;
+		border-bottom: solid 1px $color__border-footer-navigation;
 		@include mqPC {
 			border-bottom: none;
 			display: inline-block;
@@ -209,9 +209,9 @@
 		height: 40px;
 		line-height: 40px;
 		@include border-radius(20px);
-		color: #fff;
+		color: $color__text-pagination;
 		font-weight: bold;
-		background: #ff9c08;
+		background: $color__background-pagination;
 		display: inline-block;
 		margin: 0px 3px;
 		@include mqPC {
@@ -222,7 +222,8 @@
 		}
 		&:hover {
 			text-decoration: none;
-			background: #231f20;
+			color: $color__text-pagination-hover;
+			background: $color__background-pagination-hover;
 		}
 	}
 	> span {
@@ -230,9 +231,9 @@
 		height: 40px;
 		line-height: 40px;
 		@include border-radius(20px);
-		color: #fff;
+		color: $color__text-pagination-active;
 		font-weight: bold;
-		background: #231f20;
+		background: $color__background-pagination-active;
 		display: inline-block;
 		margin: 0px 3px;
 		@include mqPC {
@@ -242,8 +243,8 @@
 			@include border-radius(25px);
 		}
 		&.dots {
-			color: #231f20;
-			background: transparent;
+			color: $color__text-pagination-dots;
+			background: $color__background-pagination-dots;
 		}
 	}
 }

@@ -5,11 +5,26 @@
 	word-wrap: break-word;
 
 	a {
-		color: #336699;
+		color: $color__link-entry;
 		&:hover,
 		&:focus,
 		&:active {
-			color: $color__link-hover;
+			color: $color__link-entry-hover;
+		}
+	}
+	// link btn
+	.btn {
+		display: inline-block;
+		color: white;
+		background-color: $color__link-entry;
+		padding: 0.5em 1em;
+		border-radius: 3px;
+		&:hover,
+		&:focus,
+		&:active {
+			color: white;
+			text-decoration: none;
+			background-color: $color__link-entry-hover;
 		}
 	}
 

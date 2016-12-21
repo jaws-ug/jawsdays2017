@@ -460,6 +460,30 @@ a:hover, a:active {
 .mceContentBody a:active {
   color: #ff9c08;
 }
+.page-content .btn,
+.entry-content .btn,
+.entry-summary .btn,
+.mceContentBody .btn {
+  display: inline-block;
+  color: white;
+  background-color: #336699;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+}
+.page-content .btn:hover, .page-content .btn:focus, .page-content .btn:active,
+.entry-content .btn:hover,
+.entry-content .btn:focus,
+.entry-content .btn:active,
+.entry-summary .btn:hover,
+.entry-summary .btn:focus,
+.entry-summary .btn:active,
+.mceContentBody .btn:hover,
+.mceContentBody .btn:focus,
+.mceContentBody .btn:active {
+  color: white;
+  text-decoration: none;
+  background-color: #ff9c08;
+}
 .page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6, .page-content p,
 .entry-content h1,
 .entry-content h2,
@@ -497,7 +521,7 @@ a:hover, a:active {
 .entry-content h2,
 .entry-summary h2,
 .mceContentBody h2 {
-  background-image: url('images/title-back.gif?1448358881');
+  background-image: url('images/title-back.gif?1480305697');
   padding: 5px;
 }
 .page-content h3,

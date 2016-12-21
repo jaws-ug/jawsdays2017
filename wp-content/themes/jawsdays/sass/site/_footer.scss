@@ -71,7 +71,7 @@
 	}
 }
 .jawsdays-contact-box {
-	background: #ebebe9;
+	background: $color__background-contact-box;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	text-align: center;
@@ -91,11 +91,18 @@
 	}
 	a {
 		display: block;
-		background: #231f20;
-		color: #ffffff;
+		background: $color__background-contact-button;
+		color: $color__text-contact-button;
 		margin: 10px 0;
-		border-radius: 2px;
+		border-radius: 3px;
 		padding: 0.5em;
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color__text-contact-button-hover;
+			text-decoration: none;
+			background-color: $color__text-contact-button-hover;
+		}
 		@include mqPC {
 			margin: 0 0 0 1em;
 			display: inline-block;
@@ -103,16 +110,16 @@
 		}
 	}
 }
+
 .site-footer {
-	
-	background: #161616;
-	color: #e6e6e6;
+	background: $color__background-footer;
+	color: $color__text-footer;
 	a {
-		color: #e6e6e6;
+		color: $color__link-footer;
 		&:hover,
 		&:focus,
 		&:active {
-			color: $color__link-hover;
+			color: $color__link-footer-hover;
 			text-decoration: underline;
 		}
 	}

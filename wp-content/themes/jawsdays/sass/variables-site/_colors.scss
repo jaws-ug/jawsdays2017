@@ -1,20 +1,95 @@
+// body
 $color__background-body: #fff;
-$color__background-screen: #f1f1f1;
-$color__background-hr: #ccc;
-$color__background-button: #231f20;
-$color__background-pre: #eee;
-$color__background-ins: #fff9c0;
+$color__text-main: #313131;
 
+// screen
+$color__background-screen: #f1f1f1;
 $color__text-screen: #21759b;
-$color__text-input: #666;
-$color__text-input-focus: #111;
+
+// hr
+$color__background-hr: #ccc;
+// pre
+$color__background-pre: #eee;
+// abbr
+$color__border-abbr: #666;
+// ins
+$color__background-ins: #fff9c0;
+// a(common)
 $color__link: #231f20;
 $color__link-visited: #231f20;
 $color__link-hover: #ff9c08;
-$color__text-main: #313131;
 
+// form button
 $color__border-button: #231f20;
-$color__border-button-hover: #231f20;
-$color__border-button-focus: #231f20;
+$color__background-button: #231f20;
+$color__text-button: #ffffff;
+// form button hover
+$color__border-button-hover: #ff9c08;
+$color__background-button-hover: #ff9c08;
+$color__text-button-hover: #ffffff;
+// form button focus
+$color__border-button-focus: #ff9c08;
+$color__background-button-focus: #ff9c08;
+$color__text-button-focus: #ffffff;
+
+// form fields
+$color__text-input: #666;
 $color__border-input: #ccc;
-$color__border-abbr: #666;
+$color__text-input-focus: #111;
+
+// main navigation
+$color__background-main-navigation: #fafafa;
+$color__background-main-navigation-depth: #ffffff;
+$color__background-menu-toggle: #363636;
+$color__text-menu-toggle: #ffffff;
+
+// footer navigation
+$color__border-footer-navigation: #666;
+
+// pagination
+$color__background-pagination: #ff9c08;
+$color__text-pagination: #ffffff;
+$color__background-pagination-hover: #231f20;
+$color__text-pagination-hover: #ffffff;
+$color__background-pagination-active: #231f20;
+$color__text-pagination-active: #ffffff;
+$color__background-pagination-dots: transparent;
+$color__text-pagination-dots: #231f20;
+
+// footer jawsdays-contact-box
+$color__background-contact-box: #ebebe9;
+$color__background-contact-button: #231f20;
+$color__text-contact-button: #ffffff;
+$color__background-contact-button-hover: #231f20;
+$color__text-contact-button-hover: #ff9c08;
+
+// footer site-footer
+$color__background-footer: #161616;
+$color__text-footer: #e6e6e6;
+$color__link-footer: #e6e6e6;
+$color__link-footer-hover: #ff9c08;
+
+// main content hentry
+$color__background-hentry: #ffffff;
+$color__border-hentry: #dedede;
+
+// main content post-thumbnail
+$color__border-post-thumbnail: #dedede;
+
+// main content entry-more-button
+$color__background-more-button: #231f20;
+$color__text-more-button: #ffffff;
+$color__background-more-button-hover: #ff9c08;
+$color__text-more-button-hover: #ffffff;
+
+// main content speaker-sns
+$color__text-speaker-sns: #666666;
+
+// main entry content
+$color__link-entry: #336699;
+$color__link-entry-hover: #ff9c08;
+
+
+// widget
+$color__background-widget-title: #231f20;
+$color__text-widget-title: #ffffff;

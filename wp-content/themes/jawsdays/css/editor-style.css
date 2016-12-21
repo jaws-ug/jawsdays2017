@@ -539,6 +539,32 @@ a:hover, a:active {
   color: #ff9c08;
 }
 /* line 16, ../sass/site/primary/_entry-content.scss */
+.page-content .btn,
+.entry-content .btn,
+.entry-summary .btn,
+.mceContentBody .btn {
+  display: inline-block;
+  color: white;
+  background-color: #336699;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+}
+/* line 22, ../sass/site/primary/_entry-content.scss */
+.page-content .btn:hover, .page-content .btn:focus, .page-content .btn:active,
+.entry-content .btn:hover,
+.entry-content .btn:focus,
+.entry-content .btn:active,
+.entry-summary .btn:hover,
+.entry-summary .btn:focus,
+.entry-summary .btn:active,
+.mceContentBody .btn:hover,
+.mceContentBody .btn:focus,
+.mceContentBody .btn:active {
+  color: white;
+  text-decoration: none;
+  background-color: #ff9c08;
+}
+/* line 31, ../sass/site/primary/_entry-content.scss */
 .page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6, .page-content p,
 .entry-content h1,
 .entry-content h2,
@@ -563,7 +589,7 @@ a:hover, a:active {
 .mceContentBody p {
   margin-top: 0;
 }
-/* line 20, ../sass/site/primary/_entry-content.scss */
+/* line 35, ../sass/site/primary/_entry-content.scss */
 .page-content h1,
 .entry-content h1,
 .entry-summary h1,
@@ -573,15 +599,15 @@ a:hover, a:active {
   border-bottom: 2px solid #dedede;
   padding: 5px;
 }
-/* line 26, ../sass/site/primary/_entry-content.scss */
+/* line 41, ../sass/site/primary/_entry-content.scss */
 .page-content h2,
 .entry-content h2,
 .entry-summary h2,
 .mceContentBody h2 {
-  background-image: url('../images/title-back.gif?1448358881');
+  background-image: url('../images/title-back.gif?1480305697');
   padding: 5px;
 }
-/* line 30, ../sass/site/primary/_entry-content.scss */
+/* line 45, ../sass/site/primary/_entry-content.scss */
 .page-content h3,
 .entry-content h3,
 .entry-summary h3,
@@ -589,7 +615,7 @@ a:hover, a:active {
   border-top: 4px solid #dedede;
   padding: 5px;
 }
-/* line 34, ../sass/site/primary/_entry-content.scss */
+/* line 49, ../sass/site/primary/_entry-content.scss */
 .page-content h4,
 .entry-content h4,
 .entry-summary h4,
@@ -597,7 +623,7 @@ a:hover, a:active {
   border-top: 1px solid #dedede;
   padding: 5px;
 }
-/* line 40, ../sass/site/primary/_entry-content.scss */
+/* line 55, ../sass/site/primary/_entry-content.scss */
 .page-content table th, .page-content table td,
 .entry-content table th,
 .entry-content table td,
@@ -608,14 +634,14 @@ a:hover, a:active {
   padding: 0.5em;
   border: solid 1px #ccc;
 }
-/* line 44, ../sass/site/primary/_entry-content.scss */
+/* line 59, ../sass/site/primary/_entry-content.scss */
 .page-content table th,
 .entry-content table th,
 .entry-summary table th,
 .mceContentBody table th {
   background: #eeeeee;
 }
-/* line 50, ../sass/site/primary/_entry-content.scss */
+/* line 65, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable,
 .entry-content table.timetable,
 .entry-summary table.timetable,
@@ -625,7 +651,7 @@ a:hover, a:active {
   font-size: 0.875rem;
 }
 @media screen and (min-width: 601px) {
-  /* line 50, ../sass/site/primary/_entry-content.scss */
+  /* line 65, ../sass/site/primary/_entry-content.scss */
   .page-content table.timetable,
   .entry-content table.timetable,
   .entry-summary table.timetable,
@@ -634,7 +660,7 @@ a:hover, a:active {
     font-size: 0.75rem;
   }
 }
-/* line 57, ../sass/site/primary/_entry-content.scss */
+/* line 72, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable thead th,
 .entry-content table.timetable thead th,
 .entry-summary table.timetable thead th,
@@ -642,7 +668,7 @@ a:hover, a:active {
   background: #424346;
   color: white;
 }
-/* line 60, ../sass/site/primary/_entry-content.scss */
+/* line 75, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable thead th a,
 .entry-content table.timetable thead th a,
 .entry-summary table.timetable thead th a,
@@ -650,14 +676,14 @@ a:hover, a:active {
   color: #ff9c08;
   text-decoration: underline;
 }
-/* line 65, ../sass/site/primary/_entry-content.scss */
+/* line 80, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable .long-cell td,
 .entry-content table.timetable .long-cell td,
 .entry-summary table.timetable .long-cell td,
 .mceContentBody table.timetable .long-cell td {
   text-align: center;
 }
-/* line 68, ../sass/site/primary/_entry-content.scss */
+/* line 83, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable th > p,
 .page-content table.timetable td > p,
 .entry-content table.timetable th > p,
@@ -668,7 +694,7 @@ a:hover, a:active {
 .mceContentBody table.timetable td > p {
   margin-bottom: 0.5em;
 }
-/* line 71, ../sass/site/primary/_entry-content.scss */
+/* line 86, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable th > p::last-child,
 .page-content table.timetable td > p::last-child,
 .entry-content table.timetable th > p::last-child,
@@ -679,7 +705,7 @@ a:hover, a:active {
 .mceContentBody table.timetable td > p::last-child {
   margin-bottom: 0;
 }
-/* line 76, ../sass/site/primary/_entry-content.scss */
+/* line 91, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable .footable-row-detail-name,
 .entry-content table.timetable .footable-row-detail-name,
 .entry-summary table.timetable .footable-row-detail-name,
