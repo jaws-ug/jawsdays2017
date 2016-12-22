@@ -549,7 +549,7 @@ a:hover, a:active {
 }
 @media screen and (min-width: 601px) {
   .main-navigation ul ul a {
-    padding: 1em;
+    padding: 0.5em;
   }
 }
 .main-navigation ul li:hover > ul,
@@ -1106,7 +1106,7 @@ body.home .main-image {
   padding: 0.5em;
 }
 .jawsdays-contact-box a:hover, .jawsdays-contact-box a:focus, .jawsdays-contact-box a:active {
-  color: #ff9c08;
+  color: #ffffff;
   text-decoration: none;
   background-color: #ff9c08;
 }

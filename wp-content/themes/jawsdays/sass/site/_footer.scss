@@ -101,7 +101,7 @@
 		&:active {
 			color: $color__text-contact-button-hover;
 			text-decoration: none;
-			background-color: $color__text-contact-button-hover;
+			background-color: $color__background-contact-button-hover;
 		}
 		@include mqPC {
 			margin: 0 0 0 1em;
