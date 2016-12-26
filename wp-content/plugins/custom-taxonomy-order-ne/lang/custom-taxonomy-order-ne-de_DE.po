@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Taxonomy Order NE 2.5.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-28 16:25+0100\n"
+"PO-Revision-Date: 2015-02-28 16:33+0100\n"
+"Last-Translator: Patrick Skiebe <patrick@skie.be>\n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../customtaxorder.php:61
+msgid "Term Order"
+msgstr "Begriffs&shy;reihenfolge"
+
+#: ../customtaxorder.php:63 ../customtaxorder.php:186
+msgid "Order "
+msgstr "Reihenfolge "
+
+#: ../customtaxorder.php:112
+msgid "Cheatin&#8217; uh?"
+msgstr "Zugriff verweigert!"
+
+#: ../customtaxorder.php:128
+msgid ""
+"The ordering of categories and custom taxonomy terms through a simple drag-"
+"and-drop interface."
+msgstr ""
+"Die Sortierung von Kategorien und Begriffen eigener Taxonomien über eine "
+"einfache Drag and Drop Oberfläche."
+
+#: ../customtaxorder.php:130
+msgid "Go to the plugin's Homepage"
+msgstr "Die Homepage des Plugins besuchen"
+
+#: ../customtaxorder.php:137
+msgid "Taxonomies"
+msgstr "Taxonomien"
+
+#: ../customtaxorder.php:155
+msgid "Order by ID (default)."
+msgstr "Sortierung nach ID (Standard)."
+
+#: ../customtaxorder.php:156
+msgid "Custom Order as defined above."
+msgstr "Eigene Reihenfolge, wie oben festgelegt."
+
+#: ../customtaxorder.php:157
+msgid "Alphabetical Order."
+msgstr "Alphabetische Sortierung."
+
+#: ../customtaxorder.php:201
+msgid ""
+"Order the taxonomies by dragging and dropping them into the desired order."
+msgstr ""
+"Sortieren Sie die Taxonomien, indem Sie sie mittels Drag and Drop an die "
+"gewünschte Position ziehen."
+
+#: ../customtaxorder.php:211
+msgid "Return to Parent"
+msgstr "Zum Elternelement"
+
+#: ../customtaxorder.php:215
+msgid "Update Order"
+msgstr "Reihenfolge aktualisieren"
+
+#: ../customtaxorder.php:216
+msgid "Sort Alphabetical"
+msgstr "Alphabetisch sortieren"
+
+#: ../customtaxorder.php:225
+msgid "Sub-"
+msgstr "Unter-"
+
+#: ../customtaxorder.php:225
+msgid "Choose a term from the drop down to order its sub-terms."
+msgstr ""
+"Wählen Sie einen Begriff aus der Liste, um dessen Unterbegriffe zu sortieren."
+
+#: ../customtaxorder.php:230
+msgid "Order Sub-terms"
+msgstr "Unterbegriffe sortieren"
+
+#: ../customtaxorder.php:236
+msgid "No terms found"
+msgstr "Keine Begriffe gefunden"
+
+#: ../customtaxorder.php:243 ../customtaxorder.php:481
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: ../customtaxorder.php:246
+msgid "Auto-Sort Queries of this Taxonomy"
+msgstr "Abfragen dieser Taxonomie automatisch sortieren"
+
+#: ../customtaxorder.php:254
+msgid "Save Settings"
+msgstr "Einstellungen speichern"
+
+#: ../customtaxorder.php:348
+msgid "Order updated successfully."
+msgstr "Reihenfolge erfolgreich aktualisiert."
+
+#: ../customtaxorder.php:351
+msgid "An error occured, order has not been saved."
+msgstr "Ein Fehler ist aufgetreten, die Reihenfolge wurde nicht gespeichert."

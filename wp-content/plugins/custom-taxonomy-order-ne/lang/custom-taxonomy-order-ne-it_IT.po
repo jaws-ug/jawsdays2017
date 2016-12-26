@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Taxonomy Order NE -2.3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-06 14:49+0200\n"
+"PO-Revision-Date: 2014-01-03 11:16+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Matteo Boria <matteo@8-p.it>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: customtaxorder.php:61
+msgid "Term Order"
+msgstr "Ordina Categorie"
+
+#: customtaxorder.php:63 customtaxorder.php:176
+msgid "Order "
+msgstr "Ordina "
+
+#: customtaxorder.php:118
+msgid ""
+"The ordering of categories and custom taxonomy terms through a simple drag-"
+"and-drop interface."
+msgstr ""
+
+#: customtaxorder.php:120
+msgid "Go to the plugin's Homepage"
+msgstr ""
+
+#: customtaxorder.php:127
+msgid "Taxonomies"
+msgstr ""
+
+#: customtaxorder.php:145
+msgid "Order by ID (default)."
+msgstr ""
+
+#: customtaxorder.php:146
+msgid "Custom Order as defined above."
+msgstr ""
+
+#: customtaxorder.php:147
+msgid "Alphabetical Order."
+msgstr ""
+
+#: customtaxorder.php:191
+msgid ""
+"Order the taxonomies by dragging and dropping them into the desired order."
+msgstr ""
+"Ordina le tassonomie trascinandole (<em>drag&drop</em>) nell'ordine voluto"
+
+#: customtaxorder.php:201
+msgid "Return to Parent"
+msgstr "Torna al genitore "
+
+#: customtaxorder.php:205
+msgid "Update Order"
+msgstr "Aggiorna l'ordine"
+
+#: customtaxorder.php:206
+msgid "Sort Alphabetical"
+msgstr ""
+
+#: customtaxorder.php:215
+msgid "Sub-"
+msgstr "Sotto-"
+
+#: customtaxorder.php:215
+msgid "Choose a term from the drop down to order its sub-terms."
+msgstr "Seleziona un termine dalla tendina per ordinare i suoi sotto-termini."
+
+#: customtaxorder.php:220
+msgid "Order Sub-terms"
+msgstr "Ordina i Sotto-termini"
+
+#: customtaxorder.php:226
+msgid "No terms found"
+msgstr "Nessun termine trovato"
+
+#: customtaxorder.php:233 customtaxorder.php:465
+msgid "Settings"
+msgstr ""
+
+#: customtaxorder.php:236
+msgid "Auto-Sort Queries of this Taxonomy"
+msgstr ""
+
+#: customtaxorder.php:244
+msgid "Save Settings"
+msgstr "Salva i settaggi"
+
+#: customtaxorder.php:337
+msgid "Order updated successfully."
+msgstr "Ordinamento aggiornato correttamente"
+
+#: customtaxorder.php:339
+msgid "An error occured, order has not been saved."
+msgstr "Si è verificato un errore, ordine non salvato."
+
+#~ msgid "Order Categories"
+#~ msgstr "Ordina le Categorie"
+
+#~ msgid ""
+#~ "Check this box if you want to enable Automatic Sorting of all instances "
+#~ "from this taxonomy."
+#~ msgstr ""
+#~ "Spunta se vuoi attivare l'Ordinamento Automatico di tutte le voci in "
+#~ "questa tassonomia"
+
+#~ msgid "Auto-Sort Queries"
+#~ msgstr "Queries di auto-ordinamento"

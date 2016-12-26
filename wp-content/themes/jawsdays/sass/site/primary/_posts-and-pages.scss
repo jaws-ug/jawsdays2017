@@ -26,6 +26,17 @@
 	display: block;
 }
 
+.section-title {
+	margin-bottom: 10px;
+	text-align: center;
+	width: 100%;
+	@include font-size(24);
+	@include mqPC {
+		margin-bottom: 20px;
+		@include font-size(28);
+	}
+}
+
 .hentry {
 	margin-bottom: 20px;
 	padding: 20px;
@@ -33,6 +44,34 @@
 	border: 1px solid $color__border-hentry;
 	@include mqPC {
 		padding: 40px;
+	}
+	&.supporter-archive {
+		padding: 10px;
+	}
+}
+
+.supporter_type {
+	margin-bottom: 20px;
+	@include display-flex;
+	@include flex-wrap(wrap);
+	.supporter-archive {
+		width: 48%;
+		margin-right: 2%;
+		&:nth-of-type(2n) {
+			margin-right: 0;
+			margin-left: 2%;
+		}
+		@include mqPC {
+			width: 18%;
+			margin-right: 2%;
+			&:nth-of-type(2n) {
+				margin-right: 2%;
+				margin-left: 0;
+			}
+			&:nth-of-type(5n) {
+				margin-right: 0;
+			}
+		}
 	}
 }
 
@@ -44,10 +83,14 @@
 .post-thumbnail {
 	text-align: center;
 	margin-bottom: 15px;
+	.supporter-archive & {
+		margin-bottom: 5px;
+	}
 	a, span {
 		display: inline-block;
 		padding: 4px;
 		border: 1px solid $color__border-post-thumbnail;
+		background-color: white;
 		width: 158px;
 		height: 158px;
 		position: relative;
@@ -59,11 +102,23 @@
 			bottom: 0;
 			margin: auto;
 		}
+		.supporter-archive & {
+			width: 110px;
+			height: 110px;
+			@include mqPC {
+				width: 153px;
+				height: 153px;
+			}
+		}
 	}
 	@include mqPC {
 		float: left;
 		margin-right: 40px;
 		margin-bottom: 0;
+		.supporter-archive & {
+			float: none;
+			margin-right: 0;
+		}
 	}
 }
 .entry-header {
@@ -76,6 +131,10 @@
 	clear: none;
 	@include mqPC {
 		@include font-size(36);
+	}
+	.supporter-archive & {
+		text-align: center;
+		@include font-size(16);
 	}
 }
 .entry-meta {

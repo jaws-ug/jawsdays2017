@@ -117,6 +117,40 @@ public function custom_post_type_session() {
 
 // Register Custom Post Type
 public function custom_post_type_supporter() {
+
+	$tax_labels = array(
+		'name'                       => _x( 'Types', 'Taxonomy General Name', 'jawsdays' ),
+		'singular_name'              => _x( 'Type', 'Taxonomy Singular Name', 'jawsdays' ),
+		'menu_name'                  => __( 'Type', 'jawsdays' ),
+		'all_items'                  => __( 'All Types', 'jawsdays' ),
+		'parent_item'                => __( 'Parent Type', 'jawsdays' ),
+		'parent_item_colon'          => __( 'Parent Type:', 'jawsdays' ),
+		'new_item_name'              => __( 'New Type Name', 'jawsdays' ),
+		'add_new_item'               => __( 'Add New Type', 'jawsdays' ),
+		'edit_item'                  => __( 'Edit Type', 'jawsdays' ),
+		'update_item'                => __( 'Update Type', 'jawsdays' ),
+		'view_item'                  => __( 'View Type', 'jawsdays' ),
+		'separate_items_with_commas' => __( 'Separate types with commas', 'jawsdays' ),
+		'add_or_remove_items'        => __( 'Add or remove types', 'jawsdays' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'jawsdays' ),
+		'popular_items'              => __( 'Popular Types', 'jawsdays' ),
+		'search_items'               => __( 'Search Types', 'jawsdays' ),
+		'not_found'                  => __( 'Not Found', 'jawsdays' ),
+		'no_terms'                   => __( 'No yypes', 'jawsdays' ),
+		'items_list'                 => __( 'Types list', 'jawsdays' ),
+		'items_list_navigation'      => __( 'Types list navigation', 'jawsdays' ),
+	);
+	$tax_args = array(
+		'labels'                     => $tax_labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => false,
+		'show_tagcloud'              => false,
+	);
+	register_taxonomy( 'supporter_type', array( 'supporter' ), $tax_args );
+
 	$labels = array(
 		'name'                => _x( 'Supporters', 'Post Type General Name', 'jawsdays' ),
 		'singular_name'       => _x( 'Supporter', 'Post Type Singular Name', 'jawsdays' ),
