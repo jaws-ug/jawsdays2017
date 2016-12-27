@@ -21,8 +21,35 @@
 	<header class="entry-header">
 		<?php do_action( 'jawsdays_before_entry_header' ); ?>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php // 会場：時間 ?>
-		<p><?php the_field( 'track' ); ?>：<?php the_field( 'start_time' ); ?>〜<?php the_field( 'end_time' ); ?></p>
+		<?php
+			// 会場：時間
+			$track      = get_field( 'track' );
+			$start_time = get_field( 'start_time' );
+			$end_time   = get_field( 'end_time' );
+			if ( $track || $start_time || $end_time ) :
+		?>
+		<div class="session-meta"><?php
+			// 会場
+			if ( $track ) {
+				echo '<i class="fa fa-location-arrow" aria-hidden="true"></i> 会場：';
+				the_field( 'track' );
+				echo '　';
+			}
+			// 時間
+			if ( $start_time || $end_time) {
+				echo '<i class="fa fa-clock-o" aria-hidden="true"></i> ';
+			}
+			if ( $start_time ) {
+				the_field( 'start_time' );
+				echo '〜';
+			}
+			if ( $end_time ) {
+				the_field( 'end_time' );
+			}
+		?></div>
+		<?php endif; // 会場：時間 ?>
+		<?php // 難易度 ?>
+		<div class="session-meta"><i class="fa fa-star" aria-hidden="true"></i> <?php the_field( 'level' ); ?></div>
 		<?php
 			if ( function_exists( 'sharing_display' ) ) {
 				sharing_display( '', true );
