@@ -257,6 +257,13 @@
 		
 		render: function(){
 			
+			this.render_layout();
+			this.render_collapsed();
+			
+		},
+		
+		render_layout: function(){
+			
 			// vars
 			var layout = this.setting('layout input:checked').val();
 			
@@ -266,13 +273,7 @@
 			
 		},
 		
-		_change_layout: function( e ){
-			
-			this.render();
-			
-		},
-		
-		_focus_collapsed: function( e ){
+		render_collapsed: function(){
 			
 			// vars
 			var $select = this.setting('collapsed select');
@@ -307,6 +308,18 @@
 			
 			// render
 			acf.render_select( $select, choices );
+			
+		},
+		
+		_change_layout: function( e ){
+			
+			this.render_layout();
+			
+		},
+		
+		_focus_collapsed: function( e ){
+			
+			this.render_collapsed();
 			
 		}
 		

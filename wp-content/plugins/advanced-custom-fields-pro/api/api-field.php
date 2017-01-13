@@ -216,7 +216,7 @@ function acf_prepare_field( $field ) {
 	// filter to 3rd party customization
 	$field = apply_filters( "acf/prepare_field", $field );
 	$field = apply_filters( "acf/prepare_field/type={$field['type']}", $field );
-	$field = apply_filters( "acf/prepare_field/name={$field['name']}", $field );
+	$field = apply_filters( "acf/prepare_field/name={$field['_name']}", $field );
 	$field = apply_filters( "acf/prepare_field/key={$field['key']}", $field );
 	
 	

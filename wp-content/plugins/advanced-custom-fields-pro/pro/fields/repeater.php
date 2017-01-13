@@ -435,7 +435,6 @@ class acf_field_repeater extends acf_field {
 		// vars
 		$args = array(
 			'fields'	=> $field['sub_fields'],
-			'layout'	=> $field['layout'],
 			'parent'	=> $field['ID']
 		);
 		

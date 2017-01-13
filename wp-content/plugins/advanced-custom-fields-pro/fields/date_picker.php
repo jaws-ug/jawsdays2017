@@ -104,6 +104,10 @@ class acf_field_date_picker extends acf_field {
 	
 	function input_admin_enqueue_scripts() {
 		
+		// bail ealry if no enqueue
+	   	if( !acf_get_setting('enqueue_datepicker') ) return;
+	   	
+	   	
 		// script
 		wp_enqueue_script('jquery-ui-datepicker');
 		
@@ -128,6 +132,18 @@ class acf_field_date_picker extends acf_field {
 	
 	function render_field( $field ) {
 		
+		// format value
+		$hidden_value = '';
+		$display_value = '';
+		
+		if( $field['value'] ) {
+			
+			$hidden_value = acf_format_date( $field['value'], 'Ymd' );
+			$display_value = acf_format_date( $field['value'], $field['display_format'] );
+			
+		}
+		
+		
 		// vars
 		$e = '';
 		$div = array(
@@ -140,18 +156,26 @@ class acf_field_date_picker extends acf_field {
 			'class' 				=> 'input-alt',
 			'type'					=> 'hidden',
 			'name'					=> $field['name'],
-			'value'					=> $field['value'],
+			'value'					=> $hidden_value,
 		);
 		$input = array(
 			'class' 				=> 'input',
-			'type'					=> 'text'
+			'type'					=> 'text',
+			'value'					=> $display_value,
 		);
 		
 		
 		// save_format - compatibility with ACF < 5.0.0
 		if( !empty($field['save_format']) ) {
 			
+			// add custom JS save format
 			$div['data-save_format'] = $field['save_format'];
+			
+			// revert hidden input value to raw DB value
+			$hidden['value'] = $field['value'];
+			
+			// remove formatted value (will do this via JS)
+			$input['value'] = '';
 			
 		}
 		
@@ -211,7 +235,7 @@ class acf_field_date_picker extends acf_field {
 				'instructions'	=> __('The format used when saving a value','acf'),
 				'type'			=> 'text',
 				'name'			=> 'save_format',
-				'readonly'		=> 1
+				//'readonly'		=> 1 // this setting was not readonly in v4
 			));
 			
 		} else {

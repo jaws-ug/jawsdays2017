@@ -1040,13 +1040,14 @@ html[dir="rtl"] #acf-popup .title .acf-icon {
 }
 .acf-three-col > div {
   float: left;
-  margin: 0 0 10px 5%;
+  margin: 0 0 15px 5%;
   position: relative;
   width: 30%;
 }
 .acf-three-col > div:first-child,
 .acf-three-col > br + div {
   margin-left: 0;
+  clear: left;
 }
 .acf-three-col > br {
   display: none;

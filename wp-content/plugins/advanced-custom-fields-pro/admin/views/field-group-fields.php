@@ -2,9 +2,7 @@
 
 // vars
 $fields = false;
-$layout = false;
 $parent = 0;
-$clone = false;
 
 
 // use fields if passed in
@@ -20,7 +18,7 @@ extract( $args );
 		<li class="li-field-type"><?php _e('Type','acf'); ?></li>
 	</ul>
 	
-	<div class="acf-field-list<?php if( $layout ){ echo " layout-{$layout}"; } ?>">
+	<div class="acf-field-list">
 		
 		<div class="no-fields-message" <?php if( $fields ){ echo 'style="display:none;"'; } ?>>
 			<?php _e("No fields. Click the <strong>+ Add Field</strong> button to create your first field.",'acf'); ?>

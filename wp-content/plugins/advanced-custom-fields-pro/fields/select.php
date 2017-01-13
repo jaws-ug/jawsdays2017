@@ -253,7 +253,7 @@ class acf_field_select extends acf_field {
 	*/
 	
 	function render_field( $field ) {
-	
+		
 		// convert
 		$field['value'] = acf_get_array($field['value'], false);
 		$field['choices'] = acf_get_array($field['choices']);
@@ -263,6 +263,14 @@ class acf_field_select extends acf_field {
 		if( empty($field['placeholder']) ) {
 		
 			$field['placeholder'] = _x('Select', 'verb', 'acf');
+			
+		}
+		
+		
+		// add empty value (allows '' to be selected)
+		if( empty($field['value']) ) {
+			
+			$field['value'] = array('');
 			
 		}
 		
@@ -296,16 +304,6 @@ class acf_field_select extends acf_field {
 			$atts['multiple'] = 'multiple';
 			$atts['size'] = 5;
 			$atts['name'] .= '[]';
-		
-		// single
-		} else {
-			
-			// single select must always have a selection
-			if( !count($field['value']) ) {
-				
-				$field['value'][] = key($field['choices']);
-				
-			}
 			
 		}
 		

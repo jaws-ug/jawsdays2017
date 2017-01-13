@@ -2,7 +2,7 @@
 /*
 Plugin Name: WP Multibyte Patch
 Description: Multibyte functionality enhancement for the WordPress Japanese package.
-Version: 2.8
+Version: 2.8.1
 Plugin URI: http://eastcoder.com/code/wp-multibyte-patch/
 Author: Seisuke Kuraishi
 Author URI: http://tinybit.co.jp/
@@ -15,7 +15,7 @@ Domain Path: /languages
  * Multibyte functionality enhancement for the WordPress Japanese package.
  *
  * @package WP_Multibyte_Patch
- * @version 2.8
+ * @version 2.8.1
  * @author Seisuke Kuraishi <210pura@gmail.com>
  * @copyright Copyright (c) 2016 Seisuke Kuraishi, Tinybit Inc.
  * @license http://opensource.org/licenses/gpl-2.0.php GPLv2
@@ -49,6 +49,7 @@ class multibyte_patch {
 		'patch_force_twentyfourteen_google_fonts_off' => false,
 		'patch_force_twentyfifteen_google_fonts_off' => false,
 		'patch_force_twentysixteen_google_fonts_off' => false,
+		'patch_force_twentyseventeen_google_fonts_off' => false,
 		'patch_sanitize_file_name' => true,
 		'patch_sanitize_feed_xml_text' => false,
 		'patch_bp_create_excerpt' => false,
@@ -149,7 +150,7 @@ class multibyte_patch {
 		$remote_source = preg_replace( "/<\/*(h1|h2|h3|h4|h5|h6|p|th|td|li|dt|dd|pre|caption|input|textarea|button|body)[^>]*>/i", "\n\n", $remote_source );
 
 		preg_match( '|<title>([^<]*?)</title>|is', $remote_source, $matchtitle );
-		$title = $matchtitle[1];
+		$title = isset( $matchtitle[1] ) ? $matchtitle[1] : '';
 
 		preg_match( "/<meta[^<>]+charset=\"*([a-zA-Z0-9\-_]+)\"*[^<>]*>/i", $remote_source, $matches );
 		$charset = isset( $matches[1] ) ? $matches[1] : '';
@@ -314,6 +315,10 @@ class multibyte_patch {
 		wp_dequeue_style( 'twentysixteen-fonts' );
 	}
 
+	public function force_twentyseventeen_google_fonts_off() {
+		wp_dequeue_style( 'twentyseventeen-fonts' );
+	}
+
 	public function remove_editor_style( $file = '' ) {
 		global $editor_styles;
 
@@ -409,6 +414,13 @@ class multibyte_patch {
 
 			if ( function_exists( 'twentysixteen_fonts_url' ) )
 				$this->remove_editor_style( twentysixteen_fonts_url() );
+		}
+
+		if ( false !== $this->conf['patch_force_twentyseventeen_google_fonts_off'] && 'twentyseventeen' == get_template() ) {
+			add_action( 'wp_enqueue_scripts', array( $this, 'force_twentyseventeen_google_fonts_off' ), 99 );
+
+			if ( function_exists( 'twentyseventeen_fonts_url' ) )
+				$this->remove_editor_style( twentyseventeen_fonts_url() );
 		}
 	}
 

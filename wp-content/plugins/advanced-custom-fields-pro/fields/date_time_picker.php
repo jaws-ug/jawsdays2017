@@ -83,6 +83,10 @@ class acf_field_date_and_time_picker extends acf_field {
 	
 	function input_admin_enqueue_scripts() {
 		
+		// bail ealry if no enqueue
+	   	if( !acf_get_setting('enqueue_datetimepicker') ) return;
+	   	
+	   	
 		// vars
 		$version = '1.6.1';
 		
