@@ -71,6 +71,9 @@ public function plugins_loaded() {
 	add_filter( 'acf/settings/save_json', array( $this, 'jaws_acf_json_save_point' ) );
 	add_filter( 'acf/settings/load_json', array( $this, 'jaws_acf_json_load_point' ) );
 	add_action( 'admin_print_styles', array( $this, 'jaws_acf_css' ) );
+	// Yast SEO override
+	add_filter( 'wpseo_opengraph_image', array( $this, 'jaws_wpseo_opengraph_image' ) );
+	add_filter( 'wpseo_twitter_image', array( $this, 'jaws_wpseo_opengraph_image' ) );
 }
 
 // Register Custom Post Type
@@ -244,7 +247,7 @@ public function custom_post_type_supporter() {
 	$tax_args = array(
 		'labels'                     => $tax_labels,
 		'hierarchical'               => true,
-		'public'                     => true,
+		'public'                     => false,
 		'show_ui'                    => true,
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => false,
@@ -342,6 +345,16 @@ public function jaws_acf_css() {
 	}
 </style>
 <?php
+}
+
+// Yoast SEO
+public function jaws_wpseo_opengraph_image( $image ) {
+	if ( is_singular( 'session' ) || is_post_type_archive( 'session' ) ) {
+		$image = JAWSDAYS_URL . '/images/ogp-session-image.png';
+	} elseif ( is_post_type_archive( 'supporter' ) ) {
+		$image = JAWSDAYS_URL . '/images/ogp-supporter-image.png';
+	}
+	return $image;
 }
 
 } // end class JAWSDAYS__Setting
