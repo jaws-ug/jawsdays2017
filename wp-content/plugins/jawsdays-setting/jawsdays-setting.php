@@ -70,12 +70,113 @@ public function plugins_loaded() {
 	// ACF
 	add_filter( 'acf/settings/save_json', array( $this, 'jaws_acf_json_save_point' ) );
 	add_filter( 'acf/settings/load_json', array( $this, 'jaws_acf_json_load_point' ) );
-// 	add_action( 'init', array( $this, 'jaws_acf' ) );
-
+	add_action( 'admin_print_styles', array( $this, 'jaws_acf_css' ) );
 }
 
 // Register Custom Post Type
 public function custom_post_type_session() {
+	$tax_labels = array(
+		'name'                       => _x( 'Tracks', 'Taxonomy General Name', 'jawsdays' ),
+		'singular_name'              => _x( 'Track', 'Taxonomy Singular Name', 'jawsdays' ),
+		'menu_name'                  => __( 'Track', 'jawsdays' ),
+		'all_items'                  => __( 'All Tracks', 'jawsdays' ),
+		'parent_item'                => __( 'Parent Track', 'jawsdays' ),
+		'parent_item_colon'          => __( 'Parent Track:', 'jawsdays' ),
+		'new_item_name'              => __( 'New Track Name', 'jawsdays' ),
+		'add_new_item'               => __( 'Add New Track', 'jawsdays' ),
+		'edit_item'                  => __( 'Edit Track', 'jawsdays' ),
+		'update_item'                => __( 'Update Track', 'jawsdays' ),
+		'view_item'                  => __( 'View Track', 'jawsdays' ),
+		'separate_items_with_commas' => __( 'Separate tracks with commas', 'jawsdays' ),
+		'add_or_remove_items'        => __( 'Add or remove tracks', 'jawsdays' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'jawsdays' ),
+		'popular_items'              => __( 'Popular Tracks', 'jawsdays' ),
+		'search_items'               => __( 'Search Tracks', 'jawsdays' ),
+		'not_found'                  => __( 'Not Found', 'jawsdays' ),
+		'no_terms'                   => __( 'No tracks', 'jawsdays' ),
+		'items_list'                 => __( 'Tracks list', 'jawsdays' ),
+		'items_list_navigation'      => __( 'Tracks list navigation', 'jawsdays' ),
+	);
+	$tax_args = array(
+		'labels'                     => $tax_labels,
+		'hierarchical'               => true,
+		'public'                     => false,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => false,
+		'show_tagcloud'              => false,
+		'meta_box_cb'                => false,
+	);
+	register_taxonomy( 'session_track', array( 'session' ), $tax_args );
+
+	$tax_labels = array(
+		'name'                       => _x( 'Venues', 'Taxonomy General Name', 'jawsdays' ),
+		'singular_name'              => _x( 'Venue', 'Taxonomy Singular Name', 'jawsdays' ),
+		'menu_name'                  => __( 'Venue', 'jawsdays' ),
+		'all_items'                  => __( 'All Venues', 'jawsdays' ),
+		'parent_item'                => __( 'Parent Venue', 'jawsdays' ),
+		'parent_item_colon'          => __( 'Parent Venue:', 'jawsdays' ),
+		'new_item_name'              => __( 'New Venue Name', 'jawsdays' ),
+		'add_new_item'               => __( 'Add New Venue', 'jawsdays' ),
+		'edit_item'                  => __( 'Edit Venue', 'jawsdays' ),
+		'update_item'                => __( 'Update Venue', 'jawsdays' ),
+		'view_item'                  => __( 'View Venue', 'jawsdays' ),
+		'separate_items_with_commas' => __( 'Separate venues with commas', 'jawsdays' ),
+		'add_or_remove_items'        => __( 'Add or remove venues', 'jawsdays' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'jawsdays' ),
+		'popular_items'              => __( 'Popular Venues', 'jawsdays' ),
+		'search_items'               => __( 'Search Venues', 'jawsdays' ),
+		'not_found'                  => __( 'Not Found', 'jawsdays' ),
+		'no_terms'                   => __( 'No venues', 'jawsdays' ),
+		'items_list'                 => __( 'Venues list', 'jawsdays' ),
+		'items_list_navigation'      => __( 'Venues list navigation', 'jawsdays' ),
+	);
+	$tax_args = array(
+		'labels'                     => $tax_labels,
+		'hierarchical'               => true,
+		'public'                     => false,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => false,
+		'show_tagcloud'              => false,
+		'meta_box_cb'                => false,
+	);
+	register_taxonomy( 'session_venue', array( 'session' ), $tax_args );
+
+	$tax_labels = array(
+		'name'                       => _x( 'Levels', 'Taxonomy General Name', 'jawsdays' ),
+		'singular_name'              => _x( 'Level', 'Taxonomy Singular Name', 'jawsdays' ),
+		'menu_name'                  => __( 'Level', 'jawsdays' ),
+		'all_items'                  => __( 'All Levels', 'jawsdays' ),
+		'parent_item'                => __( 'Parent Level', 'jawsdays' ),
+		'parent_item_colon'          => __( 'Parent Level:', 'jawsdays' ),
+		'new_item_name'              => __( 'New Level Name', 'jawsdays' ),
+		'add_new_item'               => __( 'Add New Level', 'jawsdays' ),
+		'edit_item'                  => __( 'Edit Level', 'jawsdays' ),
+		'update_item'                => __( 'Update Level', 'jawsdays' ),
+		'view_item'                  => __( 'View Level', 'jawsdays' ),
+		'separate_items_with_commas' => __( 'Separate levels with commas', 'jawsdays' ),
+		'add_or_remove_items'        => __( 'Add or remove levels', 'jawsdays' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'jawsdays' ),
+		'popular_items'              => __( 'Popular Levels', 'jawsdays' ),
+		'search_items'               => __( 'Search Levels', 'jawsdays' ),
+		'not_found'                  => __( 'Not Found', 'jawsdays' ),
+		'no_terms'                   => __( 'No levels', 'jawsdays' ),
+		'items_list'                 => __( 'Levels list', 'jawsdays' ),
+		'items_list_navigation'      => __( 'Levels list navigation', 'jawsdays' ),
+	);
+	$tax_args = array(
+		'labels'                     => $tax_labels,
+		'hierarchical'               => true,
+		'public'                     => false,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => false,
+		'show_tagcloud'              => false,
+		'meta_box_cb'                => false,
+	);
+	register_taxonomy( 'session_level', array( 'session' ), $tax_args );
+
 	$labels = array(
 		'name'                => _x( 'Sessions', 'Post Type General Name', 'jawsdays' ),
 		'singular_name'       => _x( 'Session', 'Post Type Singular Name', 'jawsdays' ),
@@ -95,7 +196,7 @@ public function custom_post_type_session() {
 		'label'               => _x( 'Sessions', 'Post Type label', 'jawsdays' ),
 		'description'         => _x( 'Session', 'Post Type description', 'jawsdays' ),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'publicize', 'wpcom-markdown' ),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'revisions', 'publicize', 'wpcom-markdown' ),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,
@@ -136,7 +237,7 @@ public function custom_post_type_supporter() {
 		'popular_items'              => __( 'Popular Types', 'jawsdays' ),
 		'search_items'               => __( 'Search Types', 'jawsdays' ),
 		'not_found'                  => __( 'Not Found', 'jawsdays' ),
-		'no_terms'                   => __( 'No yypes', 'jawsdays' ),
+		'no_terms'                   => __( 'No types', 'jawsdays' ),
 		'items_list'                 => __( 'Types list', 'jawsdays' ),
 		'items_list_navigation'      => __( 'Types list navigation', 'jawsdays' ),
 	);
@@ -231,261 +332,16 @@ public function jaws_acf_json_load_point( $paths ) {
 	return $paths;
 
 }
-public function jaws_acf() {
-	if( function_exists( "register_field_group" ) ) {
-		// sub title
-		register_field_group(array (
-			'id' => 'acf_jaws_page_sub_title',
-			'title' => 'サブタイトル',
-			'fields' => array (
-				array (
-					'key' => 'field_549296c534538',
-					'label' => 'サブタイトル',
-					'name' => 'sub_title',
-					'type' => 'text',
-					'default_value' => '',
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-					'formatting' => 'html',
-					'maxlength' => '',
-				),
-			),
-			'location' => array (
-				array (
-					array (
-						'param' => 'post_type',
-						'operator' => '==',
-						'value' => 'page',
-						'order_no' => 0,
-						'group_no' => 0,
-					),
-				),
-			),
-			'options' => array (
-				'position' => 'acf_after_title',
-				'layout' => 'no_box',
-				'hide_on_screen' => array (
-				),
-			),
-			'menu_order' => 0,
-		));
-		
-		// supporter
-		register_field_group(array (
-			'id' => 'acf_jaws_supporter',
-			'title' => 'サポーター',
-			'fields' => array (
-				array (
-					'key' => 'field_54939e6d347ac',
-					'label' => 'URL',
-					'name' => '_supporter_url',
-					'type' => 'text',
-					'required' => 1,
-					'default_value' => '',
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-					'formatting' => 'none',
-					'maxlength' => '',
-				),
-			),
-			'location' => array (
-				array (
-					array (
-						'param' => 'post_type',
-						'operator' => '==',
-						'value' => 'supporter',
-						'order_no' => 0,
-						'group_no' => 0,
-					),
-				),
-			),
-			'options' => array (
-				'position' => 'acf_after_title',
-				'layout' => 'no_box',
-				'hide_on_screen' => array (
-				),
-			),
-			'menu_order' => 0,
-		));
-
-		// speaker
-		register_field_group(array (
-			'id' => 'acf_speaker1',
-			'title' => 'スピーカー1',
-			'fields' => array (
-				array (
-					'key' => 'field_5657d25d2d81a',
-					'label' => '所属',
-					'name' => 'group',
-					'type' => 'text',
-					'default_value' => '',
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-					'formatting' => 'html',
-					'maxlength' => '',
-				),
-				array (
-					'key' => 'field_5657d2772d81b',
-					'label' => '自己紹介+Web',
-					'name' => 'profile',
-					'type' => 'wysiwyg',
-					'instructions' => '',
-					'default_value' => '',
-					'toolbar' => 'full',
-					'media_upload' => 'yes',
-				),
-				array (
-					'key' => 'field_56544249c76c9',
-					'label' => 'Twitterユーザー名',
-					'name' => 'twitter',
-					'type' => 'text',
-					'default_value' => '',
-					'instructions' => '@以降のユーザー名',
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-					'formatting' => 'html',
-					'maxlength' => '',
-				),
-				array (
-					'key' => 'field_56544249c7610',
-					'label' => 'Facebookユーザー名',
-					'name' => 'facebook',
-					'type' => 'text',
-					'default_value' => '',
-					'instructions' => 'ユーザー名',
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-					'formatting' => 'html',
-					'maxlength' => '',
-				),
-				array (
-					'key' => 'field_56544249c7611',
-					'label' => 'GitHubユーザー名',
-					'name' => 'github',
-					'type' => 'text',
-					'default_value' => '',
-					'instructions' => 'ユーザー名',
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-					'formatting' => 'html',
-					'maxlength' => '',
-				),
-				array (
-					'key' => 'field_56544249c76c8',
-					'label' => 'セッションタイトル',
-					'name' => 'session_title',
-					'type' => 'text',
-					'required' => 1,
-					'default_value' => '',
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-					'formatting' => 'html',
-					'maxlength' => '',
-				),
-				array (
-					'key' => 'field_5654427ac76c9',
-					'label' => 'トラック',
-					'name' => 'track',
-					'type' => 'radio',
-					'required' => 1,
-					'choices' => array (
-						'センタートラック' => 'センタートラック',
-						'AWS Technical Deep Dive' => 'AWS Technical Deep Dive',
-						'ユーザートラック' => 'ユーザートラック',
-						'The Next Cloud' => 'The Next Cloud',
-						'Workshop' => 'Workshop',
-						'HackDay' => 'HackDay',
-						'JAWS-UG出張勉強会' => 'JAWS-UG出張勉強会',
-						'LT' => 'LT',
-					),
-					'other_choice' => 0,
-					'save_other_choice' => 0,
-					'default_value' => 'ビッグトラック',
-					'layout' => 'horizontal',
-				),
-			),
-			'location' => array (
-				array (
-					array (
-						'param' => 'post_type',
-						'operator' => '==',
-						'value' => 'speaker',
-						'order_no' => 0,
-						'group_no' => 0,
-					),
-				),
-			),
-			'options' => array (
-				'position' => 'acf_after_title',
-				'layout' => 'no_box',
-				'hide_on_screen' => array (
-				),
-			),
-			'menu_order' => 0,
-		));
-		register_field_group(array (
-			'id' => 'acf_speaker2',
-			'title' => 'スピーカー2',
-			'fields' => array (
-				array (
-					'key' => 'field_5657d21e2d819',
-					'label' => '主な聴講者',
-					'name' => 'target',
-					'type' => 'wysiwyg',
-					'default_value' => '',
-					'placeholder' => '',
-					'maxlength' => '',
-					'rows' => '',
-					'formatting' => 'br',
-				),
-				array (
-					'key' => 'field_5657d3352d81f',
-					'label' => 'スライド資料',
-					'name' => 'slide_url',
-					'type' => 'wysiwyg',
-					'instructions' => 'slideshare ならURLのみでスライドが展開されます',
-					'default_value' => '',
-					'toolbar' => 'full',
-					'media_upload' => 'yes',
-				),
-				array (
-					'key' => 'field_5657d3452d820',
-					'label' => 'その他',
-					'name' => 'other',
-					'type' => 'wysiwyg',
-					'default_value' => '',
-					'toolbar' => 'full',
-					'media_upload' => 'yes',
-				),
-			),
-			'location' => array (
-				array (
-					array (
-						'param' => 'post_type',
-						'operator' => '==',
-						'value' => 'speaker',
-						'order_no' => 0,
-						'group_no' => 0,
-					),
-				),
-			),
-			'options' => array (
-				'position' => 'normal',
-				'layout' => 'no_box',
-				'hide_on_screen' => array (
-				),
-			),
-			'menu_order' => 1,
-		));
-
+public function jaws_acf_css() {
+?>
+<style>
+	.acf-taxonomy-field ul.acf-radio-list li,
+	.acf-taxonomy-field ul.acf-checkbox-list li {
+		display: inline-block;
+		margin-right: 1em;
 	}
+</style>
+<?php
 }
 
 } // end class JAWSDAYS__Setting

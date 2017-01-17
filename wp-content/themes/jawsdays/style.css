@@ -1359,6 +1359,10 @@ p.copyright {
   margin-top: 0.5em;
 }
 
+.session-meta-parts {
+  margin-right: 1em;
+}
+
 .entry-content {
   clear: both;
   padding-top: 15px;

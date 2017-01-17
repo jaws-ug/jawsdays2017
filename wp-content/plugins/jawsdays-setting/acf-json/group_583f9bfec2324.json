@@ -3,25 +3,41 @@
     "title": "\u30bb\u30c3\u30b7\u30e7\u30f3\u4f1a\u5834\uff1a\u6642\u9593",
     "fields": [
         {
-            "layout": "horizontal",
-            "choices": {
-                "A": "A",
-                "B": "B",
-                "C": "C",
-                "D": "D",
-                "E": "E",
-                "F": "F"
-            },
-            "default_value": "",
-            "other_choice": 0,
-            "save_other_choice": 0,
+            "taxonomy": "session_track",
+            "field_type": "radio",
+            "multiple": 0,
+            "allow_null": 0,
+            "return_format": "id",
+            "add_term": 0,
+            "load_terms": 1,
+            "save_terms": 1,
+            "key": "field_587d882c52e92",
+            "label": "\u30bb\u30c3\u30b7\u30e7\u30f3\u30ab\u30c6\u30b4\u30ea\u30fc",
+            "name": "track",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "taxonomy": "session_venue",
+            "field_type": "radio",
+            "multiple": 0,
             "allow_null": 1,
-            "return_format": "label",
+            "return_format": "id",
+            "add_term": 0,
+            "load_terms": 1,
+            "save_terms": 1,
             "key": "field_583f9c0b3c6e5",
             "label": "\u4f1a\u5834",
             "name": "track",
-            "type": "radio",
-            "instructions": "\u672a\u5b9a\u306e\u5834\u5408\u306f\u30c1\u30a7\u30c3\u30af\u3092\u5916\u3057\u3066\u304f\u3060\u3055\u3044",
+            "type": "taxonomy",
+            "instructions": "\u672a\u5b9a\u306e\u5834\u5408\u306f\u300c\u7121\u300d\u3092\u9078\u629e\u3057\u3066\u304f\u3060\u3055\u3044",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -63,23 +79,20 @@
             }
         },
         {
-            "layout": "horizontal",
-            "choices": {
-                "\u521d\u5fc3\u8005\u5411\u3051": "\u521d\u5fc3\u8005\u5411\u3051",
-                "\u7d4c\u9a13\u8005\u5411\u3051": "\u7d4c\u9a13\u8005\u5411\u3051",
-                "\u8ab0\u3067\u3082OK": "\u8ab0\u3067\u3082OK"
-            },
-            "default_value": "",
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "allow_null": 0,
-            "return_format": "value",
+            "taxonomy": "session_level",
+            "field_type": "radio",
+            "multiple": 0,
+            "allow_null": 1,
+            "return_format": "id",
+            "add_term": 0,
+            "load_terms": 1,
+            "save_terms": 1,
             "key": "field_5861d3e6f34e6",
             "label": "\u96e3\u6613\u5ea6",
             "name": "level",
-            "type": "radio",
-            "instructions": "",
-            "required": 1,
+            "type": "taxonomy",
+            "instructions": "\u672a\u5b9a\u306e\u5834\u5408\u306f\u300c\u7121\u300d\u3092\u9078\u629e\u3057\u3066\u304f\u3060\u3055\u3044",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -105,5 +118,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1482806574
+    "modified": 1484623992
 }
