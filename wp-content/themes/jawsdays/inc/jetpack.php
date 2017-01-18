@@ -73,18 +73,29 @@ function jawsdays_wpas_default_suffix( $suffix ) {
 
 add_action( 'publicize_save_meta', 'jawsdays_publicize_save_meta', 10, 4);
 function jawsdays_publicize_save_meta( $submit_post, $post_id, $service_name, $connection ) {
+	$prefix = "";
+	if ( 'session' === get_post_type( $post_id ) ) {
+		$prefix = "[セッション情報更新] ";
+	} elseif ( 'supporter' === get_post_type( $post_id ) ) {
+		$prefix = "[サポーター情報更新] ";
+	}
 	$suffix = " #jawsdays #jawsug";
 	$title  = get_the_title( $post_id );
 	$link   = wp_get_shortlink( $post_id );
+
 	$publicize_custom_message = get_post_meta( $post_id, '_wpas_mess', true );
 	if ( empty( $publicize_custom_message ) ) {
 		$publicize_custom_message = sprintf(
-			"%s %s %s",
+			"%s%s %s %s",
+			$prefix,
 			$title,
 			$link,
 			$suffix
 		);
 	} else {
+		if ( strpos( $publicize_custom_message, $prefix ) === false ) {
+			$publicize_custom_message = $prefix . $publicize_custom_message;
+		}
 		if ( strpos( $publicize_custom_message, $title ) === false ) {
 			$publicize_custom_message = $publicize_custom_message . $title;
 		}
