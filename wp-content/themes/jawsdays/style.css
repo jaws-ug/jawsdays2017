@@ -1087,35 +1087,51 @@ body.home .main-image {
 }
 .jawsdays-contact-box p {
   margin: 0;
+}
+.jawsdays-contact-box .contact-text,
+.jawsdays-contact-box .contact-button {
+  margin: 10px 0;
   font-size: 20px;
   font-size: 1.25rem;
 }
 @media screen and (min-width: 601px) {
-  .jawsdays-contact-box p {
+  .jawsdays-contact-box .contact-text,
+  .jawsdays-contact-box .contact-button {
     font-size: 24px;
     font-size: 1.5rem;
     display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 1em;
   }
 }
-.jawsdays-contact-box a {
+.jawsdays-contact-box .contact-text a,
+.jawsdays-contact-box .contact-button a {
   display: block;
   background: #231f20;
   color: #ffffff;
-  margin: 10px 0;
   border-radius: 3px;
   padding: 0.5em;
 }
-.jawsdays-contact-box a:hover, .jawsdays-contact-box a:focus, .jawsdays-contact-box a:active {
+.jawsdays-contact-box .contact-text a:hover, .jawsdays-contact-box .contact-text a:focus, .jawsdays-contact-box .contact-text a:active,
+.jawsdays-contact-box .contact-button a:hover,
+.jawsdays-contact-box .contact-button a:focus,
+.jawsdays-contact-box .contact-button a:active {
   color: #ffffff;
   text-decoration: none;
   background-color: #ff9c08;
 }
 @media screen and (min-width: 601px) {
-  .jawsdays-contact-box a {
-    margin: 0 0 0 1em;
+  .jawsdays-contact-box .contact-text a,
+  .jawsdays-contact-box .contact-button a {
     display: inline-block;
     padding: 0.5em 5em;
   }
+}
+.jawsdays-contact-box .contact-other-text p {
+  margin-top: 1em;
+}
+.jawsdays-contact-box .contact-other-text a {
+  text-decoration: underline;
 }
 
 .site-footer {

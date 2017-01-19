@@ -80,13 +80,8 @@ function jawsdays_setup() {
 		'link',
 	) );
 
-	// Set up the WordPress core custom background feature.
-/*
-	add_theme_support( 'custom-background', apply_filters( 'jawsdays_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
-*/
+	// Add theme support for selective refresh for widgets.
+	add_theme_support( 'customize-selective-refresh-widgets' );
 }
 endif; // jawsdays_setup
 add_action( 'after_setup_theme', 'jawsdays_setup' );

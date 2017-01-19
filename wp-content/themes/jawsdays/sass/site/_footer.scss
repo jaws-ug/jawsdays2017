@@ -83,30 +83,42 @@
 	}
 	p {
 		margin: 0;
+	}
+	.contact-text,
+	.contact-button {
+		margin: 10px 0;
 		@include font-size(20);
 		@include mqPC {
 			@include font-size(24);
 			display: inline-block;
+			vertical-align: middle;
+			margin: 0 0 0 1em;
+		}
+		a {
+			display: block;
+			background: $color__background-contact-button;
+			color: $color__text-contact-button;
+			border-radius: 3px;
+			padding: 0.5em;
+			&:hover,
+			&:focus,
+			&:active {
+				color: $color__text-contact-button-hover;
+				text-decoration: none;
+				background-color: $color__background-contact-button-hover;
+			}
+			@include mqPC {
+				display: inline-block;
+				padding: 0.5em 5em;
+			}
 		}
 	}
-	a {
-		display: block;
-		background: $color__background-contact-button;
-		color: $color__text-contact-button;
-		margin: 10px 0;
-		border-radius: 3px;
-		padding: 0.5em;
-		&:hover,
-		&:focus,
-		&:active {
-			color: $color__text-contact-button-hover;
-			text-decoration: none;
-			background-color: $color__background-contact-button-hover;
+	.contact-other-text {
+		p {
+			margin-top: 1em;
 		}
-		@include mqPC {
-			margin: 0 0 0 1em;
-			display: inline-block;
-			padding: 0.5em 5em;
+		a {
+			text-decoration: underline;
 		}
 	}
 }

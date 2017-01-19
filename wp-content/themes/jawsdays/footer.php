@@ -25,16 +25,34 @@
 		<?php endif; ?>
 	<?php endif; ?>
 
+	<?php
+		$footer_section_link_page = get_theme_mod( 'footer_section_link' );
+		if ( ! empty( $footer_section_link_page ) ) : 
+	?>
 	<section id="jawsdays-contact-box" class="footer-section jawsdays-contact-box"><div class="inner">
-		<p class="contact-text"><?php
-			echo sprintf(
-				/* translators: %s: Name of current year */
+		<?php
+			$footer_section_title = get_theme_mod( 'footer_section_title', sprintf(
 				esc_html__( 'To participate in the JAWS DAYS %d', 'jawsdays' ),
 				2017
-			);
-		?></p>
-		<p class="contact-button"><a href="<?php echo home_url('/ticket'); ?>"><?php esc_html_e( 'Tickets', 'jawsdays' ); ?></a></p>
+			) );
+		?>
+		<p class="contact-text" id="jawsdays-contact-title"><?php echo esc_html( $footer_section_title ); ?></p>
+		<?php
+			$footer_section_btn_text  = get_theme_mod( 'footer_section_btn', __( 'Tickets', 'jawsdays' ) );
+		?>
+		<p class="contact-button"><a href="<?php echo get_permalink( $footer_section_link_page ); ?>" id="jawsdays-contact-btn-text"><?php echo esc_html( $footer_section_btn_text ); ?></a></p>
+		<div class="contact-other-text" id="jawsdays-contact-other-text">
+		<?php
+			$footer_section_other = get_theme_mod( 'footer_section_other' );
+			if ( ! empty( $footer_section_other ) ) {
+				echo '<p>' . "\n";
+				echo nl2br( $footer_section_other );
+				echo '</p>' . "\n";
+			}
+		?>
+		</div>
 	</div></section>
+	<?php endif; ?>
 
 	<footer id="colophon" class="site-footer" role="contentinfo"><div class="inner">
 		<?php do_action( 'jawsdays_before_footer' ); ?>

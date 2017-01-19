@@ -1256,103 +1256,122 @@ body.home .main-image {
 /* line 84, ../sass/site/_footer.scss */
 .jawsdays-contact-box p {
   margin: 0;
+}
+/* line 87, ../sass/site/_footer.scss */
+.jawsdays-contact-box .contact-text,
+.jawsdays-contact-box .contact-button {
+  margin: 10px 0;
   font-size: 20px;
   font-size: 1.25rem;
 }
 @media screen and (min-width: 601px) {
-  /* line 84, ../sass/site/_footer.scss */
-  .jawsdays-contact-box p {
+  /* line 87, ../sass/site/_footer.scss */
+  .jawsdays-contact-box .contact-text,
+  .jawsdays-contact-box .contact-button {
     font-size: 24px;
     font-size: 1.5rem;
     display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 1em;
   }
 }
-/* line 92, ../sass/site/_footer.scss */
-.jawsdays-contact-box a {
+/* line 97, ../sass/site/_footer.scss */
+.jawsdays-contact-box .contact-text a,
+.jawsdays-contact-box .contact-button a {
   display: block;
   background: #231f20;
   color: #ffffff;
-  margin: 10px 0;
   border-radius: 3px;
   padding: 0.5em;
 }
-/* line 99, ../sass/site/_footer.scss */
-.jawsdays-contact-box a:hover, .jawsdays-contact-box a:focus, .jawsdays-contact-box a:active {
+/* line 103, ../sass/site/_footer.scss */
+.jawsdays-contact-box .contact-text a:hover, .jawsdays-contact-box .contact-text a:focus, .jawsdays-contact-box .contact-text a:active,
+.jawsdays-contact-box .contact-button a:hover,
+.jawsdays-contact-box .contact-button a:focus,
+.jawsdays-contact-box .contact-button a:active {
   color: #ffffff;
   text-decoration: none;
   background-color: #ff9c08;
 }
 @media screen and (min-width: 601px) {
-  /* line 92, ../sass/site/_footer.scss */
-  .jawsdays-contact-box a {
-    margin: 0 0 0 1em;
+  /* line 97, ../sass/site/_footer.scss */
+  .jawsdays-contact-box .contact-text a,
+  .jawsdays-contact-box .contact-button a {
     display: inline-block;
     padding: 0.5em 5em;
   }
 }
+/* line 117, ../sass/site/_footer.scss */
+.jawsdays-contact-box .contact-other-text p {
+  margin-top: 1em;
+}
+/* line 120, ../sass/site/_footer.scss */
+.jawsdays-contact-box .contact-other-text a {
+  text-decoration: underline;
+}
 
-/* line 114, ../sass/site/_footer.scss */
+/* line 126, ../sass/site/_footer.scss */
 .site-footer {
   background: #161616;
   color: #e6e6e6;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-/* line 117, ../sass/site/_footer.scss */
+/* line 129, ../sass/site/_footer.scss */
 .site-footer a {
   color: #e6e6e6;
 }
-/* line 119, ../sass/site/_footer.scss */
+/* line 131, ../sass/site/_footer.scss */
 .site-footer a:hover, .site-footer a:focus, .site-footer a:active {
   color: #ff9c08;
   text-decoration: underline;
 }
 @media screen and (min-width: 601px) {
-  /* line 114, ../sass/site/_footer.scss */
+  /* line 126, ../sass/site/_footer.scss */
   .site-footer {
     padding-top: 40px;
     padding-bottom: 40px;
   }
 }
 
-/* line 135, ../sass/site/_footer.scss */
+/* line 147, ../sass/site/_footer.scss */
 .site-info {
   text-align: center;
   margin-top: 20px;
 }
 @media screen and (min-width: 601px) {
-  /* line 135, ../sass/site/_footer.scss */
+  /* line 147, ../sass/site/_footer.scss */
   .site-info {
     margin-top: 40px;
   }
 }
 
-/* line 142, ../sass/site/_footer.scss */
+/* line 154, ../sass/site/_footer.scss */
 .social-button {
   font-size: 36px;
   font-size: 2.25rem;
   margin-bottom: 10px;
 }
-/* line 145, ../sass/site/_footer.scss */
+/* line 157, ../sass/site/_footer.scss */
 .social-button ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 150, ../sass/site/_footer.scss */
+/* line 162, ../sass/site/_footer.scss */
 .social-button li {
   display: inline-block;
   margin: 0 5px;
 }
 
-/* line 155, ../sass/site/_footer.scss */
+/* line 167, ../sass/site/_footer.scss */
 p.copyright {
   font-size: 11px;
   font-size: 0.6875rem;
   margin: 0;
 }
 @media screen and (min-width: 601px) {
-  /* line 155, ../sass/site/_footer.scss */
+  /* line 167, ../sass/site/_footer.scss */
   p.copyright {
     font-size: 14px;
     font-size: 0.875rem;
