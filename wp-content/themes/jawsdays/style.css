@@ -1178,6 +1178,10 @@ p.copyright {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.site-content {
+  word-break: break-all;
+}
+
 .page-header {
   text-align: center;
   margin-bottom: 20px;
@@ -1355,6 +1359,7 @@ p.copyright {
   text-align: right;
 }
 
+.supporter-meta,
 .session-meta {
   margin-top: 0.5em;
 }

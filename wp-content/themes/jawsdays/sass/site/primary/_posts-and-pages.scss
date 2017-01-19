@@ -1,3 +1,6 @@
+.site-content {
+	word-break: break-all;
+}
 .page-header {
 	text-align: center;
 	margin-bottom: 20px;
@@ -142,6 +145,7 @@
 	margin-top: 10px;
 	text-align: right;
 }
+.supporter-meta,
 .session-meta {
 	margin-top: 0.5em;
 }

@@ -21,7 +21,9 @@
 	<header class="entry-header">
 		<?php do_action( 'jawsdays_before_entry_header' ); ?>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
+		<div class="supporter-meta">
+			<a href="<?php the_field( '_supporter_url' ); ?>" target="_blank"><?php the_field( '_supporter_url' ); ?></a>
+		</div>
 		<?php
 			if ( function_exists( 'sharing_display' ) ) {
 				sharing_display( '', true );
