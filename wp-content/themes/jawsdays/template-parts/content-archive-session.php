@@ -49,32 +49,22 @@
 			}
 		?></div>
 		<?php endif; // 会場：時間 ?>
-		<?php // カテゴリー・難易度 ?>
+		<?php // 難易度 ?>
+		<?php
+			$levels = get_the_terms( $post->ID, 'session_level' );
+			if ( $levels && ! is_wp_error( $levels ) ) : 
+		?>
 		<div class="session-meta">
-			<?php // カテゴリー
-				$tracks = get_the_terms( $post->ID, 'session_track' );
-				if ( $tracks && ! is_wp_error( $tracks ) ) : 
-					$tracks_array = array();
-					foreach ( $tracks as $term ) {
-					$tracks_array[] = esc_html( $term->name );
-					}
-					$trackstext = join( " / ", $tracks_array );
-					?>
-			<span class="session-meta-parts"><i class="fa fa-file" aria-hidden="true"></i> <?php echo $trackstext; ?></span>
-			<?php endif; ?>
-
-			<?php // 難易度
-				$levels = get_the_terms( $post->ID, 'session_level' );
-				if ( $levels && ! is_wp_error( $levels ) ) : 
-					$levels_array = array();
-					foreach ( $levels as $term ) {
-					$levels_array[] = esc_html( $term->name );
-					}
-					$levelstext = join( " / ", $levels_array );
-					?>
+			<?php
+				$levels_array = array();
+				foreach ( $levels as $term ) {
+				$levels_array[] = esc_html( $term->name );
+				}
+				$levelstext = join( " / ", $levels_array );
+			?>
 			<span class="session-meta-parts"><i class="fa fa-star" aria-hidden="true"></i> <?php echo $levelstext; ?></span>
-			<?php endif; ?>
 		</div>
+		<?php endif; ?>
 		<?php do_action( 'jawsdays_after_entry_header' ); ?>
 	</header><!-- .entry-header -->
 

@@ -78,7 +78,7 @@
 	}
 }
 .session_type {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	.section-description {
 		margin-bottom: 10px;
 		text-align: center;
@@ -168,6 +168,12 @@
 	.supporter-archive & {
 		text-align: center;
 		@include font-size(16);
+	}
+	.session-archive & {
+		@include font-size(18);
+		@include mqPC {
+			@include font-size(24);
+		}
 	}
 }
 .entry-meta {

@@ -1296,7 +1296,7 @@ p.copyright {
 }
 
 .session_type {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .session_type .section-description {
   margin-bottom: 10px;
@@ -1399,6 +1399,16 @@ p.copyright {
   text-align: center;
   font-size: 16px;
   font-size: 1rem;
+}
+.session-archive .entry-title {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+@media screen and (min-width: 601px) {
+  .session-archive .entry-title {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
 }
 
 .entry-meta {

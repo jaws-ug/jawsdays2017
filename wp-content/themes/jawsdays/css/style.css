@@ -1504,7 +1504,7 @@ p.copyright {
 
 /* line 80, ../sass/site/primary/_posts-and-pages.scss */
 .session_type {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 /* line 82, ../sass/site/primary/_posts-and-pages.scss */
 .session_type .section-description {
@@ -1626,8 +1626,20 @@ p.copyright {
   font-size: 16px;
   font-size: 1rem;
 }
+/* line 172, ../sass/site/primary/_posts-and-pages.scss */
+.session-archive .entry-title {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+@media screen and (min-width: 601px) {
+  /* line 172, ../sass/site/primary/_posts-and-pages.scss */
+  .session-archive .entry-title {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+}
 
-/* line 173, ../sass/site/primary/_posts-and-pages.scss */
+/* line 179, ../sass/site/primary/_posts-and-pages.scss */
 .entry-meta {
   font-size: 12px;
   font-size: 0.75rem;
@@ -1635,40 +1647,40 @@ p.copyright {
   text-align: right;
 }
 
-/* line 178, ../sass/site/primary/_posts-and-pages.scss */
+/* line 184, ../sass/site/primary/_posts-and-pages.scss */
 .supporter-meta,
 .session-meta {
   margin-top: 0.5em;
 }
 
-/* line 182, ../sass/site/primary/_posts-and-pages.scss */
+/* line 188, ../sass/site/primary/_posts-and-pages.scss */
 .session-meta-parts {
   margin-right: 1em;
 }
 
-/* line 190, ../sass/site/primary/_posts-and-pages.scss */
+/* line 196, ../sass/site/primary/_posts-and-pages.scss */
 .entry-content {
   clear: both;
   padding-top: 15px;
 }
 
-/* line 195, ../sass/site/primary/_posts-and-pages.scss */
+/* line 201, ../sass/site/primary/_posts-and-pages.scss */
 .entry-summary {
   overflow: hidden;
   margin-top: 15px;
 }
-/* line 198, ../sass/site/primary/_posts-and-pages.scss */
+/* line 204, ../sass/site/primary/_posts-and-pages.scss */
 .entry-summary p {
   margin: 0;
 }
-/* line 202, ../sass/site/primary/_posts-and-pages.scss */
+/* line 208, ../sass/site/primary/_posts-and-pages.scss */
 .entry-summary .entry-more {
   margin-top: 1em;
   font-size: 14px;
   font-size: 0.875rem;
   text-align: right;
 }
-/* line 206, ../sass/site/primary/_posts-and-pages.scss */
+/* line 212, ../sass/site/primary/_posts-and-pages.scss */
 .entry-summary .entry-more a {
   display: inline-block;
   border-radius: 3px;
@@ -1676,30 +1688,30 @@ p.copyright {
   color: #ffffff;
   padding: 0.25em 2em;
 }
-/* line 213, ../sass/site/primary/_posts-and-pages.scss */
+/* line 219, ../sass/site/primary/_posts-and-pages.scss */
 .entry-summary .entry-more a:hover, .entry-summary .entry-more a:active, .entry-summary .entry-more a:focus {
   color: #ffffff;
   background: #ff9c08;
   text-decoration: none;
 }
 
-/* line 222, ../sass/site/primary/_posts-and-pages.scss */
+/* line 228, ../sass/site/primary/_posts-and-pages.scss */
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
 }
 
-/* line 228, ../sass/site/primary/_posts-and-pages.scss */
+/* line 234, ../sass/site/primary/_posts-and-pages.scss */
 .speaker {
   clear: both;
   overflow: hidden;
   margin-bottom: 15px;
 }
-/* line 232, ../sass/site/primary/_posts-and-pages.scss */
+/* line 238, ../sass/site/primary/_posts-and-pages.scss */
 .speaker .post-thumbnail {
   margin-bottom: 5px;
 }
-/* line 235, ../sass/site/primary/_posts-and-pages.scss */
+/* line 241, ../sass/site/primary/_posts-and-pages.scss */
 .speaker .speaker-name {
   font-weight: bold;
   margin-bottom: 0;
@@ -1707,46 +1719,46 @@ p.copyright {
   margin-right: 10px;
 }
 @media screen and (min-width: 601px) {
-  /* line 235, ../sass/site/primary/_posts-and-pages.scss */
+  /* line 241, ../sass/site/primary/_posts-and-pages.scss */
   .speaker .speaker-name {
     font-size: 24px;
     font-size: 1.5rem;
   }
 }
-/* line 244, ../sass/site/primary/_posts-and-pages.scss */
+/* line 250, ../sass/site/primary/_posts-and-pages.scss */
 .speaker .speaker-sns {
   display: inline-block;
   font-size: 24px;
   font-size: 1.5rem;
 }
-/* line 247, ../sass/site/primary/_posts-and-pages.scss */
+/* line 253, ../sass/site/primary/_posts-and-pages.scss */
 .speaker .speaker-sns a {
   display: inline-block;
   color: #666666;
   margin-right: 10px;
 }
-/* line 253, ../sass/site/primary/_posts-and-pages.scss */
+/* line 259, ../sass/site/primary/_posts-and-pages.scss */
 .speaker .speaker-profile {
   margin-top: 10px;
   font-size: 14px;
   font-size: 0.875rem;
 }
-/* line 256, ../sass/site/primary/_posts-and-pages.scss */
+/* line 262, ../sass/site/primary/_posts-and-pages.scss */
 .speaker .speaker-profile p {
   margin-top: 0;
   margin-bottom: 0.5em;
 }
-/* line 260, ../sass/site/primary/_posts-and-pages.scss */
+/* line 266, ../sass/site/primary/_posts-and-pages.scss */
 .speaker .speaker-profile ul, .speaker .speaker-profile ol {
   margin-top: 0;
   margin-bottom: 0.5em;
 }
-/* line 265, ../sass/site/primary/_posts-and-pages.scss */
+/* line 271, ../sass/site/primary/_posts-and-pages.scss */
 .speaker .speaker-group {
   font-weight: bold;
 }
 
-/* line 272, ../sass/site/primary/_posts-and-pages.scss */
+/* line 278, ../sass/site/primary/_posts-and-pages.scss */
 .entry-header .sharedaddy {
   margin-top: 15px;
   *zoom: 1;
@@ -1757,16 +1769,16 @@ p.copyright {
   display: table;
   clear: both;
 }
-/* line 276, ../sass/site/primary/_posts-and-pages.scss */
+/* line 282, ../sass/site/primary/_posts-and-pages.scss */
 .entry-header div.sharedaddy h3.sd-title {
   display: none;
 }
-/* line 279, ../sass/site/primary/_posts-and-pages.scss */
+/* line 285, ../sass/site/primary/_posts-and-pages.scss */
 .entry-header .sd-content {
   float: right;
 }
 
-/* line 286, ../sass/site/primary/_posts-and-pages.scss */
+/* line 292, ../sass/site/primary/_posts-and-pages.scss */
 .wpcf7 input[type="text"],
 .wpcf7 input[type="email"],
 .wpcf7 input[type="url"],
@@ -1777,11 +1789,11 @@ p.copyright {
   width: 100%;
   margin-top: 0.25em;
 }
-/* line 297, ../sass/site/primary/_posts-and-pages.scss */
+/* line 303, ../sass/site/primary/_posts-and-pages.scss */
 .wpcf7 .wpcf7-list-item label {
   display: inline-block;
 }
-/* line 301, ../sass/site/primary/_posts-and-pages.scss */
+/* line 307, ../sass/site/primary/_posts-and-pages.scss */
 .wpcf7 .wpcf7-submit {
   display: block;
   margin: 0 auto;
