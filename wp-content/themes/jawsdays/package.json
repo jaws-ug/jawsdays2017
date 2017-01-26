@@ -9,15 +9,15 @@
     "url": "https://www.digitalcube.jp/"
   },
   "devDependencies": {
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-compass": "^2.1.0",
-    "gulp-jshint": "^2.0.0",
+    "gulp-jshint": "^2.0.4",
     "gulp-load-plugins": "^1.4.0",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.1.0",
-    "gulp-replace": "^0.5.0",
-    "jshint": "^2.9.0",
-    "run-sequence": "^1.2.0"
+    "gulp-replace": "^0.5.4",
+    "jshint": "^2.9.4",
+    "run-sequence": "^1.2.2"
   },
   "keywords": []
 }

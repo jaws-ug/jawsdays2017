@@ -76,7 +76,7 @@ public function plugins_loaded() {
 	add_filter( 'wpseo_twitter_image', array( $this, 'jaws_wpseo_opengraph_image' ) );
 }
 
-// Register Custom Post Type
+// Register Custom Post Type - Session
 public function custom_post_type_session() {
 	$tax_labels = array(
 		'name'                       => _x( 'Tracks', 'Taxonomy General Name', 'jawsdays' ),
@@ -219,7 +219,7 @@ public function custom_post_type_session() {
 	register_post_type( 'session', $args );
 }
 
-// Register Custom Post Type
+// Register Custom Post Type - Supporter
 public function custom_post_type_supporter() {
 
 	$tax_labels = array(
@@ -304,7 +304,7 @@ public function jaws_modify_main_query( $query ) {
 		return;
 	}
 
-	if ( $query->is_post_type_archive( 'supporter' ) ) {
+	if ( $query->is_post_type_archive( array( 'supporter', 'session' ) ) ) {
 		$query->set( 'posts_per_archive_page', -1 );
 		$query->set( 'orderby', 'date' );
 		$query->set( 'order', 'ASC' );

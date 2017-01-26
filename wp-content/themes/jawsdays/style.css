@@ -903,7 +903,7 @@ a:hover, a:active {
 
 body.home .site-content {
   padding: 0;
-  background: #020610 url('images/background.png?1480305697') repeat-x center bottom;
+  background: #020610 url('images/background.png?1485400016') repeat-x center bottom;
 }
 body.home .main-image {
   text-align: center;
@@ -959,7 +959,7 @@ body.home .main-image {
   display: block;
   width: 187px;
   padding-top: 49px;
-  background: transparent url('images/site-logo@2x.png?1480305697') no-repeat center top;
+  background: transparent url('images/site-logo@2x.png?1485400016') no-repeat center top;
   background-size: 187px 49px;
 }
 
@@ -1295,6 +1295,39 @@ p.copyright {
   }
 }
 
+.session_type {
+  margin-bottom: 20px;
+}
+.session_type .section-description {
+  margin-bottom: 10px;
+  text-align: center;
+}
+@media screen and (min-width: 601px) {
+  .session_type .section-posts {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 601px) {
+  .session_type .section-posts .session-archive {
+    width: 48%;
+    margin-right: 2%;
+  }
+  .session_type .section-posts .session-archive:nth-of-type(2n) {
+    margin-right: 2%;
+    margin-left: 0;
+  }
+}
+.session_type .no-session {
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #dedede;
+  text-align: center;
+  font-weight: bold;
+}
+
 .byline,
 .updated:not(.published) {
   display: none;
@@ -1587,7 +1620,7 @@ p.copyright {
 .entry-content h2,
 .entry-summary h2,
 .mceContentBody h2 {
-  background-image: url('images/title-back.gif?1480305697');
+  background-image: url('images/title-back.gif?1485400016');
   padding: 5px;
 }
 .page-content h3,

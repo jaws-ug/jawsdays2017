@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('supporter-archive'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'supporter-archive' ); ?>>
 
 	<div class="post-thumbnail"><a href="<?php the_permalink(); ?>" rel="bookmark">
 	<?php if ( has_post_thumbnail() ) : ?>

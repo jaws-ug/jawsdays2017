@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'session-archive' ); ?>>
 
 	<header class="entry-header">
 		<?php do_action( 'jawsdays_before_entry_header' ); ?>

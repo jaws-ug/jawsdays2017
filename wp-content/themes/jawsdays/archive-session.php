@@ -21,19 +21,47 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'template-parts/content', 'archive-session' ); ?>
-
-			<?php endwhile; ?>
-
 			<?php
-				the_posts_pagination( array(
-					'end_size'  => false,
-					'prev_text' => __( '&lt;', 'jawsdays' ),
-					'next_text' => __( '&gt;', 'jawsdays' ),
+				$terms = get_terms( 'session_track', array(
+					'orderby' => 'term_order',
+					'order'   => 'ASC',
+					'hide_empty' => false,
 				) );
+				if ( ! empty( $terms ) && !is_wp_error( $terms ) ) {
+					foreach ( $terms as $term ) {
+
+						echo '<section class="session_type">' . "\n";
+						echo '<h2 class="section-title">' . esc_html( $term->name ) . '</h2>' . "\n";
+						echo '<div class="section-description">' . term_description( $term->term_id, 'session_track' ) . '</div>' . "\n";
+
+						$args = array(
+							'posts_per_page' => -1,
+							'post_type'      => 'session',
+							'orderby'        => 'date',
+							'order'          => 'ASC',
+							'tax_query' => array(
+								array(
+									'taxonomy' => 'session_track',
+									'terms'    => $term->term_id,
+								),
+							),
+							
+						);
+						$the_query = new WP_Query( $args );
+						if ( $the_query->have_posts() ) {
+							echo '<div class="section-posts">';
+							while ( $the_query->have_posts() ) {
+								$the_query->the_post();
+								get_template_part( 'template-parts/content', 'archive-session' );
+							}
+							echo '</div>' . "\n";
+						} else {
+							echo '<p class="no-session">Comming soon...</p>' . "\n";;
+						}
+						wp_reset_postdata();
+						echo '</section>' . "\n";
+					}
+				}
 			?>
 
 		<?php else : ?>

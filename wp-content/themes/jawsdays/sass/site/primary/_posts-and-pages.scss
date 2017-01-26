@@ -77,6 +77,36 @@
 		}
 	}
 }
+.session_type {
+	margin-bottom: 20px;
+	.section-description {
+		margin-bottom: 10px;
+		text-align: center;
+	}
+	.section-posts {
+		@include mqPC {
+			@include display-flex;
+			@include flex-wrap(wrap);
+		}
+		.session-archive {
+			@include mqPC {
+				width: 48%;
+				margin-right: 2%;
+				&:nth-of-type(2n) {
+					margin-right: 2%;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+	.no-session {
+		padding: 20px;
+		background: $color__background-hentry;
+		border: 1px solid $color__border-hentry;
+		text-align: center;
+		font-weight: bold;
+	}
+}
 
 .byline,
 .updated:not(.published){
