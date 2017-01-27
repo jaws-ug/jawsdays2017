@@ -37,7 +37,7 @@ get_header(); ?>
 						$args = array(
 							'posts_per_page' => -1,
 							'post_type'      => 'session',
-							'orderby'        => 'date',
+							'orderby'        => 'menu_order date',
 							'order'          => 'ASC',
 							'tax_query' => array(
 								array(
