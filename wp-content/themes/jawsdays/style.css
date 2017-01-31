@@ -1464,6 +1464,38 @@ p.copyright {
   margin: 0 0 1.5em;
 }
 
+.other-page-link {
+  text-align: center;
+  margin-top: 40px;
+}
+@media screen and (min-width: 601px) {
+  .other-page-link {
+    margin-top: 60px;
+  }
+}
+.other-page-link a {
+  display: block;
+  background: #231f20;
+  color: #ffffff;
+  font-size: 20px;
+  font-size: 1.25rem;
+  border-radius: 3px;
+  padding: 0.5em;
+}
+.other-page-link a:hover, .other-page-link a:focus, .other-page-link a:active {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #ff9c08;
+}
+@media screen and (min-width: 601px) {
+  .other-page-link a {
+    display: inline-block;
+    font-size: 24px;
+    font-size: 1.5rem;
+    padding: 0.5em 5em;
+  }
+}
+
 .speaker {
   clear: both;
   overflow: hidden;

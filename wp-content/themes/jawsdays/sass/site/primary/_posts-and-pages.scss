@@ -231,6 +231,36 @@
 	margin: 0 0 1.5em;
 }
 
+// session
+.other-page-link {
+	text-align: center;
+	margin-top: 40px;
+	@include mqPC {
+		margin-top: 60px;
+	}
+	
+	a {
+		display: block;
+		background: $color__background-contact-button;
+		color: $color__text-contact-button;
+		@include font-size(20);
+		border-radius: 3px;
+		padding: 0.5em;
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color__text-contact-button-hover;
+			text-decoration: none;
+			background-color: $color__background-contact-button-hover;
+		}
+		@include mqPC {
+			display: inline-block;
+			@include font-size(24);
+			padding: 0.5em 5em;
+		}
+	}
+}
+
 // spearker
 .speaker {
 	clear: both;

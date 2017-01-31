@@ -70,6 +70,13 @@ get_header(); ?>
 
 		<?php endif; ?>
 
+		<?php
+			$page_obj = get_page_by_path( 'timetable' );
+			if ( ! empty( $page_obj ) ) {
+				echo '<div class="other-page-link"><a class="btn" href="' . get_the_permalink( $page_obj ) . '">' . get_the_title( $page_obj ). 'はこちら！</a></div>';
+			}
+
+		?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

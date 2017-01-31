@@ -1703,16 +1703,53 @@ p.copyright {
 }
 
 /* line 235, ../sass/site/primary/_posts-and-pages.scss */
+.other-page-link {
+  text-align: center;
+  margin-top: 40px;
+}
+@media screen and (min-width: 601px) {
+  /* line 235, ../sass/site/primary/_posts-and-pages.scss */
+  .other-page-link {
+    margin-top: 80px;
+  }
+}
+/* line 242, ../sass/site/primary/_posts-and-pages.scss */
+.other-page-link a {
+  display: block;
+  background: #231f20;
+  color: #ffffff;
+  font-size: 20px;
+  font-size: 1.25rem;
+  border-radius: 3px;
+  padding: 0.5em;
+}
+/* line 249, ../sass/site/primary/_posts-and-pages.scss */
+.other-page-link a:hover, .other-page-link a:focus, .other-page-link a:active {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #ff9c08;
+}
+@media screen and (min-width: 601px) {
+  /* line 242, ../sass/site/primary/_posts-and-pages.scss */
+  .other-page-link a {
+    display: inline-block;
+    font-size: 24px;
+    font-size: 1.5rem;
+    padding: 0.5em 5em;
+  }
+}
+
+/* line 265, ../sass/site/primary/_posts-and-pages.scss */
 .speaker {
   clear: both;
   overflow: hidden;
   margin-bottom: 15px;
 }
-/* line 239, ../sass/site/primary/_posts-and-pages.scss */
+/* line 269, ../sass/site/primary/_posts-and-pages.scss */
 .speaker .post-thumbnail {
   margin-bottom: 5px;
 }
-/* line 242, ../sass/site/primary/_posts-and-pages.scss */
+/* line 272, ../sass/site/primary/_posts-and-pages.scss */
 .speaker .speaker-name {
   font-weight: bold;
   margin-bottom: 0;
@@ -1720,46 +1757,46 @@ p.copyright {
   margin-right: 10px;
 }
 @media screen and (min-width: 601px) {
-  /* line 242, ../sass/site/primary/_posts-and-pages.scss */
+  /* line 272, ../sass/site/primary/_posts-and-pages.scss */
   .speaker .speaker-name {
     font-size: 24px;
     font-size: 1.5rem;
   }
 }
-/* line 251, ../sass/site/primary/_posts-and-pages.scss */
+/* line 281, ../sass/site/primary/_posts-and-pages.scss */
 .speaker .speaker-sns {
   display: inline-block;
   font-size: 24px;
   font-size: 1.5rem;
 }
-/* line 254, ../sass/site/primary/_posts-and-pages.scss */
+/* line 284, ../sass/site/primary/_posts-and-pages.scss */
 .speaker .speaker-sns a {
   display: inline-block;
   color: #666666;
   margin-right: 10px;
 }
-/* line 260, ../sass/site/primary/_posts-and-pages.scss */
+/* line 290, ../sass/site/primary/_posts-and-pages.scss */
 .speaker .speaker-profile {
   margin-top: 10px;
   font-size: 14px;
   font-size: 0.875rem;
 }
-/* line 263, ../sass/site/primary/_posts-and-pages.scss */
+/* line 293, ../sass/site/primary/_posts-and-pages.scss */
 .speaker .speaker-profile p {
   margin-top: 0;
   margin-bottom: 0.5em;
 }
-/* line 267, ../sass/site/primary/_posts-and-pages.scss */
+/* line 297, ../sass/site/primary/_posts-and-pages.scss */
 .speaker .speaker-profile ul, .speaker .speaker-profile ol {
   margin-top: 0;
   margin-bottom: 0.5em;
 }
-/* line 272, ../sass/site/primary/_posts-and-pages.scss */
+/* line 302, ../sass/site/primary/_posts-and-pages.scss */
 .speaker .speaker-group {
   font-weight: bold;
 }
 
-/* line 279, ../sass/site/primary/_posts-and-pages.scss */
+/* line 309, ../sass/site/primary/_posts-and-pages.scss */
 .entry-header .sharedaddy {
   margin-top: 15px;
   *zoom: 1;
@@ -1770,16 +1807,16 @@ p.copyright {
   display: table;
   clear: both;
 }
-/* line 283, ../sass/site/primary/_posts-and-pages.scss */
+/* line 313, ../sass/site/primary/_posts-and-pages.scss */
 .entry-header div.sharedaddy h3.sd-title {
   display: none;
 }
-/* line 286, ../sass/site/primary/_posts-and-pages.scss */
+/* line 316, ../sass/site/primary/_posts-and-pages.scss */
 .entry-header .sd-content {
   float: right;
 }
 
-/* line 293, ../sass/site/primary/_posts-and-pages.scss */
+/* line 323, ../sass/site/primary/_posts-and-pages.scss */
 .wpcf7 input[type="text"],
 .wpcf7 input[type="email"],
 .wpcf7 input[type="url"],
@@ -1790,11 +1827,11 @@ p.copyright {
   width: 100%;
   margin-top: 0.25em;
 }
-/* line 304, ../sass/site/primary/_posts-and-pages.scss */
+/* line 334, ../sass/site/primary/_posts-and-pages.scss */
 .wpcf7 .wpcf7-list-item label {
   display: inline-block;
 }
-/* line 308, ../sass/site/primary/_posts-and-pages.scss */
+/* line 338, ../sass/site/primary/_posts-and-pages.scss */
 .wpcf7 .wpcf7-submit {
   display: block;
   margin: 0 auto;
