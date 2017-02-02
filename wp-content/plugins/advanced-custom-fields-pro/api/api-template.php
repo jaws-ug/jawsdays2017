@@ -1576,13 +1576,14 @@ function update_field( $selector, $value, $post_id = false ) {
 	
 	
 	// create dummy field
-	if( !$field )
-	{
+	if( !$field ) {
+		
 		$field = acf_get_valid_field(array(
 			'name'	=> $selector,
 			'key'	=> '',
 			'type'	=> '',
 		));
+		
 	}
 	
 	
@@ -1733,7 +1734,11 @@ function add_row( $selector, $row = false, $post_id = false ) {
 	
 	
 	// update value
-	return acf_update_value( $value, $post_id, $field );
+	acf_update_value( $value, $post_id, $field );
+	
+	
+	// return
+	return count($value);
 		
 }
 
@@ -1792,7 +1797,11 @@ function add_sub_row( $selector, $row = false, $post_id = false ) {
 
 
 	// update
-	return acf_update_value( $value, $post_id, $sub_field );
+	acf_update_value( $value, $post_id, $sub_field );
+	
+	
+	// return
+	return count($value);
 	
 }
 
@@ -1963,7 +1972,11 @@ function delete_row( $selector, $i = 1, $post_id = false ) {
 	
 	
 	// update
-	return acf_update_value( $value, $post_id, $field );
+	acf_update_value( $value, $post_id, $field );
+	
+	
+	// return
+	return true;
 	
 }
 
@@ -2023,7 +2036,11 @@ function delete_sub_row( $selector, $i = 1, $post_id = false ) {
 
 
 	// update
-	return acf_update_value( $value, $post_id, $sub_field );
+	acf_update_value( $value, $post_id, $sub_field );
+	
+	
+	// return
+	return true;
 		
 }
 
