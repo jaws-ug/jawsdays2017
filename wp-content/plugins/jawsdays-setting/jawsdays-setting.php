@@ -66,7 +66,7 @@ public function plugins_loaded() {
 	add_action( 'init', array( $this, 'custom_post_type_session' ), 0 );
 	add_action( 'init', array( $this, 'custom_post_type_supporter' ), 0 );
 	// Term sort for Custom Post Type
-	add_action( 'restrict_manage_posts', array( $this, 'jaws_restrict_manage_posts' ) );
+	add_action( 'restrict_manage_posts', array( $this, 'jaws_restrict_manage_posts' ), 10, 2 );
 	// Query pre_get_posts
 	add_action( 'pre_get_posts', array( $this, 'jaws_modify_main_query' ) );
 	// ACF
@@ -296,9 +296,7 @@ public function custom_post_type_supporter() {
 	register_post_type( 'supporter', $args );
 }
 
-public function jaws_restrict_manage_posts() {
-	global $post_type;
-
+public function jaws_restrict_manage_posts( $post_type ) {
 	if ( 'supporter' == $post_type ) {
 		$term_slug = get_query_var( 'supporter_type' );
 		wp_dropdown_categories( array(
@@ -309,7 +307,6 @@ public function jaws_restrict_manage_posts() {
 			'value_field'	     => 'slug',	
 		));
 	} elseif ( 'session' == $post_type ) {
-		
 		$track_var = get_query_var( 'session_track' );
 		$venue_var = get_query_var( 'session_venue' );
 		wp_dropdown_categories( array(
