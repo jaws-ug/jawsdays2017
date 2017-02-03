@@ -106,6 +106,24 @@ http://support.advancedcustomfields.com/
 
 == Changelog ==
 
+= 5.5.5 =
+* File field: Fixed bug creating draft post when saving an empty value
+* Image field: Fixed bug mentioned above
+
+= 5.5.4 =
+* File field: Added logic to 'connect' selected attachment to post (only if attachment is not 'connected')
+* File field: Removed `filesize()` call causing performance issues with externally hosted attachments
+* File field: Added AJAX validation to 'basic' uploader
+* Image field: Added 'connect' logic mentioned above
+* Image field: Added AJAX validation mentioned above
+* True false field: Improved usability by allowing 'tab' key to focus element (use space or arrow keys to toggle)
+* Gallery field: Fixed bug causing unsaved changes in sidebar to be lost when selecting another attachment
+* API: Fixed `add_row()` and `add_sub_row()` return values (from true to new row index)
+* Core: Improved `get_posts()` query speeds by setting 'update_cache' settings to false
+* Core: Allowed 'instruction_placement' setting on 'widget' forms (previously set always to 'below fields')
+* Core: Removed 'ACF PRO invalid license nag' and will include fix for 'protocol change' in next release
+* Language: Updated French translation - thanks to Martial Parfait
+
 = 5.5.3 =
 * Options page: Fixed bug when using WPML in multiple tabs causing incorrect 'lang' to be used during save.
 * Core: Added support with new `get_user_locale()` setting in WP 4.7

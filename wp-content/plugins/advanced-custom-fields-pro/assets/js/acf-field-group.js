@@ -1308,7 +1308,7 @@
 				parent		: acf.o.post_id,
 				field_group	: acf.o.post_id,
 				prefix		: $select.attr('name').replace('[type]', ''),
-				type		: new_type,
+				type		: new_type
 			};
 			
 			
@@ -2315,7 +2315,7 @@
 			'change_field_type'			: '_change_field_type',
 			'change_field_label'		: '_change_field_label',
 			'change_field_name'			: '_change_field_name',
-			'render_field_settings'		: '_render_field_settings',
+			'render_field_settings'		: '_render_field_settings'
 		},
 		
 		_save_field: function( $el ){
@@ -2405,7 +2405,7 @@
 	acf.field_group.append = acf.model.extend({
 		
 		actions: {
-			'render_field_settings' : '_render_field_settings',
+			'render_field_settings' : '_render_field_settings'
 		},
 		
 		render: function( $el ){
@@ -2491,7 +2491,7 @@
 		type: 'select',
 		
 		actions: {
-			'render_settings': 'render',
+			'render_settings': 'render'
 		},
 		
 		events: {
@@ -2536,7 +2536,7 @@
 		type: 'radio',
 		
 		actions: {
-			'render_settings': 'render',
+			'render_settings': 'render'
 		},
 		
 		events: {
@@ -2581,7 +2581,7 @@
 		type: 'true_false',
 		
 		actions: {
-			'render_settings': 'render',
+			'render_settings': 'render'
 		},
 		
 		events: {
@@ -2627,7 +2627,7 @@
 		type: 'date_picker',
 		
 		actions: {
-			'render_settings': 'render',
+			'render_settings': 'render'
 		},
 		
 		events: {
@@ -2720,7 +2720,7 @@
 		type: 'tab',
 		
 		actions: {
-			'render_settings': 'render',
+			'render_settings': 'render'
 		},
 		
 		render: function( $el ){
@@ -2844,7 +2844,7 @@
 				
 			}
 			
-		},
+		}
 		
 	});
 	

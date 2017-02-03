@@ -4,11 +4,11 @@
 	acf.pro = acf.model.extend({
 		
 		actions: {
-			'refresh': 	'refresh',
+			'refresh': 	'refresh'
 		},
 		
 		filters: {
-			'get_fields' : 'get_fields',
+			'get_fields' : 'get_fields'
 		},
 		
 		get_fields: function( $fields ){
@@ -166,8 +166,7 @@
 			$table.find('.acf-row .acf-field.-collapsed-target').removeAttr('colspan');
 			$table.find('.acf-row.-collapsed .acf-field.-collapsed-target').attr('colspan', colspan);
 			
-		},
-		
+		}
 		
 	});
 
@@ -644,7 +643,7 @@
 				action: 	'acf/fields/flexible_content/layout_title',
 				field_key: 	this.$field.data('key'),
 				i: 			$layout.index(),
-				layout:		$layout.data('layout'),
+				layout:		$layout.data('layout')
 			});
 			
 			
@@ -1036,7 +1035,7 @@
 			// vars
 			$popup.css({
 				'margin-top' : 0 - $popup.height() - e.$el.outerHeight() - 15,
-				'margin-left' : ( e.$el.outerWidth() - $popup.width() ) / 2,
+				'margin-left' : ( e.$el.outerWidth() - $popup.width() ) / 2
 			});
 			
 			
@@ -1864,6 +1863,10 @@
 			
 			// bail early if already active
 			if( $attachment.hasClass('active') ) return;
+			
+			
+			// save any changes in sidebar
+			this.$side.find(':focus').trigger('blur');
 			
 			
 			// clear selection

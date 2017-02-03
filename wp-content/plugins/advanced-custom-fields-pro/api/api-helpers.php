@@ -626,7 +626,7 @@ function acf_get_post_types( $args = array() ) {
 	$exclude[] = 'acf-field';
 	$exclude[] = 'acf-field-group';
 	
-	
+		
 	// loop
 	foreach( $post_types as $i => $post_type ) {
 		
@@ -1490,9 +1490,11 @@ function acf_get_posts( $args = array() ) {
 	// defaults
 	// leave suppress_filters as true becuase we don't want any plugins to modify the query as we know exactly what 
 	$args = wp_parse_args( $args, array(
-		'posts_per_page'	=> -1,
-		'post_type'			=> '',
-		'post_status'		=> 'any'
+		'posts_per_page'			=> -1,
+		'post_type'					=> '',
+		'post_status'				=> 'any',
+		'update_post_meta_cache'	=> false,
+		'update_post_term_cache' 	=> false
 	));
 	
 
@@ -3845,7 +3847,8 @@ function acf_validate_attachment( $attachment, $field, $context = 'prepare' ) {
 	// custom
 	} else {
 		
-		$file = wp_parse_args($file, $attachment);
+		$file = array_merge($file, $attachment);
+		$file['type'] = pathinfo($attachment['url'], PATHINFO_EXTENSION);
 		
 	}
 	
@@ -4911,6 +4914,79 @@ function _acf_settings_slug( $v ) {
     $slug = current($slug);
 	
 	return $slug;
+}
+
+
+
+
+/*
+*  acf_strip_protocol
+*
+*  This function will remove the proticol from a url 
+*  Used to allow licences to remain active if a site is switched to https 
+*
+*  @type	function
+*  @date	10/01/2017
+*  @since	5.5.4
+*  @author	Aaron 
+*
+*  @param	$url (string)
+*  @return	(string) 
+*/
+
+function acf_strip_protocol( $url ) {
+		
+	// strip the protical 
+	return str_replace(array('http://','https://'), '', $url);
+
+}
+
+
+/*
+*  acf_connect_attachment_to_post
+*
+*  This function will connect an attacment (image etc) to the post 
+*  Used to connect attachements uploaded directly to media that have not been attaced to a post
+*
+*  @type	function
+*  @date	11/01/2017
+*  @since	5.5.4
+*
+*  @param	$attachment_id (int)
+*  @param	$post_id (int)
+*  @return	(boolean) 
+*/
+
+function acf_connect_attachment_to_post( $attachment_id = 0, $post_id = 0 ) {
+	
+	// bail ealry if $attachment_id is not valid
+	if( !$attachment_id || !is_numeric($attachment_id) ) return false;
+	
+	
+	// bail ealry if $post_id is not valid
+	if( !$post_id || !is_numeric($post_id) ) return false;
+	
+	
+	// vars 
+	$post = get_post( $attachment_id );
+	
+	
+	// check if valid post
+	if( $post && $post->post_type == 'attachment' && $post->post_parent == 0 ) {
+		
+		// update
+		wp_update_post( array('ID' => $post->ID, 'post_parent' => $post_id) );
+		
+		
+		// return
+		return true;
+		
+	}
+	
+	
+	// return
+	return true;
+
 }
 
 ?>
