@@ -300,8 +300,7 @@ public function jaws_restrict_manage_posts() {
 	global $post_type;
 
 	if ( 'supporter' == $post_type ) {
-		$queried_object = get_queried_object();
-		$term_slug = ( ! empty( $queried_object->slug )) ? $queried_object->slug : '';
+		$term_slug = get_query_var( 'supporter_type' );
 		wp_dropdown_categories( array(
 			'show_option_all'    => __( 'All Types', 'jawsdays' ),
 			'selected'           => $term_slug,
@@ -310,26 +309,19 @@ public function jaws_restrict_manage_posts() {
 			'value_field'	     => 'slug',	
 		));
 	} elseif ( 'session' == $post_type ) {
-		var_dump( $_GET );
 		
-		$queried_object = get_queried_object();
-		var_dump( $queried_object );
-		$track_slug = '';
-		$venue_slug = '';
-		if ( 'session_track' == $queried_object->taxonomy ) {
-			$track_slug = $queried_object->slug;
-		}
-		$track_slug = ( ! empty( $queried_object->slug )) ? $queried_object->slug : '';
+		$track_var = get_query_var( 'session_track' );
+		$venue_var = get_query_var( 'session_venue' );
 		wp_dropdown_categories( array(
 			'show_option_all'    => __( 'All Tracks', 'jawsdays' ),
-			'selected'           => $track_slug,
+			'selected'           => $track_var,
 			'name'               => 'session_track',
 			'taxonomy'           => 'session_track',
 			'value_field'	     => 'slug',	
 		));
 		wp_dropdown_categories( array(
 			'show_option_all'    => __( 'All Venues', 'jawsdays' ),
-			'selected'           => '',
+			'selected'           => $venue_var,
 			'name'               => 'session_venue',
 			'taxonomy'           => 'session_venue',
 			'value_field'	     => 'slug',	
