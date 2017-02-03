@@ -40,7 +40,7 @@ class just_do_it {
     if (defined('IS_AMIMOTO') && IS_AMIMOTO) {
       $this->must_plugins['AMIMOTO Plugin Dashboard'] = 'amimoto-dashboard/amimoto-plugin-dashboard.php';
       $this->must_plugins['Nginx Cache Controller'] = 'nginx-champuru/nginx-champuru.php';
-      $this->must_plugins['C3 Cloudfront Clear Cache'] = 'c3-cloudfront-clear-cache/c3-cloudfront-clear-cache.php';
+//       $this->must_plugins['C3 Cloudfront Clear Cache'] = 'c3-cloudfront-clear-cache/c3-cloudfront-clear-cache.php';
 //       $this->must_plugins['Nginx Mobile Theme'] = 'nginx-mobile-theme/nginx-mobile-theme.php';
     }
 
