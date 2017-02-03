@@ -65,6 +65,8 @@ public function plugins_loaded() {
 	// Register Custom Post Type
 	add_action( 'init', array( $this, 'custom_post_type_session' ), 0 );
 	add_action( 'init', array( $this, 'custom_post_type_supporter' ), 0 );
+	// Term sort for Custom Post Type
+	add_action( 'restrict_manage_posts', array( $this, 'jaws_restrict_manage_posts' ) );
 	// Query pre_get_posts
 	add_action( 'pre_get_posts', array( $this, 'jaws_modify_main_query' ) );
 	// ACF
@@ -292,6 +294,32 @@ public function custom_post_type_supporter() {
 		'sptp_permalink_structure' => 'supporter/%post_id%',
 	);
 	register_post_type( 'supporter', $args );
+}
+
+public function jaws_restrict_manage_posts() {
+	global $post_type;
+
+	if ( 'supporter' == $post_type ) {
+		$queried_object = get_queried_object();
+		$term_slug = ( ! empty( $queried_object->slug )) ? $queried_object->slug : '';
+		wp_dropdown_categories( array(
+			'show_option_all'    => __( 'All Types', 'jawsdays' ),
+			'selected'           => $term_slug,
+			'name'               => 'supporter_type',
+			'taxonomy'           => 'supporter_type',
+			'value_field'	     => 'slug',	
+		));
+	} elseif ( 'session' == $post_type ) {
+		$queried_object = get_queried_object();
+		$term_slug = ( ! empty( $queried_object->slug )) ? $queried_object->slug : '';
+		wp_dropdown_categories( array(
+			'show_option_all'    => __( 'All Tracks', 'jawsdays' ),
+			'selected'           => $term_slug,
+			'name'               => 'session_track',
+			'taxonomy'           => 'session_track',
+			'value_field'	     => 'slug',	
+		));
+	}
 }
 
 /**
