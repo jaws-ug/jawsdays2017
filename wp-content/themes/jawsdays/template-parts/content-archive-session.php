@@ -33,6 +33,8 @@
 					$venues_name = '';
 					$venues_hash_array = array();
 					$venues_hash = '';
+					$text = get_the_title() . ' | ' . get_bloginfo( 'name' );
+					$url  = get_the_permalink();
 					foreach ( $venues as $term ) {
 						$venues_name_array[] = esc_html( $term->name );
 						$venues_hash_array[] = '<a href="https://twitter.com/intent/tweet?text=' . urlencode( $text ) . '&amp;hashtags=jawsug,jawsdays,' . esc_html( $term->slug ) . '&amp;via=jawsdays&amp;url=' . urlencode( $url ). '" target="_blank">' . esc_html( '#' . $term->slug ) . '</a>';
