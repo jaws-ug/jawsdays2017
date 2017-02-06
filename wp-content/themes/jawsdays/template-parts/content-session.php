@@ -46,7 +46,7 @@
 					$venues_hash = '';
 					foreach ( $venues as $term ) {
 						$venues_name_array[] = esc_html( $term->name );
-						$venues_hash_array[] = esc_html( '#' . $term->slug );
+						$venues_hash_array[] = '<a href="https://twitter.com/intent/tweet?hashtags=jawsug,jawsdays,' . esc_url( $term->slug ) . '&amp;via=jawsdays&amp;text=JAWS%20DAYS%202017" target="_blank">' . esc_url( '#' . $term->slug ) . '</a>';
 					}
 					$venues_name = join( " / ", $venues_name_array );
 					$venues_hash = join( " / ", $venues_hash_array );
