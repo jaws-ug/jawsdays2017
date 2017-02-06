@@ -40,13 +40,19 @@
 			<?php // 会場
 				$venues = get_the_terms( $post->ID, 'session_venue' );
 				if ( $venues && ! is_wp_error( $venues ) ) : 
-					$venues_array = array();
+					$venues_name_array = array();
+					$venues_name = '';
+					$venues_hash_array = array();
+					$venues_hash = '';
 					foreach ( $venues as $term ) {
-						$venues_array[] = esc_html( $term->name );
+						$venues_name_array[] = esc_html( $term->name );
+						$venues_hash_array[] = esc_html( '#' . $term->slug );
 					}
-						$venuestext = join( " / ", $venues_array );
+					$venues_name = join( " / ", $venues_name_array );
+					$venues_hash = join( " / ", $venues_hash_array );
 					?>
-			<span class="session-meta-parts"><i class="fa fa-location-arrow" aria-hidden="true"></i> <?php echo $venuestext; ?></span>
+			<span class="session-meta-parts"><i class="fa fa-location-arrow" aria-hidden="true"></i> <?php echo $venues_name; ?></span>
+			<span class="session-meta-parts"><i class="fa fa-hashtag" aria-hidden="true"></i> <?php echo $venues_hash; ?></span>
 			<?php endif; ?>
 
 			<?php // 時間
