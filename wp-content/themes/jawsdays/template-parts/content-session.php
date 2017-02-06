@@ -44,9 +44,11 @@
 					$venues_name = '';
 					$venues_hash_array = array();
 					$venues_hash = '';
+					$text = get_the_title();
+					$url  = get_the_permalink();
 					foreach ( $venues as $term ) {
 						$venues_name_array[] = esc_html( $term->name );
-						$venues_hash_array[] = '<a href="https://twitter.com/intent/tweet?hashtags=jawsug,jawsdays,' . esc_url( $term->slug ) . '&amp;via=jawsdays&amp;text=JAWS%20DAYS%202017" target="_blank">' . esc_url( '#' . $term->slug ) . '</a>';
+						$venues_hash_array[] = '<a href="https://twitter.com/intent/tweet?hashtags=jawsug,jawsdays,' . esc_url( $term->slug ) . '&amp;via=jawsdays&amp;text=' . urlencode( $text ) . '%20|%20JAWS%20DAYS%202017&amp;url=' . urlencode( $url ). '" target="_blank">' . esc_url( '#' . $term->slug ) . '</a>';
 					}
 					$venues_name = join( " / ", $venues_name_array );
 					$venues_hash = join( " / ", $venues_hash_array );
