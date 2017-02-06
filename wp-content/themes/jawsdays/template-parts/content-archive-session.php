@@ -64,6 +64,19 @@
 				}
 			?>
 		</div>
+		<?php // 登壇者
+			if( have_rows( 'speaker' ) ):
+				echo '<div class="session-meta"><i class="fa fa-microphone" aria-hidden="true"></i> ';
+				// loop through the rows of data
+				while ( have_rows( 'speaker' ) ) : the_row();
+					// Name
+					echo '<span class="session-meta-parts">';
+					the_sub_field( 'name' );
+					echo '</span>' . "\n";
+				endwhile;
+				echo '</div>' . "\n"
+			endif;
+		?>
 		<?php do_action( 'jawsdays_after_entry_header' ); ?>
 	</header><!-- .entry-header -->
 
