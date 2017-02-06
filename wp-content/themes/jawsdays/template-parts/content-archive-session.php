@@ -70,11 +70,11 @@
 				// loop through the rows of data
 				while ( have_rows( 'speaker' ) ) : the_row();
 					// Name
-					echo '<span class="session-meta-parts">';
+					echo '<span class="session-meta-name">';
 					the_sub_field( 'name' );
-					echo '</span>' . "\n";
+					echo '</span> ';
 				endwhile;
-				echo '</div>' . "\n"
+				echo '</div>' . "\n";
 			endif;
 		?>
 		<?php do_action( 'jawsdays_after_entry_header' ); ?>
