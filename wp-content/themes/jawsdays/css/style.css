@@ -1710,7 +1710,7 @@ p.copyright {
 @media screen and (min-width: 601px) {
   /* line 235, ../sass/site/primary/_posts-and-pages.scss */
   .other-page-link {
-    margin-top: 80px;
+    margin-top: 60px;
   }
 }
 /* line 242, ../sass/site/primary/_posts-and-pages.scss */
@@ -1985,9 +1985,27 @@ p.copyright {
   .mceContentBody table.timetable {
     font-size: 12px;
     font-size: 0.75rem;
+    width: 100%;
+    table-layout: fixed;
   }
 }
-/* line 72, ../sass/site/primary/_entry-content.scss */
+/* line 73, ../sass/site/primary/_entry-content.scss */
+.page-content table.timetable .time,
+.entry-content table.timetable .time,
+.entry-summary table.timetable .time,
+.mceContentBody table.timetable .time {
+  white-space: nowrap;
+}
+@media screen and (min-width: 601px) {
+  /* line 73, ../sass/site/primary/_entry-content.scss */
+  .page-content table.timetable .time,
+  .entry-content table.timetable .time,
+  .entry-summary table.timetable .time,
+  .mceContentBody table.timetable .time {
+    width: 4em;
+  }
+}
+/* line 79, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable thead th,
 .entry-content table.timetable thead th,
 .entry-summary table.timetable thead th,
@@ -1995,7 +2013,7 @@ p.copyright {
   background: #424346;
   color: white;
 }
-/* line 75, ../sass/site/primary/_entry-content.scss */
+/* line 82, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable thead th a,
 .entry-content table.timetable thead th a,
 .entry-summary table.timetable thead th a,
@@ -2003,14 +2021,22 @@ p.copyright {
   color: #ff9c08;
   text-decoration: underline;
 }
-/* line 80, ../sass/site/primary/_entry-content.scss */
+/* line 87, ../sass/site/primary/_entry-content.scss */
+.page-content table.timetable td.time,
+.entry-content table.timetable td.time,
+.entry-summary table.timetable td.time,
+.mceContentBody table.timetable td.time {
+  background: #eeeeee;
+  text-align: center;
+}
+/* line 91, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable .long-cell td,
 .entry-content table.timetable .long-cell td,
 .entry-summary table.timetable .long-cell td,
 .mceContentBody table.timetable .long-cell td {
   text-align: center;
 }
-/* line 83, ../sass/site/primary/_entry-content.scss */
+/* line 94, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable th > p,
 .page-content table.timetable td > p,
 .entry-content table.timetable th > p,
@@ -2021,7 +2047,7 @@ p.copyright {
 .mceContentBody table.timetable td > p {
   margin-bottom: 0.5em;
 }
-/* line 86, ../sass/site/primary/_entry-content.scss */
+/* line 97, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable th > p::last-child,
 .page-content table.timetable td > p::last-child,
 .entry-content table.timetable th > p::last-child,
@@ -2032,12 +2058,26 @@ p.copyright {
 .mceContentBody table.timetable td > p::last-child {
   margin-bottom: 0;
 }
-/* line 91, ../sass/site/primary/_entry-content.scss */
+/* line 102, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable .footable-row-detail-name,
 .entry-content table.timetable .footable-row-detail-name,
 .entry-summary table.timetable .footable-row-detail-name,
 .mceContentBody table.timetable .footable-row-detail-name {
-  width: 50%;
+  width: 5.9em;
+}
+/* line 105, ../sass/site/primary/_entry-content.scss */
+.page-content table.timetable .footable-row-detail-row,
+.entry-content table.timetable .footable-row-detail-row,
+.entry-summary table.timetable .footable-row-detail-row,
+.mceContentBody table.timetable .footable-row-detail-row {
+  border-bottom: solid 1px #ccc;
+}
+/* line 107, ../sass/site/primary/_entry-content.scss */
+.page-content table.timetable .footable-row-detail-row:last-child,
+.entry-content table.timetable .footable-row-detail-row:last-child,
+.entry-summary table.timetable .footable-row-detail-row:last-child,
+.mceContentBody table.timetable .footable-row-detail-row:last-child {
+  border-bottom: none;
 }
 
 /*--------------------------------------------------------------

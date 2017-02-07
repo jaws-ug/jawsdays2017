@@ -68,12 +68,13 @@
 			if( have_rows( 'speaker' ) ):
 				echo '<div class="session-meta"><i class="fa fa-microphone" aria-hidden="true"></i> ';
 				// loop through the rows of data
+				$speaker_name_array = array();
+				$speaker_name = '';
 				while ( have_rows( 'speaker' ) ) : the_row();
-					// Name
-					echo '<span class="session-meta-name">';
-					the_sub_field( 'name' );
-					echo '</span> ';
+					$speaker_name_array[] = esc_html( get_sub_field( 'name' ) );
 				endwhile;
+				$speaker_name = join( " / ", $speaker_name_array );
+				echo '<span class="session-meta-name">' . $speaker_name . '</span> ';
 				echo '</div>' . "\n";
 			endif;
 		?>

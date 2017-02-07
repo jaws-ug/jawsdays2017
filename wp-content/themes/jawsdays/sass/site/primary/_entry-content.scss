@@ -67,8 +67,15 @@
 		@include font-size(14);
 		@include mqPC {
 			@include font-size(12);
+			width: 100%;
+			table-layout: fixed;
 		}
-
+		.time {
+			white-space: nowrap;
+			@include mqPC {
+				width: 4em;
+			}
+		}
 		thead th {
 			background: #424346;
 			color: white;
@@ -76,6 +83,10 @@
 				color: $color__link-hover;
 				text-decoration: underline;
 			}
+		}
+		td.time {
+			background: #eeeeee;
+			text-align: center;
 		}
 		.long-cell td {
 			text-align: center;
@@ -89,7 +100,13 @@
 		}
 		
 		.footable-row-detail-name {
-			width: 50%;
+			width: 5.9em;
+		}
+		.footable-row-detail-row {
+			border-bottom: solid 1px $color__background-hr;
+			&:last-child {
+				border-bottom: none;
+			}
 		}
 	}
 

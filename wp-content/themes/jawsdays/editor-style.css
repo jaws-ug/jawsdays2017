@@ -569,6 +569,22 @@ a:hover, a:active {
   .mceContentBody table.timetable {
     font-size: 12px;
     font-size: 0.75rem;
+    width: 100%;
+    table-layout: fixed;
+  }
+}
+.page-content table.timetable .time,
+.entry-content table.timetable .time,
+.entry-summary table.timetable .time,
+.mceContentBody table.timetable .time {
+  white-space: nowrap;
+}
+@media screen and (min-width: 601px) {
+  .page-content table.timetable .time,
+  .entry-content table.timetable .time,
+  .entry-summary table.timetable .time,
+  .mceContentBody table.timetable .time {
+    width: 4em;
   }
 }
 .page-content table.timetable thead th,
@@ -584,6 +600,13 @@ a:hover, a:active {
 .mceContentBody table.timetable thead th a {
   color: #ff9c08;
   text-decoration: underline;
+}
+.page-content table.timetable td.time,
+.entry-content table.timetable td.time,
+.entry-summary table.timetable td.time,
+.mceContentBody table.timetable td.time {
+  background: #eeeeee;
+  text-align: center;
 }
 .page-content table.timetable .long-cell td,
 .entry-content table.timetable .long-cell td,
@@ -615,7 +638,19 @@ a:hover, a:active {
 .entry-content table.timetable .footable-row-detail-name,
 .entry-summary table.timetable .footable-row-detail-name,
 .mceContentBody table.timetable .footable-row-detail-name {
-  width: 50%;
+  width: 5.9em;
+}
+.page-content table.timetable .footable-row-detail-row,
+.entry-content table.timetable .footable-row-detail-row,
+.entry-summary table.timetable .footable-row-detail-row,
+.mceContentBody table.timetable .footable-row-detail-row {
+  border-bottom: solid 1px #ccc;
+}
+.page-content table.timetable .footable-row-detail-row:last-child,
+.entry-content table.timetable .footable-row-detail-row:last-child,
+.entry-summary table.timetable .footable-row-detail-row:last-child,
+.mceContentBody table.timetable .footable-row-detail-row:last-child {
+  border-bottom: none;
 }
 
 /*--------------------------------------------------------------
