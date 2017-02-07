@@ -634,11 +634,11 @@ a:hover, a:active {
 .mceContentBody table.timetable td > p::last-child {
   margin-bottom: 0;
 }
-.page-content table.timetable .footable-row-detail-name,
-.entry-content table.timetable .footable-row-detail-name,
-.entry-summary table.timetable .footable-row-detail-name,
-.mceContentBody table.timetable .footable-row-detail-name {
-  width: 5.9em;
+.page-content table.timetable .footable-row-detail-inner,
+.entry-content table.timetable .footable-row-detail-inner,
+.entry-summary table.timetable .footable-row-detail-inner,
+.mceContentBody table.timetable .footable-row-detail-inner {
+  width: 100%;
 }
 .page-content table.timetable .footable-row-detail-row,
 .entry-content table.timetable .footable-row-detail-row,
@@ -651,6 +651,12 @@ a:hover, a:active {
 .entry-summary table.timetable .footable-row-detail-row:last-child,
 .mceContentBody table.timetable .footable-row-detail-row:last-child {
   border-bottom: none;
+}
+.page-content table.timetable .footable-row-detail-name,
+.entry-content table.timetable .footable-row-detail-name,
+.entry-summary table.timetable .footable-row-detail-name,
+.mceContentBody table.timetable .footable-row-detail-name {
+  width: 5.9em;
 }
 
 /*--------------------------------------------------------------

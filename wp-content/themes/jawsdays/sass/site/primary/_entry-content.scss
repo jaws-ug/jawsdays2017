@@ -99,14 +99,17 @@
 			}
 		}
 		
-		.footable-row-detail-name {
-			width: 5.9em;
+		.footable-row-detail-inner {
+			width: 100%;
 		}
 		.footable-row-detail-row {
 			border-bottom: solid 1px $color__background-hr;
 			&:last-child {
 				border-bottom: none;
 			}
+		}
+		.footable-row-detail-name {
+			width: 5.9em;
 		}
 	}
 

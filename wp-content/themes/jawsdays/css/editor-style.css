@@ -732,20 +732,27 @@ a:hover, a:active {
   margin-bottom: 0;
 }
 /* line 102, ../sass/site/primary/_entry-content.scss */
+.page-content table.timetable .footable-row-detail-inner,
+.entry-content table.timetable .footable-row-detail-inner,
+.entry-summary table.timetable .footable-row-detail-inner,
+.mceContentBody table.timetable .footable-row-detail-inner {
+  width: 100%;
+}
+/* line 105, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable .footable-row-detail-name,
 .entry-content table.timetable .footable-row-detail-name,
 .entry-summary table.timetable .footable-row-detail-name,
 .mceContentBody table.timetable .footable-row-detail-name {
   width: 5.9em;
 }
-/* line 105, ../sass/site/primary/_entry-content.scss */
+/* line 108, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable .footable-row-detail-row,
 .entry-content table.timetable .footable-row-detail-row,
 .entry-summary table.timetable .footable-row-detail-row,
 .mceContentBody table.timetable .footable-row-detail-row {
   border-bottom: solid 1px #ccc;
 }
-/* line 107, ../sass/site/primary/_entry-content.scss */
+/* line 110, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable .footable-row-detail-row:last-child,
 .entry-content table.timetable .footable-row-detail-row:last-child,
 .entry-summary table.timetable .footable-row-detail-row:last-child,
