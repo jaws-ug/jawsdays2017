@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: JAWSDAYS Setting\n"
-"POT-Creation-Date: 2017-01-17 12:12+0900\n"
+"POT-Creation-Date: 2017-02-08 17:38+0900\n"
 "PO-Revision-Date: 2017-01-17 12:11+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -15,405 +15,413 @@ msgstr ""
 "X-Poedit-WPHeader: jawsdays-setting.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: jawsdays-setting.php:80
+#: jawsdays-setting.php:87
 msgctxt "Taxonomy General Name"
 msgid "Tracks"
 msgstr ""
 
-#: jawsdays-setting.php:81
+#: jawsdays-setting.php:88
 msgctxt "Taxonomy Singular Name"
 msgid "Track"
 msgstr ""
 
-#: jawsdays-setting.php:82
+#: jawsdays-setting.php:89
 msgid "Track"
 msgstr ""
 
-#: jawsdays-setting.php:83
+#: jawsdays-setting.php:90 jawsdays-setting.php:316
 msgid "All Tracks"
 msgstr ""
 
-#: jawsdays-setting.php:84
+#: jawsdays-setting.php:91
 msgid "Parent Track"
 msgstr ""
 
-#: jawsdays-setting.php:85
+#: jawsdays-setting.php:92
 msgid "Parent Track:"
 msgstr ""
 
-#: jawsdays-setting.php:86
+#: jawsdays-setting.php:93
 msgid "New Track Name"
 msgstr ""
 
-#: jawsdays-setting.php:87
+#: jawsdays-setting.php:94
 msgid "Add New Track"
 msgstr ""
 
-#: jawsdays-setting.php:88
+#: jawsdays-setting.php:95
 msgid "Edit Track"
 msgstr ""
 
-#: jawsdays-setting.php:89
+#: jawsdays-setting.php:96
 msgid "Update Track"
 msgstr ""
 
-#: jawsdays-setting.php:90
+#: jawsdays-setting.php:97
 msgid "View Track"
 msgstr ""
 
-#: jawsdays-setting.php:91
+#: jawsdays-setting.php:98
 msgid "Separate tracks with commas"
 msgstr ""
 
-#: jawsdays-setting.php:92
+#: jawsdays-setting.php:99
 msgid "Add or remove tracks"
 msgstr ""
 
-#: jawsdays-setting.php:93 jawsdays-setting.php:127 jawsdays-setting.php:161
-#: jawsdays-setting.php:237
+#: jawsdays-setting.php:100 jawsdays-setting.php:134 jawsdays-setting.php:168
+#: jawsdays-setting.php:244
 msgid "Choose from the most used"
 msgstr ""
 
-#: jawsdays-setting.php:94
+#: jawsdays-setting.php:101
 msgid "Popular Tracks"
 msgstr ""
 
-#: jawsdays-setting.php:95
+#: jawsdays-setting.php:102
 msgid "Search Tracks"
 msgstr ""
 
-#: jawsdays-setting.php:96 jawsdays-setting.php:130 jawsdays-setting.php:164
-#: jawsdays-setting.php:240
+#: jawsdays-setting.php:103 jawsdays-setting.php:137 jawsdays-setting.php:171
+#: jawsdays-setting.php:247
 msgid "Not Found"
 msgstr ""
 
-#: jawsdays-setting.php:97
+#: jawsdays-setting.php:104
 msgid "No tracks"
 msgstr ""
 
-#: jawsdays-setting.php:98
+#: jawsdays-setting.php:105
 msgid "Tracks list"
 msgstr ""
 
-#: jawsdays-setting.php:99
+#: jawsdays-setting.php:106
 msgid "Tracks list navigation"
 msgstr ""
 
-#: jawsdays-setting.php:114
+#: jawsdays-setting.php:121
 msgctxt "Taxonomy General Name"
 msgid "Venues"
 msgstr ""
 
-#: jawsdays-setting.php:115
+#: jawsdays-setting.php:122
 msgctxt "Taxonomy Singular Name"
 msgid "Venue"
 msgstr ""
 
-#: jawsdays-setting.php:116
+#: jawsdays-setting.php:123
 msgid "Venue"
 msgstr ""
 
-#: jawsdays-setting.php:117
+#: jawsdays-setting.php:124 jawsdays-setting.php:323
 msgid "All Venues"
 msgstr ""
 
-#: jawsdays-setting.php:118
+#: jawsdays-setting.php:125
 msgid "Parent Venue"
 msgstr ""
 
-#: jawsdays-setting.php:119
+#: jawsdays-setting.php:126
 msgid "Parent Venue:"
 msgstr ""
 
-#: jawsdays-setting.php:120
+#: jawsdays-setting.php:127
 msgid "New Venue Name"
 msgstr ""
 
-#: jawsdays-setting.php:121
+#: jawsdays-setting.php:128
 msgid "Add New Venue"
 msgstr ""
 
-#: jawsdays-setting.php:122
+#: jawsdays-setting.php:129
 msgid "Edit Venue"
 msgstr ""
 
-#: jawsdays-setting.php:123
+#: jawsdays-setting.php:130
 msgid "Update Venue"
 msgstr ""
 
-#: jawsdays-setting.php:124
+#: jawsdays-setting.php:131
 msgid "View Venue"
 msgstr ""
 
-#: jawsdays-setting.php:125
+#: jawsdays-setting.php:132
 msgid "Separate venues with commas"
 msgstr ""
 
-#: jawsdays-setting.php:126
+#: jawsdays-setting.php:133
 msgid "Add or remove venues"
 msgstr ""
 
-#: jawsdays-setting.php:128
+#: jawsdays-setting.php:135
 msgid "Popular Venues"
 msgstr ""
 
-#: jawsdays-setting.php:129
+#: jawsdays-setting.php:136
 msgid "Search Venues"
 msgstr ""
 
-#: jawsdays-setting.php:131
+#: jawsdays-setting.php:138
 msgid "No venues"
 msgstr ""
 
-#: jawsdays-setting.php:132
+#: jawsdays-setting.php:139
 msgid "Venues list"
 msgstr ""
 
-#: jawsdays-setting.php:133
+#: jawsdays-setting.php:140
 msgid "Venues list navigation"
 msgstr ""
 
-#: jawsdays-setting.php:148
+#: jawsdays-setting.php:155
 msgctxt "Taxonomy General Name"
 msgid "Levels"
 msgstr ""
 
-#: jawsdays-setting.php:149
+#: jawsdays-setting.php:156
 msgctxt "Taxonomy Singular Name"
 msgid "Level"
 msgstr ""
 
-#: jawsdays-setting.php:150
+#: jawsdays-setting.php:157
 msgid "Level"
 msgstr ""
 
-#: jawsdays-setting.php:151
+#: jawsdays-setting.php:158
 msgid "All Levels"
 msgstr ""
 
-#: jawsdays-setting.php:152
+#: jawsdays-setting.php:159
 msgid "Parent Level"
 msgstr ""
 
-#: jawsdays-setting.php:153
+#: jawsdays-setting.php:160
 msgid "Parent Level:"
 msgstr ""
 
-#: jawsdays-setting.php:154
+#: jawsdays-setting.php:161
 msgid "New Level Name"
 msgstr ""
 
-#: jawsdays-setting.php:155
+#: jawsdays-setting.php:162
 msgid "Add New Level"
 msgstr ""
 
-#: jawsdays-setting.php:156
+#: jawsdays-setting.php:163
 msgid "Edit Level"
 msgstr ""
 
-#: jawsdays-setting.php:157
+#: jawsdays-setting.php:164
 msgid "Update Level"
 msgstr ""
 
-#: jawsdays-setting.php:158
+#: jawsdays-setting.php:165
 msgid "View Level"
 msgstr ""
 
-#: jawsdays-setting.php:159
+#: jawsdays-setting.php:166
 msgid "Separate levels with commas"
 msgstr ""
 
-#: jawsdays-setting.php:160
+#: jawsdays-setting.php:167
 msgid "Add or remove levels"
 msgstr ""
 
-#: jawsdays-setting.php:162
+#: jawsdays-setting.php:169
 msgid "Popular Levels"
 msgstr ""
 
-#: jawsdays-setting.php:163
+#: jawsdays-setting.php:170
 msgid "Search Levels"
 msgstr ""
 
-#: jawsdays-setting.php:165
+#: jawsdays-setting.php:172
 msgid "No levels"
 msgstr ""
 
-#: jawsdays-setting.php:166
+#: jawsdays-setting.php:173
 msgid "Levels list"
 msgstr ""
 
-#: jawsdays-setting.php:167
+#: jawsdays-setting.php:174
 msgid "Levels list navigation"
 msgstr ""
 
-#: jawsdays-setting.php:182
+#: jawsdays-setting.php:189
 msgctxt "Post Type General Name"
 msgid "Sessions"
 msgstr ""
 
-#: jawsdays-setting.php:183
+#: jawsdays-setting.php:190
 msgctxt "Post Type Singular Name"
 msgid "Session"
 msgstr ""
 
-#: jawsdays-setting.php:184
+#: jawsdays-setting.php:191
 msgctxt "Post Type Menu Name"
 msgid "Sessions"
 msgstr ""
 
-#: jawsdays-setting.php:185 jawsdays-setting.php:260
+#: jawsdays-setting.php:192 jawsdays-setting.php:267
 msgid "Parent Item:"
 msgstr ""
 
-#: jawsdays-setting.php:186 jawsdays-setting.php:261
+#: jawsdays-setting.php:193 jawsdays-setting.php:268
 msgid "All Items"
 msgstr ""
 
-#: jawsdays-setting.php:187 jawsdays-setting.php:262
+#: jawsdays-setting.php:194 jawsdays-setting.php:269
 msgid "View Item"
 msgstr ""
 
-#: jawsdays-setting.php:188 jawsdays-setting.php:263
+#: jawsdays-setting.php:195 jawsdays-setting.php:270
 msgid "Add New Item"
 msgstr ""
 
-#: jawsdays-setting.php:189 jawsdays-setting.php:264
+#: jawsdays-setting.php:196 jawsdays-setting.php:271
 msgid "Add New"
 msgstr ""
 
-#: jawsdays-setting.php:190 jawsdays-setting.php:265
+#: jawsdays-setting.php:197 jawsdays-setting.php:272
 msgid "Edit Item"
 msgstr ""
 
-#: jawsdays-setting.php:191 jawsdays-setting.php:266
+#: jawsdays-setting.php:198 jawsdays-setting.php:273
 msgid "Update Item"
 msgstr ""
 
-#: jawsdays-setting.php:192 jawsdays-setting.php:267
+#: jawsdays-setting.php:199 jawsdays-setting.php:274
 msgid "Search Item"
 msgstr ""
 
-#: jawsdays-setting.php:193 jawsdays-setting.php:268
+#: jawsdays-setting.php:200 jawsdays-setting.php:275
 msgid "Not found"
 msgstr ""
 
-#: jawsdays-setting.php:194 jawsdays-setting.php:269
+#: jawsdays-setting.php:201 jawsdays-setting.php:276
 msgid "Not found in Trash"
 msgstr ""
 
-#: jawsdays-setting.php:197
+#: jawsdays-setting.php:204
 msgctxt "Post Type label"
 msgid "Sessions"
 msgstr ""
 
-#: jawsdays-setting.php:198
+#: jawsdays-setting.php:205
 msgctxt "Post Type description"
 msgid "Session"
 msgstr ""
 
-#: jawsdays-setting.php:224
+#: jawsdays-setting.php:231
 msgctxt "Taxonomy General Name"
 msgid "Types"
 msgstr ""
 
-#: jawsdays-setting.php:225
+#: jawsdays-setting.php:232
 msgctxt "Taxonomy Singular Name"
 msgid "Type"
 msgstr ""
 
-#: jawsdays-setting.php:226
+#: jawsdays-setting.php:233
 msgid "Type"
 msgstr ""
 
-#: jawsdays-setting.php:227
+#: jawsdays-setting.php:234 jawsdays-setting.php:306
 msgid "All Types"
 msgstr ""
 
-#: jawsdays-setting.php:228
+#: jawsdays-setting.php:235
 msgid "Parent Type"
 msgstr ""
 
-#: jawsdays-setting.php:229
+#: jawsdays-setting.php:236
 msgid "Parent Type:"
 msgstr ""
 
-#: jawsdays-setting.php:230
+#: jawsdays-setting.php:237
 msgid "New Type Name"
 msgstr ""
 
-#: jawsdays-setting.php:231
+#: jawsdays-setting.php:238
 msgid "Add New Type"
 msgstr ""
 
-#: jawsdays-setting.php:232
+#: jawsdays-setting.php:239
 msgid "Edit Type"
 msgstr ""
 
-#: jawsdays-setting.php:233
+#: jawsdays-setting.php:240
 msgid "Update Type"
 msgstr ""
 
-#: jawsdays-setting.php:234
+#: jawsdays-setting.php:241
 msgid "View Type"
 msgstr ""
 
-#: jawsdays-setting.php:235
+#: jawsdays-setting.php:242
 msgid "Separate types with commas"
 msgstr ""
 
-#: jawsdays-setting.php:236
+#: jawsdays-setting.php:243
 msgid "Add or remove types"
 msgstr ""
 
-#: jawsdays-setting.php:238
+#: jawsdays-setting.php:245
 msgid "Popular Types"
 msgstr ""
 
-#: jawsdays-setting.php:239
+#: jawsdays-setting.php:246
 msgid "Search Types"
 msgstr ""
 
-#: jawsdays-setting.php:241
+#: jawsdays-setting.php:248
 msgid "No types"
 msgstr ""
 
-#: jawsdays-setting.php:242
+#: jawsdays-setting.php:249
 msgid "Types list"
 msgstr ""
 
-#: jawsdays-setting.php:243
+#: jawsdays-setting.php:250
 msgid "Types list navigation"
 msgstr ""
 
-#: jawsdays-setting.php:257
+#: jawsdays-setting.php:264
 msgctxt "Post Type General Name"
 msgid "Supporters"
 msgstr ""
 
-#: jawsdays-setting.php:258
+#: jawsdays-setting.php:265
 msgctxt "Post Type Singular Name"
 msgid "Supporter"
 msgstr ""
 
-#: jawsdays-setting.php:259
+#: jawsdays-setting.php:266
 msgctxt "Post Type Menu Name"
 msgid "Supporters"
 msgstr ""
 
-#: jawsdays-setting.php:272
+#: jawsdays-setting.php:279
 msgctxt "Post Type label"
 msgid "Supporters"
 msgstr ""
 
-#: jawsdays-setting.php:273
+#: jawsdays-setting.php:280
 msgctxt "Post Type description"
 msgid "Supporter"
+msgstr ""
+
+#: jawsdays-setting.php:338
+msgid "Start Time"
+msgstr ""
+
+#: jawsdays-setting.php:339
+msgid "End Time"
 msgstr ""
 
 #. Plugin Name of the plugin/theme

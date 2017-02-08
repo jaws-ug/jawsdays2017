@@ -73,6 +73,9 @@ public function plugins_loaded() {
 	add_filter( 'acf/settings/save_json', array( $this, 'jaws_acf_json_save_point' ) );
 	add_filter( 'acf/settings/load_json', array( $this, 'jaws_acf_json_load_point' ) );
 	add_action( 'admin_print_styles', array( $this, 'jaws_acf_css' ) );
+	// Add custom column for session post list in dashboard.
+	add_filter( 'manage_session_posts_columns', array( $this, 'jaws_session_posts_columns' ) );
+	add_action( 'manage_session_posts_custom_column', array( $this, 'jaws_session_posts_custom_column' ), 10, 2 );
 	// Yast SEO override
 	add_filter( 'wpseo_opengraph_image', array( $this, 'jaws_wpseo_opengraph_image' ) );
 	add_filter( 'wpseo_twitter_image', array( $this, 'jaws_wpseo_opengraph_image' ) );
@@ -323,6 +326,34 @@ public function jaws_restrict_manage_posts( $post_type ) {
 			'taxonomy'           => 'session_venue',
 			'value_field'	     => 'slug',	
 		));
+	}
+}
+
+// Add custom column for session post list in dashboard.
+public function jaws_session_posts_columns( $columns ) {
+	// 任意の場所に追加
+	$new_columns = array();
+	foreach ( $columns as $column_name => $column_display_name ) {
+		if ( $column_name == 'taxonomy-session_level' ) {
+			$new_columns['start_time'] = __( 'Start Time', 'jawsdays' );
+			$new_columns['end_time'] = __( 'End Time', 'jawsdays' );
+		}
+		$new_columns[ $column_name ] = $column_display_name;
+	}	
+
+	return $new_columns;
+}
+public function jaws_session_posts_custom_column( $column, $post_id ) {
+	switch ( $column ) {
+	
+		case 'start_time' :
+			echo get_post_meta( $post_id , 'start_time' , true ); 
+			break;
+	
+		case 'end_time' :
+			echo get_post_meta( $post_id , 'end_time' , true ); 
+			break;
+
 	}
 }
 

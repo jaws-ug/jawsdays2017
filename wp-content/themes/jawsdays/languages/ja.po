@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2016-12-01 13:10+0900\n"
-"PO-Revision-Date: 2016-12-01 13:17+0900\n"
+"POT-Creation-Date: 2017-02-08 17:39+0900\n"
+"PO-Revision-Date: 2017-02-08 17:41+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -48,13 +48,12 @@ msgstr "新しいコメント"
 msgid "Comments are closed."
 msgstr "コメントは受け付けていません。"
 
-#. translators: %s: Name of current year
-#: footer.php:32
+#: footer.php:35 inc/customizer.php:28
 #, php-format
 msgid "To participate in the JAWS DAYS %d"
 msgstr "JAWS DAYS %d に参加する"
 
-#: footer.php:36
+#: footer.php:41 inc/customizer.php:61
 msgid "Tickets"
 msgstr ""
 
@@ -66,7 +65,7 @@ msgstr "メインメニュー"
 msgid "Footer Menu"
 msgstr "フッターメニュー"
 
-#: functions.php:113
+#: functions.php:108
 msgid "Footer Widget Area"
 msgstr "フッターウィジェットエリア"
 
@@ -77,6 +76,30 @@ msgstr "コンテンツへスキップ"
 #: header.php:41
 msgid "Primary Menu"
 msgstr "メインメニュー"
+
+#: inc/custom-header.php:25
+msgid "Default Header Image"
+msgstr "標準のヘッダー画像"
+
+#: inc/customizer.php:21
+msgid "Theme Options"
+msgstr "テーマオプション"
+
+#: inc/customizer.php:34
+msgid "Footer Section Title"
+msgstr "フッターセクションのタイトル"
+
+#: inc/customizer.php:52
+msgid "Button Link Page"
+msgstr "リンクボタンのページ"
+
+#: inc/customizer.php:65
+msgid "Button Text"
+msgstr "ボタンのテキスト"
+
+#: inc/customizer.php:82
+msgid "Other Text"
+msgstr "他に表示するテキスト"
 
 #: inc/template-tags.php:28
 #, php-format
@@ -128,6 +151,10 @@ msgstr "%sを編集"
 msgid "Search Results for: %s"
 msgstr "検索結果: %s"
 
+#: template-parts/content-archive-session.php:86 template-parts/content.php:36
+msgid "Read more &raquo;"
+msgstr ""
+
 #: template-parts/content-none.php:15
 msgid "Nothing Found"
 msgstr "見つかりませんでした"
@@ -154,34 +181,30 @@ msgid ""
 "searching can help."
 msgstr "お探しのコンテンツが見つかりません。検索をお試しください。"
 
-#: template-parts/content-page.php:29 template-parts/content-session.php:112
-#: template-parts/content-single.php:41 template-parts/content-supporter.php:38
+#: template-parts/content-page.php:29 template-parts/content-session.php:182
+#: template-parts/content-single.php:41 template-parts/content-supporter.php:40
 msgid "Pages:"
 msgstr "ページ:"
 
-#: template-parts/content-session.php:49
+#: template-parts/content-session.php:94
+msgid "Speakers"
+msgstr "登壇者"
+
+#: template-parts/content-session.php:140
 msgid "Affiliation:"
 msgstr "所属: "
 
-#: template-parts/content-session.php:83
-msgid "Track:"
-msgstr "トラック: "
-
-#: template-parts/content-session.php:93
+#: template-parts/content-session.php:163
 msgid "Target"
 msgstr "主な聴講者"
 
-#: template-parts/content-session.php:99
+#: template-parts/content-session.php:169
 msgid "Materials"
 msgstr "資料"
 
-#: template-parts/content-session.php:105
+#: template-parts/content-session.php:175
 msgid "Other"
 msgstr "その他"
-
-#: template-parts/content.php:36
-msgid "Read more &raquo;"
-msgstr ""
 
 #. Theme Name of the plugin/theme
 msgid "JAWSDAYS"
@@ -199,3 +222,6 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "DigitalCube Co.,Ltd"
 msgstr ""
+
+#~ msgid "Track:"
+#~ msgstr "トラック: "

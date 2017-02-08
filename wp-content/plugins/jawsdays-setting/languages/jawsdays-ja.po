@@ -1,418 +1,428 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=1; plural=0;\n"
 "Project-Id-Version: JAWSDAYS Setting\n"
-"POT-Creation-Date: 2017-01-17 12:12+0900\n"
-"PO-Revision-Date: 2017-01-17 12:24+0900\n"
+"POT-Creation-Date: 2017-02-08 17:38+0900\n"
+"PO-Revision-Date: 2017-02-08 17:39+0900\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.8.11\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: jawsdays-setting.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Last-Translator: \n"
-"Language: ja\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: jawsdays-setting.php:80
+#: jawsdays-setting.php:87
 msgctxt "Taxonomy General Name"
 msgid "Tracks"
 msgstr "カテゴリー"
 
-#: jawsdays-setting.php:81
+#: jawsdays-setting.php:88
 msgctxt "Taxonomy Singular Name"
 msgid "Track"
 msgstr "カテゴリー"
 
-#: jawsdays-setting.php:82
+#: jawsdays-setting.php:89
 msgid "Track"
 msgstr "カテゴリー"
 
-#: jawsdays-setting.php:83
+#: jawsdays-setting.php:90 jawsdays-setting.php:316
 msgid "All Tracks"
 msgstr "全てのカテゴリー"
 
-#: jawsdays-setting.php:84
+#: jawsdays-setting.php:91
 msgid "Parent Track"
 msgstr "親カテゴリー"
 
-#: jawsdays-setting.php:85
+#: jawsdays-setting.php:92
 msgid "Parent Track:"
 msgstr "親カテゴリー:"
 
-#: jawsdays-setting.php:86
+#: jawsdays-setting.php:93
 msgid "New Track Name"
 msgstr "新規カテゴリー名"
 
-#: jawsdays-setting.php:87
+#: jawsdays-setting.php:94
 msgid "Add New Track"
 msgstr "新規カテゴリー追加"
 
-#: jawsdays-setting.php:88
+#: jawsdays-setting.php:95
 msgid "Edit Track"
 msgstr "カテゴリーを編集"
 
-#: jawsdays-setting.php:89
+#: jawsdays-setting.php:96
 msgid "Update Track"
 msgstr "カテゴリーを更新"
 
-#: jawsdays-setting.php:90
+#: jawsdays-setting.php:97
 msgid "View Track"
 msgstr "カテゴリーを表示"
 
-#: jawsdays-setting.php:91
+#: jawsdays-setting.php:98
 msgid "Separate tracks with commas"
 msgstr "カテゴリーが複数ある場合はコンマで区切ってください"
 
-#: jawsdays-setting.php:92
+#: jawsdays-setting.php:99
 msgid "Add or remove tracks"
 msgstr "カテゴリーを追加、削除する"
 
-#: jawsdays-setting.php:93 jawsdays-setting.php:127 jawsdays-setting.php:161
-#: jawsdays-setting.php:237
+#: jawsdays-setting.php:100 jawsdays-setting.php:134 jawsdays-setting.php:168
+#: jawsdays-setting.php:244
 msgid "Choose from the most used"
 msgstr "よく使われているものから選択"
 
-#: jawsdays-setting.php:94
+#: jawsdays-setting.php:101
 msgid "Popular Tracks"
 msgstr "人気のあるカテゴリー"
 
-#: jawsdays-setting.php:95
+#: jawsdays-setting.php:102
 msgid "Search Tracks"
 msgstr "カテゴリーを検索"
 
-#: jawsdays-setting.php:96 jawsdays-setting.php:130 jawsdays-setting.php:164
-#: jawsdays-setting.php:240
+#: jawsdays-setting.php:103 jawsdays-setting.php:137 jawsdays-setting.php:171
+#: jawsdays-setting.php:247
 msgid "Not Found"
 msgstr "見つかりませんでした"
 
-#: jawsdays-setting.php:97
+#: jawsdays-setting.php:104
 msgid "No tracks"
 msgstr "カテゴリーなし"
 
-#: jawsdays-setting.php:98
+#: jawsdays-setting.php:105
 msgid "Tracks list"
 msgstr "カテゴリーリスト"
 
-#: jawsdays-setting.php:99
+#: jawsdays-setting.php:106
 msgid "Tracks list navigation"
 msgstr "カテゴリーリストナビゲーション"
 
-#: jawsdays-setting.php:114
+#: jawsdays-setting.php:121
 msgctxt "Taxonomy General Name"
 msgid "Venues"
 msgstr "会場"
 
-#: jawsdays-setting.php:115
+#: jawsdays-setting.php:122
 msgctxt "Taxonomy Singular Name"
 msgid "Venue"
 msgstr "会場"
 
-#: jawsdays-setting.php:116
+#: jawsdays-setting.php:123
 msgid "Venue"
 msgstr "会場"
 
-#: jawsdays-setting.php:117
+#: jawsdays-setting.php:124 jawsdays-setting.php:323
 msgid "All Venues"
 msgstr "すべての会場"
 
-#: jawsdays-setting.php:118
+#: jawsdays-setting.php:125
 msgid "Parent Venue"
 msgstr "親会場"
 
-#: jawsdays-setting.php:119
+#: jawsdays-setting.php:126
 msgid "Parent Venue:"
 msgstr "親会場:"
 
-#: jawsdays-setting.php:120
+#: jawsdays-setting.php:127
 msgid "New Venue Name"
 msgstr "新規会場名"
 
-#: jawsdays-setting.php:121
+#: jawsdays-setting.php:128
 msgid "Add New Venue"
 msgstr "新しい会場を追加"
 
-#: jawsdays-setting.php:122
+#: jawsdays-setting.php:129
 msgid "Edit Venue"
 msgstr "会場を編集"
 
-#: jawsdays-setting.php:123
+#: jawsdays-setting.php:130
 msgid "Update Venue"
 msgstr "会場を更新"
 
-#: jawsdays-setting.php:124
+#: jawsdays-setting.php:131
 msgid "View Venue"
 msgstr "会場を表示"
 
-#: jawsdays-setting.php:125
+#: jawsdays-setting.php:132
 msgid "Separate venues with commas"
 msgstr "会場が複数ある場合はコンマで区切ってください"
 
-#: jawsdays-setting.php:126
+#: jawsdays-setting.php:133
 msgid "Add or remove venues"
 msgstr "会場を追加、削除する"
 
-#: jawsdays-setting.php:128
+#: jawsdays-setting.php:135
 msgid "Popular Venues"
 msgstr "人気のある会場"
 
-#: jawsdays-setting.php:129
+#: jawsdays-setting.php:136
 msgid "Search Venues"
 msgstr "会場を検索"
 
-#: jawsdays-setting.php:131
+#: jawsdays-setting.php:138
 msgid "No venues"
 msgstr "会場なし"
 
-#: jawsdays-setting.php:132
+#: jawsdays-setting.php:139
 msgid "Venues list"
 msgstr "会場リスト"
 
-#: jawsdays-setting.php:133
+#: jawsdays-setting.php:140
 msgid "Venues list navigation"
 msgstr "会場リストナビゲーション"
 
-#: jawsdays-setting.php:148
+#: jawsdays-setting.php:155
 msgctxt "Taxonomy General Name"
 msgid "Levels"
 msgstr "難易度"
 
-#: jawsdays-setting.php:149
+#: jawsdays-setting.php:156
 msgctxt "Taxonomy Singular Name"
 msgid "Level"
 msgstr "難易度"
 
-#: jawsdays-setting.php:150
+#: jawsdays-setting.php:157
 msgid "Level"
 msgstr "難易度"
 
-#: jawsdays-setting.php:151
+#: jawsdays-setting.php:158
 msgid "All Levels"
 msgstr "すべての難易度"
 
-#: jawsdays-setting.php:152
+#: jawsdays-setting.php:159
 msgid "Parent Level"
 msgstr "親難易度"
 
-#: jawsdays-setting.php:153
+#: jawsdays-setting.php:160
 msgid "Parent Level:"
 msgstr "親難易度:"
 
-#: jawsdays-setting.php:154
+#: jawsdays-setting.php:161
 msgid "New Level Name"
 msgstr "新規難易度名"
 
-#: jawsdays-setting.php:155
+#: jawsdays-setting.php:162
 msgid "Add New Level"
 msgstr "新規難易度を追加"
 
-#: jawsdays-setting.php:156
+#: jawsdays-setting.php:163
 msgid "Edit Level"
 msgstr "難易度を編集"
 
-#: jawsdays-setting.php:157
+#: jawsdays-setting.php:164
 msgid "Update Level"
 msgstr "難易度を更新"
 
-#: jawsdays-setting.php:158
+#: jawsdays-setting.php:165
 msgid "View Level"
 msgstr "難易度を見る"
 
-#: jawsdays-setting.php:159
+#: jawsdays-setting.php:166
 msgid "Separate levels with commas"
 msgstr "難易度が複数ある場合はコンマで区切ってください"
 
-#: jawsdays-setting.php:160
+#: jawsdays-setting.php:167
 msgid "Add or remove levels"
 msgstr "難易度を追加、削除する"
 
-#: jawsdays-setting.php:162
+#: jawsdays-setting.php:169
 msgid "Popular Levels"
 msgstr "人気のある難易度"
 
-#: jawsdays-setting.php:163
+#: jawsdays-setting.php:170
 msgid "Search Levels"
 msgstr "難易度を検索"
 
-#: jawsdays-setting.php:165
+#: jawsdays-setting.php:172
 msgid "No levels"
 msgstr "難易度なし"
 
-#: jawsdays-setting.php:166
+#: jawsdays-setting.php:173
 msgid "Levels list"
 msgstr "難易度リスト"
 
-#: jawsdays-setting.php:167
+#: jawsdays-setting.php:174
 msgid "Levels list navigation"
 msgstr "難易度リストナビゲーション"
 
-#: jawsdays-setting.php:182
+#: jawsdays-setting.php:189
 msgctxt "Post Type General Name"
 msgid "Sessions"
 msgstr "セッション"
 
-#: jawsdays-setting.php:183
+#: jawsdays-setting.php:190
 msgctxt "Post Type Singular Name"
 msgid "Session"
 msgstr "セッション"
 
-#: jawsdays-setting.php:184
+#: jawsdays-setting.php:191
 msgctxt "Post Type Menu Name"
 msgid "Sessions"
 msgstr "セッション"
 
-#: jawsdays-setting.php:185 jawsdays-setting.php:260
+#: jawsdays-setting.php:192 jawsdays-setting.php:267
 msgid "Parent Item:"
 msgstr "親アイテム："
 
-#: jawsdays-setting.php:186 jawsdays-setting.php:261
+#: jawsdays-setting.php:193 jawsdays-setting.php:268
 msgid "All Items"
 msgstr "すべての項目"
 
-#: jawsdays-setting.php:187 jawsdays-setting.php:262
+#: jawsdays-setting.php:194 jawsdays-setting.php:269
 msgid "View Item"
 msgstr "項目を見る"
 
-#: jawsdays-setting.php:188 jawsdays-setting.php:263
+#: jawsdays-setting.php:195 jawsdays-setting.php:270
 msgid "Add New Item"
 msgstr "新規項目追加"
 
-#: jawsdays-setting.php:189 jawsdays-setting.php:264
+#: jawsdays-setting.php:196 jawsdays-setting.php:271
 msgid "Add New"
 msgstr "新規追加"
 
-#: jawsdays-setting.php:190 jawsdays-setting.php:265
+#: jawsdays-setting.php:197 jawsdays-setting.php:272
 msgid "Edit Item"
 msgstr "項目の編集"
 
-#: jawsdays-setting.php:191 jawsdays-setting.php:266
+#: jawsdays-setting.php:198 jawsdays-setting.php:273
 msgid "Update Item"
 msgstr "項目を更新"
 
-#: jawsdays-setting.php:192 jawsdays-setting.php:267
+#: jawsdays-setting.php:199 jawsdays-setting.php:274
 msgid "Search Item"
 msgstr "項目を検索"
 
-#: jawsdays-setting.php:193 jawsdays-setting.php:268
+#: jawsdays-setting.php:200 jawsdays-setting.php:275
 msgid "Not found"
 msgstr "見つかりません"
 
-#: jawsdays-setting.php:194 jawsdays-setting.php:269
+#: jawsdays-setting.php:201 jawsdays-setting.php:276
 msgid "Not found in Trash"
 msgstr "ごみ箱に見つかりません"
 
-#: jawsdays-setting.php:197
+#: jawsdays-setting.php:204
 msgctxt "Post Type label"
 msgid "Sessions"
 msgstr "セッション"
 
-#: jawsdays-setting.php:198
+#: jawsdays-setting.php:205
 msgctxt "Post Type description"
 msgid "Session"
 msgstr "セッション"
 
-#: jawsdays-setting.php:224
+#: jawsdays-setting.php:231
 msgctxt "Taxonomy General Name"
 msgid "Types"
 msgstr "サポータータイプ"
 
-#: jawsdays-setting.php:225
+#: jawsdays-setting.php:232
 msgctxt "Taxonomy Singular Name"
 msgid "Type"
 msgstr "サポータータイプ"
 
-#: jawsdays-setting.php:226
+#: jawsdays-setting.php:233
 msgid "Type"
 msgstr "サポータータイプ"
 
-#: jawsdays-setting.php:227
+#: jawsdays-setting.php:234 jawsdays-setting.php:306
 msgid "All Types"
 msgstr "全てのタイプ"
 
-#: jawsdays-setting.php:228
+#: jawsdays-setting.php:235
 msgid "Parent Type"
 msgstr "親タイプ"
 
-#: jawsdays-setting.php:229
+#: jawsdays-setting.php:236
 msgid "Parent Type:"
 msgstr "親タイプ:"
 
-#: jawsdays-setting.php:230
+#: jawsdays-setting.php:237
 msgid "New Type Name"
 msgstr "新規タイプ名"
 
-#: jawsdays-setting.php:231
+#: jawsdays-setting.php:238
 msgid "Add New Type"
 msgstr "新規タイプを追加"
 
-#: jawsdays-setting.php:232
+#: jawsdays-setting.php:239
 msgid "Edit Type"
 msgstr "タイプを編集"
 
-#: jawsdays-setting.php:233
+#: jawsdays-setting.php:240
 msgid "Update Type"
 msgstr "タイプを更新"
 
-#: jawsdays-setting.php:234
+#: jawsdays-setting.php:241
 msgid "View Type"
 msgstr "タイプを表示"
 
-#: jawsdays-setting.php:235
+#: jawsdays-setting.php:242
 msgid "Separate types with commas"
 msgstr "タイプが複数ある場合はコンマで区切ってください。"
 
-#: jawsdays-setting.php:236
+#: jawsdays-setting.php:243
 msgid "Add or remove types"
 msgstr "タイプを追加、削除する"
 
-#: jawsdays-setting.php:238
+#: jawsdays-setting.php:245
 msgid "Popular Types"
 msgstr "人気のタイプ"
 
-#: jawsdays-setting.php:239
+#: jawsdays-setting.php:246
 msgid "Search Types"
 msgstr "タイプの検索"
 
-#: jawsdays-setting.php:241
+#: jawsdays-setting.php:248
 msgid "No types"
 msgstr "タイプがありません"
 
-#: jawsdays-setting.php:242
+#: jawsdays-setting.php:249
 msgid "Types list"
 msgstr "タイプリスト"
 
-#: jawsdays-setting.php:243
+#: jawsdays-setting.php:250
 msgid "Types list navigation"
 msgstr "タイプリストナビゲーション"
 
-#: jawsdays-setting.php:257
+#: jawsdays-setting.php:264
 msgctxt "Post Type General Name"
 msgid "Supporters"
 msgstr "サポーター"
 
-#: jawsdays-setting.php:258
+#: jawsdays-setting.php:265
 msgctxt "Post Type Singular Name"
 msgid "Supporter"
 msgstr "サポーター"
 
-#: jawsdays-setting.php:259
+#: jawsdays-setting.php:266
 msgctxt "Post Type Menu Name"
 msgid "Supporters"
 msgstr "サポーター"
 
-#: jawsdays-setting.php:272
+#: jawsdays-setting.php:279
 msgctxt "Post Type label"
 msgid "Supporters"
 msgstr "サポーター"
 
-#: jawsdays-setting.php:273
+#: jawsdays-setting.php:280
 msgctxt "Post Type description"
 msgid "Supporter"
 msgstr "サポーター"
+
+#: jawsdays-setting.php:338
+msgid "Start Time"
+msgstr "開始時間"
+
+#: jawsdays-setting.php:339
+msgid "End Time"
+msgstr "終了時間"
 
 #. Plugin Name of the plugin/theme
 msgid "JAWSDAYS Setting"
