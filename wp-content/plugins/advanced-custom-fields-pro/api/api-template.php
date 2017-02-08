@@ -627,10 +627,11 @@ function get_row_index() {
 	
 	// vars
 	$i = acf_get_loop('active', 'i');
+	$offset = acf_get_setting('row_index_offset');
 	
 	
 	// return
-	return $i + 1;
+	return $offset + $i;
 	
 }
 
@@ -1475,7 +1476,7 @@ class acf_template_form {
 			
 			
 			?>
-		</div><!-- acf-form-fields -->
+		</div>
 		
 		<?php if( $args['form'] ): ?>
 		
@@ -1714,7 +1715,7 @@ function add_row( $selector, $row = false, $post_id = false ) {
 	
 	
 	// get field
-	$field = acf_maybe_get_field( $selector, $post_id );
+	$field = acf_maybe_get_field( $selector, $post_id, false );
 	
 	
 	// bail early if no field
@@ -1825,7 +1826,8 @@ function add_sub_row( $selector, $row = false, $post_id = false ) {
 function update_row( $selector, $i = 1, $row = false, $post_id = false ) {
 	
 	// vars
-	$i--;
+	$offset = acf_get_setting('row_index_offset');
+	$i = $i - $offset;
 	
 	
 	// filter post_id
@@ -1833,7 +1835,7 @@ function update_row( $selector, $i = 1, $row = false, $post_id = false ) {
 	
 	
 	// get field
-	$field = acf_maybe_get_field( $selector, $post_id );
+	$field = acf_maybe_get_field( $selector, $post_id, false );
 	
 	
 	// bail early if no field
@@ -1881,7 +1883,8 @@ function update_sub_row( $selector, $i = 1, $row = false, $post_id = false ) {
 	
 	// vars
 	$sub_field = false;
-	$i--;
+	$offset = acf_get_setting('row_index_offset');
+	$i = $i - $offset;
 	
 	
 	// filter post_id
@@ -1944,7 +1947,8 @@ function update_sub_row( $selector, $i = 1, $row = false, $post_id = false ) {
 function delete_row( $selector, $i = 1, $post_id = false ) {
 	
 	// vars
-	$i--;
+	$offset = acf_get_setting('row_index_offset');
+	$i = $i - $offset;
 	
 	
 	// filter post_id
@@ -1965,6 +1969,10 @@ function delete_row( $selector, $i = 1, $post_id = false ) {
 	
 	// ensure array
 	$value = acf_get_array($value);
+	
+	
+	// bail early if index doesn't exist
+	if( !isset($value[ $i ]) ) return false;
 	
 		
 	// unset
@@ -2000,7 +2008,8 @@ function delete_sub_row( $selector, $i = 1, $post_id = false ) {
 	
 	// vars
 	$sub_field = false;
-	$i--;
+	$offset = acf_get_setting('row_index_offset');
+	$i = $i - $offset;
 	
 	
 	// filter post_id
@@ -2029,6 +2038,10 @@ function delete_sub_row( $selector, $i = 1, $post_id = false ) {
 	
 	// ensure array
 	$value = acf_get_array( $value );
+	
+	
+	// bail early if index doesn't exist
+	if( !isset($value[ $i ]) ) return false;
 	
 	
 	// append

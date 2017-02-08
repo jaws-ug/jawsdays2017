@@ -2839,6 +2839,10 @@ function acf_in_array( $value = '', $array = false ) {
 
 function acf_get_valid_post_id( $post_id = 0 ) {
 	
+	// vars
+	$_post_id = $post_id;
+	
+	
 	// if not $post_id, load queried object
 	if( !$post_id ) {
 		
@@ -2871,8 +2875,8 @@ function acf_get_valid_post_id( $post_id = 0 ) {
 		
 		// term
 		} elseif( isset($post_id->taxonomy, $post_id->term_id) ) {
-		
-			$post_id = 'term_' . $post_id->term_id;
+			
+			$post_id = acf_get_term_post_id( $post_id->taxonomy, $post_id->term_id );
 		
 		// comment
 		} elseif( isset($post_id->comment_ID) ) {
@@ -2948,7 +2952,7 @@ function acf_get_valid_post_id( $post_id = 0 ) {
 	
 	
 	// filter for 3rd party
-	$post_id = apply_filters('acf/get_valid_post_id', $post_id);
+	$post_id = apply_filters('acf/validate_post_id', $post_id, $_post_id);
 	
 	
 	// return
@@ -3003,7 +3007,7 @@ function acf_get_post_id_info( $post_id = 0 ) {
 		$type = explode($glue, $post_id);
 		$id = array_pop($type);
 		$type = implode($glue, $type);
-		$meta = array('post', 'user', 'comment', 'term'); // add in 'term'
+		$meta = array('post', 'user', 'comment', 'term');
 		
 		
 		// check if is taxonomy (ACF < 5.5)
@@ -3036,6 +3040,7 @@ function acf_get_post_id_info( $post_id = 0 ) {
 	return $info;
 	
 }
+
 
 /*
 
@@ -3087,6 +3092,36 @@ function acf_isset_termmeta( $taxonomy = '' ) {
 	// return
 	return true;
 		
+}
+
+
+/*
+*  acf_get_term_post_id
+*
+*  This function will return a valid post_id string for a given term and taxonomy
+*
+*  @type	function
+*  @date	6/2/17
+*  @since	5.5.6
+*
+*  @param	$taxonomy (string)
+*  @param	$term_id (int)
+*  @return	(string)
+*/
+
+function acf_get_term_post_id( $taxonomy, $term_id ) {
+	
+	// WP < 4.4
+	if( !acf_isset_termmeta() ) {
+		
+		return $taxonomy . '_' . $term_id;
+		
+	}
+	
+	
+	// return
+	return 'term_' . $term_id;
+	
 }
 
 

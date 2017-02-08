@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitb8fceefcda1c4d18916d08a8d7a7d3e0
+class ComposerStaticInit6635f2a2d429a0e1dac5acb24f324193
 {
     public static $prefixesPsr0 = array (
         'x' => 
@@ -259,7 +259,7 @@ class ComposerStaticInitb8fceefcda1c4d18916d08a8d7a7d3e0
         'Yoast_Form' => __DIR__ . '/../..' . '/admin/class-yoast-form.php',
         'Yoast_Form_Element' => __DIR__ . '/../..' . '/admin/views/interface-yoast-form-element.php',
         'Yoast_Form_Fieldset' => __DIR__ . '/../..' . '/admin/views/class-yoast-form-fieldset.php',
-        'Yoast_I18n_WordPressOrg' => __DIR__ . '/..' . '/yoast/i18n-module/src/i18n-module-wordpressorg.php',
+        'Yoast_I18n_WordPressOrg_v2' => __DIR__ . '/..' . '/yoast/i18n-module/src/i18n-module-wordpressorg.php',
         'Yoast_Input_Select' => __DIR__ . '/../..' . '/admin/views/class-yoast-input-select.php',
         'Yoast_License_Manager' => __DIR__ . '/..' . '/yoast/license-manager/class-license-manager.php',
         'Yoast_Notification' => __DIR__ . '/../..' . '/admin/class-yoast-notification.php',
@@ -279,14 +279,14 @@ class ComposerStaticInitb8fceefcda1c4d18916d08a8d7a7d3e0
         'iYoast_License_Manager' => __DIR__ . '/..' . '/yoast/license-manager/class-license-manager.php',
         'xrstf\\Composer52\\AutoloadGenerator' => __DIR__ . '/..' . '/xrstf/composer-php52/lib/xrstf/Composer52/AutoloadGenerator.php',
         'xrstf\\Composer52\\Generator' => __DIR__ . '/..' . '/xrstf/composer-php52/lib/xrstf/Composer52/Generator.php',
-        'yoast_i18n' => __DIR__ . '/..' . '/yoast/i18n-module/src/i18n-module.php',
+        'yoast_i18n_v2' => __DIR__ . '/..' . '/yoast/i18n-module/src/i18n-module.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixesPsr0 = ComposerStaticInitb8fceefcda1c4d18916d08a8d7a7d3e0::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitb8fceefcda1c4d18916d08a8d7a7d3e0::$classMap;
+            $loader->prefixesPsr0 = ComposerStaticInit6635f2a2d429a0e1dac5acb24f324193::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit6635f2a2d429a0e1dac5acb24f324193::$classMap;
 
         }, null, ClassLoader::class);
     }

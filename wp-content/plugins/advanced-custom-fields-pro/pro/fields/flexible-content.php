@@ -51,20 +51,25 @@ class acf_field_flexible_content extends acf_field {
 			'max_layout'	=> __("Maximum {label} limit reached ({max} {identifier})",'acf'),
 			'available'		=> __("{available} {label} {identifier} available (max {max})",'acf'),
 			'required'		=> __("{required} {label} {identifier} required (min {min})",'acf'),
+			'layout_warning'	=> __('Flexible Content requires at least 1 layout','acf')
 		);		
 		
 		
 		// ajax
-		add_action('wp_ajax_acf/fields/flexible_content/layout_title',			array($this, 'ajax_layout_title'));
-		add_action('wp_ajax_nopriv_acf/fields/flexible_content/layout_title',	array($this, 'ajax_layout_title'));
+		$this->add_action('wp_ajax_acf/fields/flexible_content/layout_title',			array($this, 'ajax_layout_title'));
+		$this->add_action('wp_ajax_nopriv_acf/fields/flexible_content/layout_title',	array($this, 'ajax_layout_title'));
 		
 		
 		// filters
-		add_filter('acf/clone_field', array($this, 'acf_clone_field'), 10, 2);
+		$this->add_filter('acf/prepare_field_for_export',	array($this, 'prepare_any_field_for_export'));
+		$this->add_filter('acf/clone_field', 				array($this, 'clone_any_field'), 10, 2);
+		$this->add_filter('acf/validate_field',					array($this, 'validate_any_field'));
 		
 		
 		// field filters
-		$this->add_field_filter('acf/get_sub_field', array($this, 'get_sub_field'), 10, 3);
+		$this->add_field_filter('acf/get_sub_field', 			array($this, 'get_sub_field'), 10, 3);
+		$this->add_field_filter('acf/prepare_field_for_export', array($this, 'prepare_field_for_export'));
+		$this->add_field_filter('acf/prepare_field_for_import', array($this, 'prepare_field_for_import'));
 		
 		
 		// do not delete!
@@ -1538,7 +1543,8 @@ class acf_field_flexible_content extends acf_field {
 		
 		
 		// prepend order
-		$title = '<span class="acf-fc-layout-order">' . ($i+1) . '</span> ' . $title;
+		$order = is_numeric($i) ? $i+1 : 0;
+		$title = '<span class="acf-fc-layout-order">' . $order . '</span> ' . $title;
 		
 		
 		// return
@@ -1548,7 +1554,7 @@ class acf_field_flexible_content extends acf_field {
 	
 	
 	/*
-	*  acf_clone_field
+	*  clone_any_field
 	*
 	*  This function will update clone field settings based on the origional field
 	*
@@ -1561,7 +1567,7 @@ class acf_field_flexible_content extends acf_field {
 	*  @return	$clone
 	*/
 	
-	function acf_clone_field( $field, $clone_field ) {
+	function clone_any_field( $field, $clone_field ) {
 		
 		// remove parent_layout
 		// - allows a sub field to be rendered as a normal field
@@ -1572,6 +1578,162 @@ class acf_field_flexible_content extends acf_field {
 		if( isset($clone_field['parent_layout']) ) {
 			
 			$field['parent_layout'] = $clone_field['parent_layout'];
+			
+		}
+		
+		
+		// return
+		return $field;
+		
+	}
+	
+	
+	/*
+	*  prepare_field_for_export
+	*
+	*  description
+	*
+	*  @type	function
+	*  @date	11/03/2014
+	*  @since	5.0.0
+	*
+	*  @param	$post_id (int)
+	*  @return	$post_id (int)
+	*/
+	
+	function prepare_field_for_export( $field ) {
+		
+		// bail early if no layouts
+		if( empty($field['layouts']) ) return $field;
+		
+		
+		// loop
+		foreach( $field['layouts'] as $i => $layout ) {
+			
+			$field['layouts'][ $i ]['sub_fields'] = acf_prepare_fields_for_export( $layout['sub_fields'] );
+		
+		}
+		
+		
+		// return
+		return $field;
+		
+	}
+	
+	function prepare_any_field_for_export( $field ) {
+		
+		// remove parent_layout
+		unset( $field['parent_layout'] );
+		
+		
+		// return
+		return $field;
+		
+	}
+	
+	
+	/*
+	*  prepare_field_for_import
+	*
+	*  description
+	*
+	*  @type	function
+	*  @date	11/03/2014
+	*  @since	5.0.0
+	*
+	*  @param	$post_id (int)
+	*  @return	$post_id (int)
+	*/
+	
+	function prepare_field_for_import( $field ) {
+		
+		// bail early if no layouts
+		if( empty($field['layouts']) ) return $field;
+		
+		
+		// var
+		$extra = array();
+		
+		
+		// loop
+		foreach( array_keys($field['layouts']) as $i ) {
+			
+			// extract layout
+			$layout = acf_extract_var( $field['layouts'], $i );
+			
+			
+			// get valid layout (fixes ACF4 export code bug undefined index 'key')
+			if( empty($layout['key']) ) $layout['key'] = uniqid();
+			
+			
+			// extract sub fields
+			$sub_fields = acf_extract_var( $layout, 'sub_fields');
+			
+			
+			// validate sub fields
+			if( !empty($sub_fields) ) {
+				
+				// loop over sub fields
+				foreach( array_keys($sub_fields) as $j ) {
+					
+					// extract sub field
+					$sub_field = acf_extract_var( $sub_fields, $j );
+					
+					
+					// attributes
+					$sub_field['parent'] = $field['key'];
+					$sub_field['parent_layout'] = $layout['key'];
+					
+					
+					// append to extra
+					$extra[] = $sub_field;
+					
+				}
+				
+			}
+			
+			
+			// append to layout
+			$field['layouts'][ $i ] = $layout;
+		
+		}
+		
+		
+		// extra
+		if( !empty($extra) ) {
+			
+			array_unshift($extra, $field);
+			
+			return $extra;
+			
+		}
+		
+		
+		// return
+		return $field;
+		
+	}
+	
+	
+	/*
+	*  validate_any_field
+	*
+	*  This function will add compatibility for the 'column_width' setting
+	*
+	*  @type	function
+	*  @date	30/1/17
+	*  @since	5.5.6
+	*
+	*  @param	$field (array)
+	*  @return	$field
+	*/
+	
+	function validate_any_field( $field ) {
+		
+		// width has changed
+		if( isset($field['column_width']) ) {
+			
+			$field['wrapper']['width'] = acf_extract_var($field, 'column_width');
 			
 		}
 		

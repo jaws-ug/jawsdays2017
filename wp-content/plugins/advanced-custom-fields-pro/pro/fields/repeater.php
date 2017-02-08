@@ -50,7 +50,13 @@ class acf_field_repeater extends acf_field {
 		
 		
 		// field filters
-		$this->add_field_filter('acf/get_sub_field', array($this, 'get_sub_field'), 10, 3);
+		$this->add_field_filter('acf/get_sub_field', 			array($this, 'get_sub_field'), 10, 3);
+		$this->add_field_filter('acf/prepare_field_for_export', array($this, 'prepare_field_for_export'));
+		$this->add_field_filter('acf/prepare_field_for_import', array($this, 'prepare_field_for_import'));
+		
+		
+		// filters
+		$this->add_filter('acf/validate_field',					array($this, 'validate_any_field'));
 		
 		
 		// do not delete!
@@ -154,7 +160,6 @@ class acf_field_repeater extends acf_field {
 		
 		// vars
 		$sub_fields = $field['sub_fields'];
-		$value = acf_get_array($field['value']);
 		$show_order = true;
 		$show_add = true;
 		$show_remove = true;
@@ -162,6 +167,10 @@ class acf_field_repeater extends acf_field {
 		
 		// bail early if no sub fields
 		if( empty($sub_fields) ) return;
+		
+		
+		// value
+		$value = is_array($field['value']) ? $field['value'] : array();
 		
 		
 		// div
@@ -546,61 +555,54 @@ class acf_field_repeater extends acf_field {
 	function load_value( $value, $post_id, $field ) {
 		
 		// bail early if no value
-		if( empty($value) || empty($field['sub_fields']) ) {
-			
-			return $value;
-			
-		}
+		if( empty($value) ) return false;
 		
 		
-		// convert to int
-		$value = intval( $value );
+		// bail ealry if not numeric
+		if( !is_numeric($value) ) return false;
+		
+		
+		// bail early if no sub fields
+		if( empty($field['sub_fields']) ) return false;
 		
 		
 		// vars
+		$value = intval($value);
 		$rows = array();
 		
 		
-		// check number of rows
-		if( $value > 0 ) {
+		// loop
+		for( $i = 0; $i < $value; $i++ ) {
 			
-			// loop through rows
-			for( $i = 0; $i < $value; $i++ ) {
+			// create empty array
+			$rows[ $i ] = array();
+			
+			
+			// loop through sub fields
+			foreach( array_keys($field['sub_fields']) as $j ) {
 				
-				// create empty array
-				$rows[ $i ] = array();
-				
-				
-				// loop through sub fields
-				foreach( array_keys($field['sub_fields']) as $j ) {
-					
-					// get sub field
-					$sub_field = $field['sub_fields'][ $j ];
-					
-					
-					// bail ealry if no name (tab)
-					if( acf_is_empty($sub_field['name']) ) continue;
-					
-					
-					// update $sub_field name
-					$sub_field['name'] = "{$field['name']}_{$i}_{$sub_field['name']}";
-					
-					
-					// get value
-					$sub_value = acf_get_value( $post_id, $sub_field );
+				// get sub field
+				$sub_field = $field['sub_fields'][ $j ];
 				
 				
-					// add value
-					$rows[ $i ][ $sub_field['key'] ] = $sub_value;
-					
-				}
-				// foreach
+				// bail ealry if no name (tab)
+				if( acf_is_empty($sub_field['name']) ) continue;
+				
+				
+				// update $sub_field name
+				$sub_field['name'] = "{$field['name']}_{$i}_{$sub_field['name']}";
+				
+				
+				// get value
+				$sub_value = acf_get_value( $post_id, $sub_field );
+			
+			
+				// add value
+				$rows[ $i ][ $sub_field['key'] ] = $sub_value;
 				
 			}
-			// for
 			
 		}
-		// if
 		
 		
 		// return
@@ -628,11 +630,15 @@ class acf_field_repeater extends acf_field {
 	function format_value( $value, $post_id, $field ) {
 		
 		// bail early if no value
-		if( empty($value) || empty($field['sub_fields']) ) {
-						
-			return false;
-			
-		}
+		if( empty($value) ) return false;
+		
+		
+		// bail ealry if not array
+		if( !is_array($value) ) return false;
+		
+		
+		// bail early if no sub fields
+		if( empty($field['sub_fields']) ) return false;
 		
 		
 		// loop over rows
@@ -1027,6 +1033,128 @@ class acf_field_repeater extends acf_field {
 		
 		// translate
 		$field['button_label'] = acf_translate( $field['button_label'] );
+		
+		
+		// return
+		return $field;
+		
+	}
+	
+	
+	/*
+	*  prepare_field_for_export
+	*
+	*  description
+	*
+	*  @type	function
+	*  @date	11/03/2014
+	*  @since	5.0.0
+	*
+	*  @param	$post_id (int)
+	*  @return	$post_id (int)
+	*/
+	
+	function prepare_field_for_export( $field ) {
+		
+		// bail early if no layouts
+		if( empty($field['sub_fields']) ) return $field;
+		
+		
+		// prepare
+		$field['sub_fields'] = acf_prepare_fields_for_export( $field['sub_fields'] );
+		
+		
+		// return
+		return $field;
+		
+	}
+	
+	
+	/*
+	*  prepare_field_for_import
+	*
+	*  description
+	*
+	*  @type	function
+	*  @date	11/03/2014
+	*  @since	5.0.0
+	*
+	*  @param	$post_id (int)
+	*  @return	$post_id (int)
+	*/
+	
+	function prepare_field_for_import( $field ) {
+		
+		// bail early if no layouts
+		if( empty($field['sub_fields']) ) return $field;
+		
+		
+		// var
+		$extra = array();
+		
+		
+		// extract sub fields
+		$sub_fields = acf_extract_var( $field, 'sub_fields');
+		
+		
+		// reset field setting
+		$field['sub_fields'] = array();
+		
+		
+		// loop
+		foreach( array_keys($sub_fields) as $i ) {
+			
+			// extract sub field
+			$sub_field = acf_extract_var( $sub_fields, $i );
+					
+			
+			// attributes
+			$sub_field['parent'] = $field['key'];
+			
+			
+			// append to extra
+			$extra[] = $sub_field;
+			
+		}
+		
+		
+		// extra
+		if( !empty($extra) ) {
+			
+			array_unshift($extra, $field);
+			
+			return $extra;
+			
+		}
+		
+		
+		// return
+		return $field;
+		
+	}
+	
+	
+	/*
+	*  validate_any_field
+	*
+	*  This function will add compatibility for the 'column_width' setting
+	*
+	*  @type	function
+	*  @date	30/1/17
+	*  @since	5.5.6
+	*
+	*  @param	$field (array)
+	*  @return	$field
+	*/
+	
+	function validate_any_field( $field ) {
+		
+		// width has changed
+		if( isset($field['column_width']) ) {
+			
+			$field['wrapper']['width'] = acf_extract_var($field, 'column_width');
+			
+		}
 		
 		
 		// return
