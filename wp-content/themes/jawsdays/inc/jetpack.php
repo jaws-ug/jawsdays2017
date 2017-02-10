@@ -62,6 +62,7 @@ add_action( 'loop_start', 'jptweak_remove_share' );
 add_action( 'publicize_save_meta', 'jawsdays_publicize_save_meta', 10, 4);
 function jawsdays_publicize_save_meta( $submit_post, $post_id, $service_name, $connection ) {
 
+	delete_post_meta( $post_id, '_wpas_mess' );
 	$prefix = "";
 	if ( 'session' === get_post_type( $post_id ) ) {
 		$prefix = "[セッション情報更新] ";
@@ -90,5 +91,5 @@ function jawsdays_publicize_save_meta( $submit_post, $post_id, $service_name, $c
 			$publicize_custom_message = $publicize_custom_message . $link;
 		}
 	}
-	update_post_meta($post_id, '_wpas_mess', $publicize_custom_message);
+	update_post_meta( $post_id, '_wpas_mess', $publicize_custom_message );
 }
