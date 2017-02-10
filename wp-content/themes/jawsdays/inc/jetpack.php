@@ -56,41 +56,28 @@ function jptweak_remove_share() {
 add_action( 'loop_start', 'jptweak_remove_share' );
 
 /*
- * パブリサイズ共有でサフィックス追加
- * 参考 http://blog.tenshinbo.net/2013/12/12/p-57/
- * original
- * $this->default_prefix = Publicize_Util::build_sprintf( array(
- * 	apply_filters( 'wpas_default_prefix', $this->default_prefix ),
- * 	'url',
- * ) );
+ * パブリサイズ共有
  */
-
-add_filter( 'wpas_default_suffix', 'jawsdays_wpas_default_suffix' );
-function jawsdays_wpas_default_suffix( $suffix ) {
-	$suffix = $suffix . " #jawsdays #jawsug";
-	return $suffix;
-}
 
 add_action( 'publicize_save_meta', 'jawsdays_publicize_save_meta', 10, 4);
 function jawsdays_publicize_save_meta( $submit_post, $post_id, $service_name, $connection ) {
+
 	$prefix = "";
 	if ( 'session' === get_post_type( $post_id ) ) {
 		$prefix = "[セッション情報更新] ";
 	} elseif ( 'supporter' === get_post_type( $post_id ) ) {
 		$prefix = "[サポーター情報更新] ";
 	}
-	$suffix = " #jawsdays #jawsug";
 	$title  = get_the_title( $post_id );
 	$link   = wp_get_shortlink( $post_id );
 
 	$publicize_custom_message = get_post_meta( $post_id, '_wpas_mess', true );
 	if ( empty( $publicize_custom_message ) ) {
 		$publicize_custom_message = sprintf(
-			"%s%s %s %s",
+			"%s%s %s",
 			$prefix,
 			$title,
-			$link,
-			$suffix
+			$link
 		);
 	} else {
 		if ( strpos( $publicize_custom_message, $prefix ) === false ) {
@@ -101,9 +88,6 @@ function jawsdays_publicize_save_meta( $submit_post, $post_id, $service_name, $c
 		}
 		if ( strpos( $publicize_custom_message, $link ) === false ) {
 			$publicize_custom_message = $publicize_custom_message . $link;
-		}
-		if ( strpos( $publicize_custom_message, $suffix ) === false ) {
-			$publicize_custom_message = $publicize_custom_message . $suffix;
 		}
 	}
 	update_post_meta($post_id, '_wpas_mess', $publicize_custom_message);

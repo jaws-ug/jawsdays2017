@@ -79,6 +79,8 @@ public function plugins_loaded() {
 	// Yast SEO override
 	add_filter( 'wpseo_opengraph_image', array( $this, 'jaws_wpseo_opengraph_image' ) );
 	add_filter( 'wpseo_twitter_image', array( $this, 'jaws_wpseo_opengraph_image' ) );
+	// Jetpack override
+	add_filter( 'wpas_default_suffix', array( $this, 'jaws_wpas_default_suffix' ) );
 }
 
 // Register Custom Post Type - Session
@@ -418,6 +420,12 @@ public function jaws_wpseo_opengraph_image( $image ) {
 		$image = JAWSDAYS_URL . '/images/ogp-supporter-image.png';
 	}
 	return $image;
+}
+
+// Jetpack override
+public function jaws_wpas_default_suffix( $suffix ) {
+	$suffix = $suffix . " #jawsdays #jawsug";
+	return $suffix;
 }
 
 } // end class JAWSDAYS__Setting
