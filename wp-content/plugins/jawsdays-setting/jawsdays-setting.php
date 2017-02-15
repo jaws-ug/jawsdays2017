@@ -306,6 +306,7 @@ public function jaws_restrict_manage_posts( $post_type ) {
 		$term_slug = get_query_var( 'supporter_type' );
 		wp_dropdown_categories( array(
 			'show_option_all'    => __( 'All Types', 'jawsdays' ),
+			'hide_empty'         => 0,
 			'selected'           => $term_slug,
 			'name'               => 'supporter_type',
 			'taxonomy'           => 'supporter_type',
@@ -316,6 +317,7 @@ public function jaws_restrict_manage_posts( $post_type ) {
 		$venue_var = get_query_var( 'session_venue' );
 		wp_dropdown_categories( array(
 			'show_option_all'    => __( 'All Tracks', 'jawsdays' ),
+			'hide_empty'         => 0,
 			'selected'           => $track_var,
 			'name'               => 'session_track',
 			'taxonomy'           => 'session_track',
@@ -323,6 +325,7 @@ public function jaws_restrict_manage_posts( $post_type ) {
 		));
 		wp_dropdown_categories( array(
 			'show_option_all'    => __( 'All Venues', 'jawsdays' ),
+			'hide_empty'         => 0,
 			'selected'           => $venue_var,
 			'name'               => 'session_venue',
 			'taxonomy'           => 'session_venue',
