@@ -1195,7 +1195,7 @@ p.copyright {
 ## Posts and pages
 --------------------------------------------------------------*/
 .site-content {
-  word-break: break-all;
+  word-wrap: break-word;
 }
 
 .page-header {
@@ -1578,12 +1578,6 @@ p.copyright {
   width: 250px;
 }
 
-.page-content,
-.entry-content,
-.entry-summary,
-.mceContentBody {
-  word-wrap: break-word;
-}
 .page-content a,
 .entry-content a,
 .entry-summary a,

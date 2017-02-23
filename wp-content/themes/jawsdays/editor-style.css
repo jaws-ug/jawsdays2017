@@ -436,12 +436,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-.page-content,
-.entry-content,
-.entry-summary,
-.mceContentBody {
-  word-wrap: break-word;
-}
 .page-content a,
 .entry-content a,
 .entry-summary a,

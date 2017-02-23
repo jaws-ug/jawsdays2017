@@ -511,21 +511,14 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-/* line 1, ../sass/site/primary/_entry-content.scss */
-.page-content,
-.entry-content,
-.entry-summary,
-.mceContentBody {
-  word-wrap: break-word;
-}
-/* line 7, ../sass/site/primary/_entry-content.scss */
+/* line 6, ../sass/site/primary/_entry-content.scss */
 .page-content a,
 .entry-content a,
 .entry-summary a,
 .mceContentBody a {
   color: #336699;
 }
-/* line 9, ../sass/site/primary/_entry-content.scss */
+/* line 8, ../sass/site/primary/_entry-content.scss */
 .page-content a:hover, .page-content a:focus, .page-content a:active,
 .entry-content a:hover,
 .entry-content a:focus,
@@ -538,7 +531,7 @@ a:hover, a:active {
 .mceContentBody a:active {
   color: #ff9c08;
 }
-/* line 16, ../sass/site/primary/_entry-content.scss */
+/* line 15, ../sass/site/primary/_entry-content.scss */
 .page-content .btn,
 .entry-content .btn,
 .entry-summary .btn,
@@ -549,7 +542,7 @@ a:hover, a:active {
   padding: 0.5em 1em;
   border-radius: 3px;
 }
-/* line 22, ../sass/site/primary/_entry-content.scss */
+/* line 21, ../sass/site/primary/_entry-content.scss */
 .page-content .btn:hover, .page-content .btn:focus, .page-content .btn:active,
 .entry-content .btn:hover,
 .entry-content .btn:focus,
@@ -564,7 +557,7 @@ a:hover, a:active {
   text-decoration: none;
   background-color: #ff9c08;
 }
-/* line 31, ../sass/site/primary/_entry-content.scss */
+/* line 30, ../sass/site/primary/_entry-content.scss */
 .page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6, .page-content p,
 .entry-content h1,
 .entry-content h2,
@@ -589,7 +582,7 @@ a:hover, a:active {
 .mceContentBody p {
   margin-top: 0;
 }
-/* line 35, ../sass/site/primary/_entry-content.scss */
+/* line 34, ../sass/site/primary/_entry-content.scss */
 .page-content h1,
 .entry-content h1,
 .entry-summary h1,
@@ -599,7 +592,7 @@ a:hover, a:active {
   border-bottom: 2px solid #dedede;
   padding: 5px;
 }
-/* line 41, ../sass/site/primary/_entry-content.scss */
+/* line 40, ../sass/site/primary/_entry-content.scss */
 .page-content h2,
 .entry-content h2,
 .entry-summary h2,
@@ -607,7 +600,7 @@ a:hover, a:active {
   background-image: url('../images/title-back.gif?1480305697');
   padding: 5px;
 }
-/* line 45, ../sass/site/primary/_entry-content.scss */
+/* line 44, ../sass/site/primary/_entry-content.scss */
 .page-content h3,
 .entry-content h3,
 .entry-summary h3,
@@ -615,7 +608,7 @@ a:hover, a:active {
   border-top: 4px solid #dedede;
   padding: 5px;
 }
-/* line 49, ../sass/site/primary/_entry-content.scss */
+/* line 48, ../sass/site/primary/_entry-content.scss */
 .page-content h4,
 .entry-content h4,
 .entry-summary h4,
@@ -623,7 +616,7 @@ a:hover, a:active {
   border-top: 1px solid #dedede;
   padding: 5px;
 }
-/* line 55, ../sass/site/primary/_entry-content.scss */
+/* line 54, ../sass/site/primary/_entry-content.scss */
 .page-content table th, .page-content table td,
 .entry-content table th,
 .entry-content table td,
@@ -634,14 +627,14 @@ a:hover, a:active {
   padding: 0.5em;
   border: solid 1px #ccc;
 }
-/* line 59, ../sass/site/primary/_entry-content.scss */
+/* line 58, ../sass/site/primary/_entry-content.scss */
 .page-content table th,
 .entry-content table th,
 .entry-summary table th,
 .mceContentBody table th {
   background: #eeeeee;
 }
-/* line 65, ../sass/site/primary/_entry-content.scss */
+/* line 64, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable,
 .entry-content table.timetable,
 .entry-summary table.timetable,
@@ -651,7 +644,7 @@ a:hover, a:active {
   font-size: 0.875rem;
 }
 @media screen and (min-width: 601px) {
-  /* line 65, ../sass/site/primary/_entry-content.scss */
+  /* line 64, ../sass/site/primary/_entry-content.scss */
   .page-content table.timetable,
   .entry-content table.timetable,
   .entry-summary table.timetable,
@@ -662,7 +655,7 @@ a:hover, a:active {
     table-layout: fixed;
   }
 }
-/* line 73, ../sass/site/primary/_entry-content.scss */
+/* line 72, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable .time,
 .entry-content table.timetable .time,
 .entry-summary table.timetable .time,
@@ -670,7 +663,7 @@ a:hover, a:active {
   white-space: nowrap;
 }
 @media screen and (min-width: 601px) {
-  /* line 73, ../sass/site/primary/_entry-content.scss */
+  /* line 72, ../sass/site/primary/_entry-content.scss */
   .page-content table.timetable .time,
   .entry-content table.timetable .time,
   .entry-summary table.timetable .time,
@@ -678,7 +671,7 @@ a:hover, a:active {
     width: 4em;
   }
 }
-/* line 79, ../sass/site/primary/_entry-content.scss */
+/* line 78, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable thead th,
 .entry-content table.timetable thead th,
 .entry-summary table.timetable thead th,
@@ -686,7 +679,7 @@ a:hover, a:active {
   background: #424346;
   color: white;
 }
-/* line 82, ../sass/site/primary/_entry-content.scss */
+/* line 81, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable thead th a,
 .entry-content table.timetable thead th a,
 .entry-summary table.timetable thead th a,
@@ -694,7 +687,7 @@ a:hover, a:active {
   color: #ff9c08;
   text-decoration: underline;
 }
-/* line 87, ../sass/site/primary/_entry-content.scss */
+/* line 86, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable td.time,
 .entry-content table.timetable td.time,
 .entry-summary table.timetable td.time,
@@ -702,14 +695,14 @@ a:hover, a:active {
   background: #eeeeee;
   text-align: center;
 }
-/* line 91, ../sass/site/primary/_entry-content.scss */
+/* line 90, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable .long-cell td,
 .entry-content table.timetable .long-cell td,
 .entry-summary table.timetable .long-cell td,
 .mceContentBody table.timetable .long-cell td {
   text-align: center;
 }
-/* line 94, ../sass/site/primary/_entry-content.scss */
+/* line 93, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable th > p,
 .page-content table.timetable td > p,
 .entry-content table.timetable th > p,
@@ -720,7 +713,7 @@ a:hover, a:active {
 .mceContentBody table.timetable td > p {
   margin-bottom: 0.5em;
 }
-/* line 97, ../sass/site/primary/_entry-content.scss */
+/* line 96, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable th > p::last-child,
 .page-content table.timetable td > p::last-child,
 .entry-content table.timetable th > p::last-child,
@@ -731,33 +724,33 @@ a:hover, a:active {
 .mceContentBody table.timetable td > p::last-child {
   margin-bottom: 0;
 }
-/* line 102, ../sass/site/primary/_entry-content.scss */
+/* line 101, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable .footable-row-detail-inner,
 .entry-content table.timetable .footable-row-detail-inner,
 .entry-summary table.timetable .footable-row-detail-inner,
 .mceContentBody table.timetable .footable-row-detail-inner {
   width: 100%;
 }
-/* line 105, ../sass/site/primary/_entry-content.scss */
-.page-content table.timetable .footable-row-detail-name,
-.entry-content table.timetable .footable-row-detail-name,
-.entry-summary table.timetable .footable-row-detail-name,
-.mceContentBody table.timetable .footable-row-detail-name {
-  width: 5.9em;
-}
-/* line 108, ../sass/site/primary/_entry-content.scss */
+/* line 104, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable .footable-row-detail-row,
 .entry-content table.timetable .footable-row-detail-row,
 .entry-summary table.timetable .footable-row-detail-row,
 .mceContentBody table.timetable .footable-row-detail-row {
   border-bottom: solid 1px #ccc;
 }
-/* line 110, ../sass/site/primary/_entry-content.scss */
+/* line 106, ../sass/site/primary/_entry-content.scss */
 .page-content table.timetable .footable-row-detail-row:last-child,
 .entry-content table.timetable .footable-row-detail-row:last-child,
 .entry-summary table.timetable .footable-row-detail-row:last-child,
 .mceContentBody table.timetable .footable-row-detail-row:last-child {
   border-bottom: none;
+}
+/* line 110, ../sass/site/primary/_entry-content.scss */
+.page-content table.timetable .footable-row-detail-name,
+.entry-content table.timetable .footable-row-detail-name,
+.entry-summary table.timetable .footable-row-detail-name,
+.mceContentBody table.timetable .footable-row-detail-name {
+  width: 5.9em;
 }
 
 /*--------------------------------------------------------------
