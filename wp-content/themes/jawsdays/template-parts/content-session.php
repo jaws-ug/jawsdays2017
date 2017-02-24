@@ -132,7 +132,7 @@
 				?>
 				</div>
 				<?php endif; ?>
-				<?php if ( get_sub_field( 'group' ) || get_field( 'profile' ) ) : ?>
+				<?php if ( get_sub_field( 'group' ) || get_sub_field( 'profile' ) ) : ?>
 				<div class="speaker-profile">
 				<?php
 					// 所属
