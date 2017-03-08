@@ -64,7 +64,7 @@ class WPSEO_Premium_Popup {
 		}
 
 		$assets_uri = trailingslashit( plugin_dir_url( WPSEO_FILE ) );
-		$premium_uri = 'https://yoast.com/wordpress/plugins/seo-premium/#utm_source=wordpress-seo-metabox&amp;utm_medium=popup&amp;utm_campaign=help-center-contact-support';
+		$premium_uri = 'https://yoa.st/contact-support';
 
 		/* translators: %s expands to Yoast SEO Premium */
 		$cta_text = sprintf( __( 'Buy %s', 'wordpress-seo' ), 'Yoast SEO Premium' );
@@ -74,7 +74,7 @@ class WPSEO_Premium_Popup {
 		}
 
 		$popup = <<<EO_POPUP
-<div id="wpseo-{$this->identifier}-popup" class="wpseo-premium-popup$classes">
+<div id="wpseo-{$this->identifier}-popup" class="wpseo-premium-popup wp-clearfix$classes">
 	<img class="alignright wpseo-premium-popup-icon" src="{$assets_uri}images/Yoast_SEO_Icon.svg" width="150" height="150" alt="Yoast SEO"/>
 	<{$this->heading_level} id="wpseo-contact-support-popup-title" class="wpseo-premium-popup-title">{$this->title}</{$this->heading_level}>
 	<p>{$this->content}</p>
