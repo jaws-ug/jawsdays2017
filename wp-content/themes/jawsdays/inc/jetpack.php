@@ -59,7 +59,7 @@ add_action( 'loop_start', 'jptweak_remove_share' );
  * パブリサイズ共有
  */
 
-add_action( 'publicize_save_meta', 'jawsdays_publicize_save_meta', 10, 4);
+// add_action( 'publicize_save_meta', 'jawsdays_publicize_save_meta', 10, 4);
 function jawsdays_publicize_save_meta( $submit_post, $post_id, $service_name, $connection ) {
 
 	delete_post_meta( $post_id, '_wpas_mess' );
