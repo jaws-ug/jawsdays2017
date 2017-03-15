@@ -80,7 +80,7 @@ public function plugins_loaded() {
 	add_filter( 'wpseo_opengraph_image', array( $this, 'jaws_wpseo_opengraph_image' ) );
 	add_filter( 'wpseo_twitter_image', array( $this, 'jaws_wpseo_opengraph_image' ) );
 	// Jetpack override
-	add_filter( 'wpas_default_suffix', array( $this, 'jaws_wpas_default_suffix' ) );
+// 	add_filter( 'wpas_default_suffix', array( $this, 'jaws_wpas_default_suffix' ) );
 }
 
 // Register Custom Post Type - Session

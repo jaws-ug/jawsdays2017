@@ -59,26 +59,29 @@ add_action( 'loop_start', 'jptweak_remove_share' );
  * パブリサイズ共有
  */
 
-// add_action( 'publicize_save_meta', 'jawsdays_publicize_save_meta', 10, 4);
+add_action( 'publicize_save_meta', 'jawsdays_publicize_save_meta', 10, 4);
 function jawsdays_publicize_save_meta( $submit_post, $post_id, $service_name, $connection ) {
 
-	delete_post_meta( $post_id, '_wpas_mess' );
 	$prefix = "";
 	if ( 'session' === get_post_type( $post_id ) ) {
 		$prefix = "[セッション情報更新] ";
 	} elseif ( 'supporter' === get_post_type( $post_id ) ) {
 		$prefix = "[サポーター情報更新] ";
 	}
-	$title  = get_the_title( $post_id );
-	$link   = wp_get_shortlink( $post_id );
+	$title   = get_the_title( $post_id );
+	$suffix  = " #jawsdays #jawsug";
+	$link    = wp_get_shortlink( $post_id );
+	$excerpt = get_the_excerpt( $post_id );
 
 	$publicize_custom_message = get_post_meta( $post_id, '_wpas_mess', true );
 	if ( empty( $publicize_custom_message ) ) {
 		$publicize_custom_message = sprintf(
-			"%s%s %s",
+			"%s%s %s\n%s\n%s",
 			$prefix,
 			$title,
-			$link
+			$suffix,
+			$link,
+			$excerpt
 		);
 	} else {
 		if ( strpos( $publicize_custom_message, $prefix ) === false ) {
@@ -87,9 +90,16 @@ function jawsdays_publicize_save_meta( $submit_post, $post_id, $service_name, $c
 		if ( strpos( $publicize_custom_message, $title ) === false ) {
 			$publicize_custom_message = $publicize_custom_message . $title;
 		}
+		if ( strpos( $publicize_custom_message, $suffix ) === false ) {
+			$publicize_custom_message = $publicize_custom_message . $suffix;
+		}
 		if ( strpos( $publicize_custom_message, $link ) === false ) {
 			$publicize_custom_message = $publicize_custom_message . $link;
 		}
+		if ( strpos( $publicize_custom_message, $excerpt ) === false ) {
+			$publicize_custom_message = $publicize_custom_message . $excerpt;
+		}
 	}
+	delete_post_meta( $post_id, '_wpas_mess' );
 	update_post_meta( $post_id, '_wpas_mess', $publicize_custom_message );
 }
