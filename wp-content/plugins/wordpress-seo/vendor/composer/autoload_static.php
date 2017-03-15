@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit6635f2a2d429a0e1dac5acb24f324193
+class ComposerStaticInitb302bc72d072431a8a4fd6aae5897830
 {
     public static $prefixesPsr0 = array (
         'x' => 
@@ -96,6 +96,7 @@ class ComposerStaticInit6635f2a2d429a0e1dac5acb24f324193
         'WPSEO_Admin_Pages' => __DIR__ . '/../..' . '/admin/class-config.php',
         'WPSEO_Admin_Stop_Words' => __DIR__ . '/../..' . '/admin/class-stop-words.php',
         'WPSEO_Admin_User_Profile' => __DIR__ . '/../..' . '/admin/class-admin-user-profile.php',
+        'WPSEO_Advanced_Settings' => __DIR__ . '/../..' . '/inc/class-wpseo-advanced-settings.php',
         'WPSEO_Author_Sitemap_Provider' => __DIR__ . '/../..' . '/inc/sitemaps/class-author-sitemap-provider.php',
         'WPSEO_Breadcrumbs' => __DIR__ . '/../..' . '/frontend/class-breadcrumbs.php',
         'WPSEO_Bulk_Description_List_Table' => __DIR__ . '/../..' . '/admin/class-bulk-description-editor-list-table.php',
@@ -154,6 +155,7 @@ class ComposerStaticInit6635f2a2d429a0e1dac5acb24f324193
         'WPSEO_GSC_Issues' => __DIR__ . '/../..' . '/admin/google_search_console/class-gsc-issues.php',
         'WPSEO_GSC_Mapper' => __DIR__ . '/../..' . '/admin/google_search_console/class-gsc-mapper.php',
         'WPSEO_GSC_Marker' => __DIR__ . '/../..' . '/admin/google_search_console/class-gsc-marker.php',
+        'WPSEO_GSC_Modal' => __DIR__ . '/../..' . '/admin/google_search_console/class-gsc-modal.php',
         'WPSEO_GSC_Platform_Tabs' => __DIR__ . '/../..' . '/admin/google_search_console/class-gsc-platform-tabs.php',
         'WPSEO_GSC_Service' => __DIR__ . '/../..' . '/admin/google_search_console/class-gsc-service.php',
         'WPSEO_GSC_Settings' => __DIR__ . '/../..' . '/admin/google_search_console/class-gsc-settings.php',
@@ -260,6 +262,7 @@ class ComposerStaticInit6635f2a2d429a0e1dac5acb24f324193
         'Yoast_Form_Element' => __DIR__ . '/../..' . '/admin/views/interface-yoast-form-element.php',
         'Yoast_Form_Fieldset' => __DIR__ . '/../..' . '/admin/views/class-yoast-form-fieldset.php',
         'Yoast_I18n_WordPressOrg_v2' => __DIR__ . '/..' . '/yoast/i18n-module/src/i18n-module-wordpressorg.php',
+        'Yoast_I18n_v2' => __DIR__ . '/..' . '/yoast/i18n-module/src/i18n-module.php',
         'Yoast_Input_Select' => __DIR__ . '/../..' . '/admin/views/class-yoast-input-select.php',
         'Yoast_License_Manager' => __DIR__ . '/..' . '/yoast/license-manager/class-license-manager.php',
         'Yoast_Notification' => __DIR__ . '/../..' . '/admin/class-yoast-notification.php',
@@ -279,14 +282,13 @@ class ComposerStaticInit6635f2a2d429a0e1dac5acb24f324193
         'iYoast_License_Manager' => __DIR__ . '/..' . '/yoast/license-manager/class-license-manager.php',
         'xrstf\\Composer52\\AutoloadGenerator' => __DIR__ . '/..' . '/xrstf/composer-php52/lib/xrstf/Composer52/AutoloadGenerator.php',
         'xrstf\\Composer52\\Generator' => __DIR__ . '/..' . '/xrstf/composer-php52/lib/xrstf/Composer52/Generator.php',
-        'yoast_i18n_v2' => __DIR__ . '/..' . '/yoast/i18n-module/src/i18n-module.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixesPsr0 = ComposerStaticInit6635f2a2d429a0e1dac5acb24f324193::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit6635f2a2d429a0e1dac5acb24f324193::$classMap;
+            $loader->prefixesPsr0 = ComposerStaticInitb302bc72d072431a8a4fd6aae5897830::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitb302bc72d072431a8a4fd6aae5897830::$classMap;
 
         }, null, ClassLoader::class);
     }
